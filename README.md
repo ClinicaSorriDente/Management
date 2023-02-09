@@ -9,7 +9,9 @@ O projeto possui 3 tipos de usuários, que são: paciente, recepcionista e admin
 *   [Site no Railway](https://gerenciamento-servicos.herokuapp.com) :robot:
 
 ## :round_pushpin: Objetivos
-O cliente deve ser capaz de fazer o cadastramento dos seus dados pessoais, tais como Nome Completo, CPF, qual a sua ocupação e uma senha para ter acesso ao sistema. Ele também deve ser capaz de cadastrar os serviços, vinculando cada serviço a um cliente, que possuirá seus respectivos dados e seu endereço. Cada serviço poderá ter ou não materiais vinculados a si, e ter ou não um ajudante em cada serviço. Após o cadastro de todos os dados necessários, o cliente poderá vizualizar os seus serviços, quais serão realizados, os que foram ou não pagos, e com isso possuir uma maneira eficiente de vizualizar serviços.
+Um recepcionista pode editar e visualizar apenas a si mesmo. Um visitante do sistema deve ser capaz de cadastrar-se como paciente e
+consequentemente editar, remover e visualizar seu perfil. Um administrador deve ser capaz de cadastrar uma entidade dentista que não é um perfil de usuário, essa entidade deve possuir o horário de atendimento para cada dia que trabalha na clínica, bem como informações sobre o dentista e suas especializações. Tudo isso deve ser visível para o paciente na hora de marcar uma consulta. Um recepcionista deve ser capaz de alterar os horários de um dentista se necessário enquanto que os pacientes devem ser capazes de marcar a consulta em horários não ocupados por outros pacientes. Os recepcionistas devem ser capazes de marcar e desmarcar uma consulta realizada por um paciente. Além disso, pode confirmar a presença do paciente quando eles chegarem ao consultório (a consulta deve ficar registrada no sistema, horário, nome do dentista, paciente, etc.).
+
 ## :hammer_and_wrench: Tecnologias Usadas
  ### [Ruby](https://www.ruby-lang.org/pt/)
 *   Versão 3.1.1
