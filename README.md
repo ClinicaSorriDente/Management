@@ -3,8 +3,8 @@
 ## :octocat: Integrantes
 [Rogério Lacerda](https://github.com/RogerioLacerdaGH) | [José Elias](https://github.com/Eliaz500) | [Gison Vilaça](https://github.com/gison-vilaca) | [Rodrigo Leandro](https://github.com/rudrigozx)
 ## :page_with_curl: Sobre o Projeto
-Projeto para implementação de um SaaS em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrado pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2020.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
-O projeto possui um cliente, autonomo MEI (MicroEmpreendedor Individual), que está a procura de um sistema para que possa ser possível, de maneira rápida e prática, realizar a consulta dos serviços a serem feitos. O sistema irá ajudá-lo a planejar futuros serviços e calcular o preço da mão de obra e dos materiais necessários para serem feitos. Além disso, auxilia o prestador de serviço a ter uma melhor organização quanto aos serviços, visto que eles já teriam os nomes de seus clientes e os dados vinculados, levando assim uma forma mais otimizada da perspectiva dos serviços a serem feitos.
+É uma implementação de um SaaS escrita em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrada pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
+O projeto possui 3 tipos de usuários, que são: paciente, recepcionista e administrador. O sistema gerencia as consultas de um consultório odontológico. Nele, é possível a realização de: cadrastamentos, visualizações, edições e remoções nos 3 tipos de usuários(com a exceção da função de remover do "administrador padrão"). Dessa maneira, o sistema executa todas as funcionalidades possíveis para o auxílio de todos os usuários do consultório, sejam eles os usários que são atendidos, como os que atendem.
 
 *   [Site no Railway](https://gerenciamento-servicos.herokuapp.com) :robot:
 
