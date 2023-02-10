@@ -1,4 +1,5 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/69114b9aa610439881a3b4a0237b14b9)](https://www.codacy.com/gh/esMEIproject/gerenciamento-servicos/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=esMEIproject/gerenciamento-servicos&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.com/esMEIproject/gerenciamento-servicos.svg?branch=main)](https://travis-ci.com/esMEIproject/gerenciamento-servicos)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/18c2ea2d78d24112b7c1aeb4556f0827)](https://www.codacy.com/gh/ClinicaSorriDente/Manegement/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ClinicaSorriDente/Manegement&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.com/esMEIproject/gerenciamento-servicos.svg?branch=main)](https://travis-ci.com/esMEIproject/gerenciamento-servicos)
+
 # Sistema de gerenciamento de clínica odontológica
 ## :octocat: Integrantes
 [Rogério Lacerda](https://github.com/RogerioLacerdaGH) | [José Elias](https://github.com/Eliaz500) | [Gison Vilaça](https://github.com/gison-vilaca) | [Rodrigo Leandro](https://github.com/rudrigozx)
