@@ -1,22 +1,24 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/69114b9aa610439881a3b4a0237b14b9)](https://www.codacy.com/gh/esMEIproject/gerenciamento-servicos/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=esMEIproject/gerenciamento-servicos&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.com/esMEIproject/gerenciamento-servicos.svg?branch=main)](https://travis-ci.com/esMEIproject/gerenciamento-servicos)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/18c2ea2d78d24112b7c1aeb4556f0827)](https://www.codacy.com/gh/ClinicaSorriDente/Manegement/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ClinicaSorriDente/Manegement&amp;utm_campaign=Badge_Grade)
+
 # Sistema de gerenciamento de clínica odontológica
 ## :octocat: Integrantes
 [Rogério Lacerda](https://github.com/RogerioLacerdaGH) | [José Elias](https://github.com/Eliaz500) | [Gison Vilaça](https://github.com/gison-vilaca) | [Rodrigo Leandro](https://github.com/rudrigozx)
 ## :page_with_curl: Sobre o Projeto
-Projeto para implementação de um SaaS em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrado pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2020.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
-O projeto possui um cliente, autonomo MEI (MicroEmpreendedor Individual), que está a procura de um sistema para que possa ser possível, de maneira rápida e prática, realizar a consulta dos serviços a serem feitos. O sistema irá ajudá-lo a planejar futuros serviços e calcular o preço da mão de obra e dos materiais necessários para serem feitos. Além disso, auxilia o prestador de serviço a ter uma melhor organização quanto aos serviços, visto que eles já teriam os nomes de seus clientes e os dados vinculados, levando assim uma forma mais otimizada da perspectiva dos serviços a serem feitos.
+É uma implementação de um SaaS escrita em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrada pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
+O projeto possui 3 tipos de usuários, que são: paciente, recepcionista e administrador. O sistema gerencia as consultas de um consultório odontológico. Nele, é possível a realização de: cadrastamentos, visualizações, edições e remoções nos 3 tipos de usuários(com a exceção da função de remover do "administrador padrão"). Dessa maneira, o sistema executa todas as funcionalidades possíveis para o auxílio de todos os usuários do consultório, sejam eles os usários que são atendidos, como os que atendem.
 
-*   [Site no Railway](https://gerenciamento-servicos.herokuapp.com) :robot:
+*   [Site no Railway](https://manegement-production.up.railway.app) :robot:
 
 ## :round_pushpin: Objetivos
-O cliente deve ser capaz de fazer o cadastramento dos seus dados pessoais, tais como Nome Completo, CPF, qual a sua ocupação e uma senha para ter acesso ao sistema. Ele também deve ser capaz de cadastrar os serviços, vinculando cada serviço a um cliente, que possuirá seus respectivos dados e seu endereço. Cada serviço poderá ter ou não materiais vinculados a si, e ter ou não um ajudante em cada serviço. Após o cadastro de todos os dados necessários, o cliente poderá vizualizar os seus serviços, quais serão realizados, os que foram ou não pagos, e com isso possuir uma maneira eficiente de vizualizar serviços.
+Um recepcionista pode editar e visualizar apenas a si mesmo. Um visitante do sistema deve ser capaz de cadastrar-se como paciente e
+consequentemente editar, remover e visualizar seu perfil. Um administrador deve ser capaz de cadastrar uma entidade dentista que não é um perfil de usuário, essa entidade deve possuir o horário de atendimento para cada dia que trabalha na clínica, bem como informações sobre o dentista e suas especializações. Tudo isso deve ser visível para o paciente na hora de marcar uma consulta. Um recepcionista deve ser capaz de alterar os horários de um dentista se necessário enquanto que os pacientes devem ser capazes de marcar a consulta em horários não ocupados por outros pacientes. Os recepcionistas devem ser capazes de marcar e desmarcar uma consulta realizada por um paciente. Além disso, pode confirmar a presença do paciente quando eles chegarem ao consultório (a consulta deve ficar registrada no sistema, horário, nome do dentista, paciente, etc.).
+
 ## :hammer_and_wrench: Tecnologias Usadas
  ### [Ruby](https://www.ruby-lang.org/pt/)
 *   Versão 3.1.1
  ### [Rails](https://rubyonrails.org/)
 *   Versão 7.0.2.2
  ### [Codacy](https://www.codacy.com/product)
- ### [Travis CI](https://travis-ci.org/)
  ### [Railway](https://railway.app/)
 ## :construction: Status do Projeto
 Em andamento
