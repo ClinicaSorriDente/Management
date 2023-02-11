@@ -1,4 +1,4 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/18c2ea2d78d24112b7c1aeb4556f0827)](https://www.codacy.com/gh/ClinicaSorriDente/Manegement/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ClinicaSorriDente/Manegement&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.com/esMEIproject/gerenciamento-servicos.svg?branch=main)](https://travis-ci.com/esMEIproject/gerenciamento-servicos)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/18c2ea2d78d24112b7c1aeb4556f0827)](https://www.codacy.com/gh/ClinicaSorriDente/Manegement/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ClinicaSorriDente/Manegement&amp;utm_campaign=Badge_Grade)
 
 # Sistema de gerenciamento de clínica odontológica
 ## :octocat: Integrantes
@@ -7,7 +7,7 @@
 É uma implementação de um SaaS escrita em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrada pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
 O projeto possui 3 tipos de usuários, que são: paciente, recepcionista e administrador. O sistema gerencia as consultas de um consultório odontológico. Nele, é possível a realização de: cadrastamentos, visualizações, edições e remoções nos 3 tipos de usuários(com a exceção da função de remover do "administrador padrão"). Dessa maneira, o sistema executa todas as funcionalidades possíveis para o auxílio de todos os usuários do consultório, sejam eles os usários que são atendidos, como os que atendem.
 
-*   [Site no Railway](https://gerenciamento-servicos.herokuapp.com) :robot:
+*   [Site no Railway](https://manegement-production.up.railway.app) :robot:
 
 ## :round_pushpin: Objetivos
 Um recepcionista pode editar e visualizar apenas a si mesmo. Um visitante do sistema deve ser capaz de cadastrar-se como paciente e
@@ -19,7 +19,6 @@ consequentemente editar, remover e visualizar seu perfil. Um administrador deve 
  ### [Rails](https://rubyonrails.org/)
 *   Versão 7.0.2.2
  ### [Codacy](https://www.codacy.com/product)
- ### [Travis CI](https://travis-ci.org/)
  ### [Railway](https://railway.app/)
 ## :construction: Status do Projeto
 Em andamento
