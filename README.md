@@ -7,7 +7,7 @@
 É uma implementação de um SaaS escrita em Ruby e Rails com foco no servidor para a disciplina de __Engenharia de Software__ ministrada pelo Professor Dr. [Rodrigo Andrade](https://github.com/rcaa), da UFAPE, referente ao período de 2022.1 com intuito de avaliação para a 2ª Verificação de Aprendizagem.
 O projeto possui 3 tipos de usuários, que são: paciente, recepcionista e administrador. O sistema gerencia as consultas de um consultório odontológico. Nele, é possível a realização de: cadrastamentos, visualizações, edições e remoções nos 3 tipos de usuários(com a exceção da função de remover do "administrador padrão"). Dessa maneira, o sistema executa todas as funcionalidades possíveis para o auxílio de todos os usuários do consultório, sejam eles os usários que são atendidos, como os que atendem.
 
-*   [Site no Railway](http://management-production-1303.up.railway.app) :robot:
+*   [Site no Railway](https://management-production-1303.up.railway.app) :robot:
 
 ## :round_pushpin: Objetivos
 Um recepcionista pode editar e visualizar apenas a si mesmo. Um visitante do sistema deve ser capaz de cadastrar-se como paciente e
