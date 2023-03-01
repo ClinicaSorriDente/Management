@@ -1,0 +1,872 @@
+  [1m[35m (13.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (379.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (55.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePacientes (20230228230438)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pacientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "nascimento" date, "cpf" varchar, "email" varchar, "endereco" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230228230438"]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-28 23:16:42.045727"], ["updated_at", "2023-02-28 23:16:42.045727"]]
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-28 20:17:07 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.9ms | Allocations: 607)
+Completed 200 OK in 209ms (Views: 63.2ms | ActiveRecord: 0.0ms | Allocations: 4683)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-02-28 20:17:18 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 699.2ms | Allocations: 68276)
+Completed 200 OK in 704ms (Views: 700.6ms | ActiveRecord: 0.2ms | Allocations: 70182)
+
+
+Started GET "/pacientes/new" for 127.0.0.1 at 2023-02-28 20:17:22 -0300
+Processing by PacientesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 148.1ms | Allocations: 6248)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 149.1ms | Allocations: 6608)
+  Rendered layout layouts/application.html.erb (Duration: 150.9ms | Allocations: 7681)
+Completed 200 OK in 177ms (Views: 162.2ms | ActiveRecord: 0.4ms | Allocations: 13071)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 20:19:58 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"99999999999", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Create Paciente"}
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.9ms | Allocations: 1968)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2075)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3124)
+Completed 422 Unprocessable Entity in 16ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 4743)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 20:20:07 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"99999999998", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Create Paciente"}
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.4ms | Allocations: 1800)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1899)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 2842)
+Completed 422 Unprocessable Entity in 29ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 3963)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 20:24:11 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"13546949455", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Create Paciente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Create (0.2ms)[0m  [1m[32mINSERT INTO "pacientes" ("nome", "nascimento", "cpf", "email", "endereco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "gvm"], ["nascimento", "2023-02-28"], ["cpf", "13546949455"], ["email", "jjjjjjjjjj"], ["endereco", "jjjjjjjjjjj"], ["created_at", "2023-02-28 23:24:11.044610"], ["updated_at", "2023-02-28 23:24:11.044610"]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (61.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+Redirected to http://0.0.0.0:3000/pacientes/1
+Completed 302 Found in 82ms (ActiveRecord: 61.3ms | Allocations: 3536)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:24:11 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 2.5ms | Allocations: 303)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 72.5ms | Allocations: 1477)
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 2529)
+Completed 200 OK in 142ms (Views: 86.8ms | ActiveRecord: 0.2ms | Allocations: 8996)
+
+
+Started GET "/pacientes/1/edit" for 127.0.0.1 at 2023-02-28 20:24:14 -0300
+Processing by PacientesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.7ms | Allocations: 1565)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1843)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 2788)
+Completed 200 OK in 39ms (Views: 31.0ms | ActiveRecord: 0.3ms | Allocations: 3700)
+
+
+Started PATCH "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:24:21 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"1354694945g", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"1"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 14.0ms | Allocations: 1833)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1959)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 2903)
+Completed 422 Unprocessable Entity in 47ms (Views: 22.1ms | ActiveRecord: 0.1ms | Allocations: 4897)
+
+
+Started PATCH "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:24:27 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"13546949456", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"1"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 11.5ms | Allocations: 1823)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1949)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 2892)
+Completed 422 Unprocessable Entity in 38ms (Views: 28.5ms | ActiveRecord: 0.1ms | Allocations: 4796)
+
+
+Started PATCH "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:24:32 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"13546949456", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"1"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 6.8ms | Allocations: 1823)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1949)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 2892)
+Completed 422 Unprocessable Entity in 31ms (Views: 22.7ms | ActiveRecord: 0.1ms | Allocations: 4820)
+
+
+Started PATCH "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:24:37 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"13546949455", "email"=>"jjjjjjjjjj", "endereco"=>"jjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"1"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+Redirected to http://0.0.0.0:3000/pacientes/1
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms | Allocations: 1258)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:24:37 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 499)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1442)
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 2196)
+
+
+Started DELETE "/pacientes/1" for 127.0.0.1 at 2023-02-28 20:25:03 -0300
+Processing by PacientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+  [1m[36mPaciente Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pacientes" WHERE "pacientes"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (69.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+Redirected to http://0.0.0.0:3000/pacientes
+Completed 302 Found in 80ms (ActiveRecord: 70.2ms | Allocations: 2488)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-02-28 20:25:03 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 803)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 1754)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 2027)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 20:35:36 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 499)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/pacientes/new" for 127.0.0.1 at 2023-02-28 20:35:51 -0300
+Processing by PacientesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 23.3ms | Allocations: 4322)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 4706)
+  Rendered layout layouts/application.html.erb (Duration: 71.9ms | Allocations: 24589)
+Completed 200 OK in 91ms (Views: 73.3ms | ActiveRecord: 0.4ms | Allocations: 31742)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 20:36:17 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-21", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Create Paciente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 10.3ms | Allocations: 2384)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2491)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 3545)
+Completed 422 Unprocessable Entity in 30ms (Views: 17.3ms | ActiveRecord: 0.4ms | Allocations: 8862)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 20:36:37 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-02-28", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Create Paciente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Create (0.2ms)[0m  [1m[32mINSERT INTO "pacientes" ("nome", "nascimento", "cpf", "email", "endereco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "gvm6"], ["nascimento", "2023-02-28"], ["cpf", "13546949455"], ["email", "jjjjjjjjjjjjjjj"], ["endereco", "jjjjjjjjjjjjjjj"], ["created_at", "2023-02-28 23:36:37.463696"], ["updated_at", "2023-02-28 23:36:37.463696"]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+Redirected to http://0.0.0.0:3000/pacientes/2
+Completed 302 Found in 40ms (ActiveRecord: 8.2ms | Allocations: 4413)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-02-28 20:36:37 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.4ms | Allocations: 303)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2405)
+Completed 200 OK in 20ms (Views: 14.8ms | ActiveRecord: 0.1ms | Allocations: 4030)
+
+
+Started GET "/pacientes/2/edit" for 127.0.0.1 at 2023-02-28 20:37:23 -0300
+Processing by PacientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 7.3ms | Allocations: 1561)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1840)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2785)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 3696)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-02-28 20:37:31 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 1.8ms | Allocations: 1392)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1518)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2461)
+Completed 422 Unprocessable Entity in 43ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 6577)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 21:07:56 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 499)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-02-28 21:08:07 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (4.6ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 0.6ms | Allocations: 339)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 7331)
+  Rendered layout layouts/application.html.erb (Duration: 76.9ms | Allocations: 27240)
+Completed 200 OK in 86ms (Views: 75.4ms | ActiveRecord: 5.0ms | Allocations: 29600)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 21:37:34 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.6ms | Allocations: 499)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 3344)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-02-28 21:39:01 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 1.2ms | Allocations: 339)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 134.0ms | Allocations: 7167)
+  Rendered layout layouts/application.html.erb (Duration: 672.0ms | Allocations: 27700)
+Completed 200 OK in 740ms (Views: 672.8ms | ActiveRecord: 0.7ms | Allocations: 30008)
+
+
+Started GET "/pacientes/new" for 127.0.0.1 at 2023-02-28 21:39:04 -0300
+Processing by PacientesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 216.8ms | Allocations: 4031)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 234.4ms | Allocations: 4348)
+  Rendered layout layouts/application.html.erb (Duration: 235.9ms | Allocations: 5418)
+Completed 200 OK in 242ms (Views: 241.3ms | ActiveRecord: 0.0ms | Allocations: 5857)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 21:39:30 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"ahds", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"lllllllllllllllllllllllllllllll", "endereco"=>"lllllllllllllllllll"}, "commit"=>"Create Paciente"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? LIMIT ?[0m  [["email", "lllllllllllllllllllllllllllllll"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? LIMIT ?[0m  [["endereco", "lllllllllllllllllll"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.9ms | Allocations: 1510)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1617)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2670)
+Completed 422 Unprocessable Entity in 30ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 8731)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 21:39:42 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"ahds", "nascimento"=>"2023-03-29", "cpf"=>"13546949455", "email"=>"lllllllllllllllllllllllllllllll", "endereco"=>"lllllllllllllllllll"}, "commit"=>"Create Paciente"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? LIMIT ?[0m  [["email", "lllllllllllllllllllllllllllllll"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? LIMIT ?[0m  [["endereco", "lllllllllllllllllll"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 5.6ms | Allocations: 1349)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1448)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2392)
+Completed 422 Unprocessable Entity in 36ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 6248)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-02-28 21:39:51 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"ahds", "nascimento"=>"2023-02-28", "cpf"=>"13546949455", "email"=>"lllllllllllllllllllllllllllllll", "endereco"=>"lllllllllllllllllll"}, "commit"=>"Create Paciente"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? LIMIT ?[0m  [["email", "lllllllllllllllllllllllllllllll"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? LIMIT ?[0m  [["endereco", "lllllllllllllllllll"], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mPaciente Create (0.2ms)[0m  [1m[32mINSERT INTO "pacientes" ("nome", "nascimento", "cpf", "email", "endereco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "ahds"], ["nascimento", "2023-02-28"], ["cpf", "13546949455"], ["email", "lllllllllllllllllllllllllllllll"], ["endereco", "lllllllllllllllllll"], ["created_at", "2023-03-01 00:39:51.884011"], ["updated_at", "2023-03-01 00:39:51.884011"]]
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:27:in `block in create'
+Redirected to http://0.0.0.0:3000/pacientes/3
+Completed 302 Found in 113ms (ActiveRecord: 8.2ms | Allocations: 4936)
+
+
+Started GET "/pacientes/3" for 127.0.0.1 at 2023-02-28 21:39:52 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 54.0ms | Allocations: 731)
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 1674)
+Completed 200 OK in 82ms (Views: 68.7ms | ActiveRecord: 0.1ms | Allocations: 3219)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-02-28 21:39:55 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 2025)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 2297)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-01 10:17:23 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/es/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 134.0ms | Allocations: 499)
+Completed 200 OK in 195ms (Views: 148.9ms | ActiveRecord: 0.0ms | Allocations: 3343)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-01 10:17:30 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 12.1ms | Allocations: 339)
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 102.8ms | Allocations: 7327)
+  Rendered layout layouts/application.html.erb (Duration: 520.5ms | Allocations: 27820)
+Completed 200 OK in 555ms (Views: 523.6ms | ActiveRecord: 0.5ms | Allocations: 30181)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:17:33 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 1926)
+Completed 200 OK in 41ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 4750)
+
+
+Started GET "/pacientes/2/edit" for 127.0.0.1 at 2023-03-01 10:17:36 -0300
+Processing by PacientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 68.4ms | Allocations: 4056)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 69.9ms | Allocations: 4421)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 5479)
+Completed 200 OK in 78ms (Views: 72.3ms | ActiveRecord: 0.1ms | Allocations: 6334)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:17:41 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm", "nascimento"=>"2023-02-28", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.8ms | Allocations: 2400)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2541)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3589)
+Completed 422 Unprocessable Entity in 25ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 9381)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:17:55 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 7.1ms | Allocations: 2214)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2340)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3283)
+Completed 422 Unprocessable Entity in 49ms (Views: 15.3ms | ActiveRecord: 0.4ms | Allocations: 7985)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:01 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Update (31.4ms)[0m  [1m[33mUPDATE "pacientes" SET "nascimento" = ?, "updated_at" = ? WHERE "pacientes"."id" = ?[0m  [["nascimento", "2023-03-01"], ["updated_at", "2023-03-01 13:18:01.436538"], ["id", 2]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+Redirected to http://0.0.0.0:3000/pacientes/2
+Completed 302 Found in 88ms (ActiveRecord: 39.9ms | Allocations: 5622)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:01 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 500)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1443)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 2193)
+
+
+Started GET "/pacientes/2/edit" for 127.0.0.1 at 2023-03-01 10:18:04 -0300
+Processing by PacientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 1.8ms | Allocations: 1434)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1560)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2503)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.1ms | Allocations: 3253)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:11 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-02", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.0ms | Allocations: 1389)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1515)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2458)
+Completed 422 Unprocessable Entity in 50ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 7154)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:18 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+Redirected to http://0.0.0.0:3000/pacientes/2
+Completed 302 Found in 23ms (ActiveRecord: 4.0ms | Allocations: 3931)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:18 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 495)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 1438)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 2190)
+
+
+Started GET "/pacientes/2/edit" for 127.0.0.1 at 2023-03-01 10:18:20 -0300
+Processing by PacientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 6.8ms | Allocations: 1423)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1549)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 2492)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.1ms | Allocations: 3243)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:26 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949456", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 27.7ms | Allocations: 1847)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 28.1ms | Allocations: 1973)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 2916)
+Completed 422 Unprocessable Entity in 61ms (Views: 36.2ms | ActiveRecord: 0.5ms | Allocations: 7613)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:32 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"1354694945g", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 2.6ms | Allocations: 1823)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1949)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2892)
+Completed 422 Unprocessable Entity in 53ms (Views: 22.2ms | ActiveRecord: 0.4ms | Allocations: 7578)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:40 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+Redirected to http://0.0.0.0:3000/pacientes/2
+Completed 302 Found in 21ms (ActiveRecord: 0.4ms | Allocations: 3936)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:40 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 498)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 1441)
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 2193)
+
+
+Started GET "/pacientes/2/edit" for 127.0.0.1 at 2023-03-01 10:18:41 -0300
+Processing by PacientesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 1.9ms | Allocations: 1405)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1531)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2474)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 3225)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:18:48 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjj", "endereco"=>"jjjjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (10.4ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 17.1ms | Allocations: 2213)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2339)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3289)
+Completed 422 Unprocessable Entity in 51ms (Views: 25.8ms | ActiveRecord: 10.7ms | Allocations: 7979)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:19:00 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/edit.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 5.4ms | Allocations: 2213)
+  Rendered pacientes/edit.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2339)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3289)
+Completed 422 Unprocessable Entity in 35ms (Views: 15.5ms | ActiveRecord: 1.2ms | Allocations: 7997)
+
+
+Started PATCH "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:19:06 -0300
+Processing by PacientesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "paciente"=>{"nome"=>"gvm6", "nascimento"=>"2023-03-01", "cpf"=>"13546949455", "email"=>"jjjjjjjjjjjjjjj", "endereco"=>"jjjjjjjjjjjjj"}, "commit"=>"Update Paciente", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."email" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["email", "jjjjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "pacientes" WHERE "pacientes"."endereco" = ? AND "pacientes"."id" != ? LIMIT ?[0m  [["endereco", "jjjjjjjjjjjjj"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mPaciente Update (0.2ms)[0m  [1m[33mUPDATE "pacientes" SET "endereco" = ?, "updated_at" = ? WHERE "pacientes"."id" = ?[0m  [["endereco", "jjjjjjjjjjjjj"], ["updated_at", "2023-03-01 13:19:06.356903"], ["id", 2]]
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:40:in `block in update'
+Redirected to http://0.0.0.0:3000/pacientes/2
+Completed 302 Found in 43ms (ActiveRecord: 6.3ms | Allocations: 4605)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:19:06 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 499)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1442)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 2192)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-01 10:19:08 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1078)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2029)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 2301)
+
+
+Started GET "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:19:19 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 469)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 1412)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.1ms | Allocations: 2162)
+
+
+Started DELETE "/pacientes/2" for 127.0.0.1 at 2023-03-01 10:19:21 -0300
+Processing by PacientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+  [1m[36mPaciente Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pacientes" WHERE "pacientes"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (58.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+Redirected to http://0.0.0.0:3000/pacientes
+Completed 302 Found in 66ms (ActiveRecord: 58.5ms | Allocations: 2448)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-01 10:19:21 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 967)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1918)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 2188)
+
+
+Started GET "/pacientes/3" for 127.0.0.1 at 2023-03-01 10:19:24 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 461)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1404)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 2154)
+
+
+Started DELETE "/pacientes/3" for 127.0.0.1 at 2023-03-01 10:19:26 -0300
+Processing by PacientesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+  [1m[36mPaciente Destroy (0.2ms)[0m  [1m[31mDELETE FROM "pacientes" WHERE "pacientes"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (68.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/pacientes_controller.rb:52:in `destroy'
+Redirected to http://0.0.0.0:3000/pacientes
+Completed 302 Found in 79ms (ActiveRecord: 68.5ms | Allocations: 2371)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-01 10:19:26 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.1ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 763)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1714)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 1984)
+
+
