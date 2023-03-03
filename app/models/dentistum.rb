@@ -1,0 +1,2 @@
+class Dentistum < ApplicationRecord
+end

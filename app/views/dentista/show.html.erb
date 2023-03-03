@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @dentistum %>
+
+<div>
+  <%= link_to "Edit this dentistum", edit_dentistum_path(@dentistum) %> |
+  <%= link_to "Back to dentista", dentista_path %>
+
+  <%= button_to "Destroy this dentistum", @dentistum, method: :delete %>
+</div>
