@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<div align="center">
+<h1>Login Admin</h1>
+
+<%= form_with url: login_path do |form| %>
+  <div class="mb-3">
+    <%= form.label :usuario %><br>
+    <%= form.text_field :usuario,class:"form_control" %>
+  </div><br>
+
+  <div class="mb-3">
+    <%= form.label :senha %><br>
+    <%= form.password_field :senha,class:"form_control" %>
+  </div><br>
+
+  <div class="mb-3">
+    <%= form.submit "login" , class:"btn btn-primary"%>
+
+  </div>
+<% end %>
+
+</div>

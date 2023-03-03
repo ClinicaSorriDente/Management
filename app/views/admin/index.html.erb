@@ -1,0 +1,20 @@
+<div align="center">
+<h1>
+  <%="Bem vindo " + @admin.usuario + "!"%>
+</h1><br>
+
+<%=link_to "cadastrar dentista" %><br>
+<%=link_to "Crud Paciente" %><br>
+<%= "etc ..." %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= link_to "cadastrar novo admin?",cadastro_url %>
+  <br>
+  <br>
+  <%=button_to "Sair da Conta",logout_path, method: :delete %>
+  <br>
+  <br>
+  <%= button_to "Excluir este Admin", @admin, method: :delete %>
+</div>

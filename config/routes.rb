@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  resources :pacientes
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :pacientes
+  resources :home
+  resources :admin
+  get "cadastro", to: "cadastro#new"
+  post "cadastro", to: "cadastro#create"
+  get "login", to: "login#new"
+  post "login", to: "login#create"
+  delete"logout", to: "login#destroy"
+
+
+  root to: "home#index"
 end

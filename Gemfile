@@ -81,5 +81,9 @@ group :production do
   gem 'activerecord-postgresql-adapter'
 end
 
+
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+
 gem "validators"
 gem "cpf_cnpj"
+

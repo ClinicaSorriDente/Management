@@ -70,6 +70,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -128,8 +129,9 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.14.1-x64-mingw-ucrt)
+    nokogiri (1.14.2-x64-mingw-ucrt)
       racc (~> 1.4)
+    pg (1.4.6-x64-mingw-ucrt)
     nokogiri (1.14.1-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.5)
@@ -173,7 +175,7 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rubyzip (2.3.2)
-    selenium-webdriver (4.8.0)
+    selenium-webdriver (4.8.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -184,13 +186,14 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.6.1-x64-mingw-ucrt)
     sqlite3 (1.6.0-x64-mingw-ucrt)
     sqlite3 (1.6.0-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
-    timeout (0.3.1)
-    turbo-rails (1.3.3)
+    timeout (0.3.2)
+    turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
@@ -214,7 +217,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.6)
+    zeitwerk (2.6.7)
 
 PLATFORMS
   x64-mingw-ucrt
@@ -222,6 +225,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgresql-adapter
+  bcrypt (~> 3.1, >= 3.1.11)
   bootsnap
   capybara
   cpf_cnpj
