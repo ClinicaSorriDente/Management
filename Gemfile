@@ -80,3 +80,5 @@ group :production do
   gem 'pg'
   gem 'activerecord-postgresql-adapter'
 end
+
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
