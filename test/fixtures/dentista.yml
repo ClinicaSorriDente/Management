@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  telefone: MyString
+  CRO: MyString
+  CPF: MyString
+  especializacao: MyString
+  data: 2023-03-02
+  horaInicio: 2023-03-02 20:48:07
+  horaTermino: 2023-03-02 20:48:07
+
+two:
+  nome: MyString
+  telefone: MyString
+  CRO: MyString
+  CPF: MyString
+  especializacao: MyString
+  data: 2023-03-02
+  horaInicio: 2023-03-02 20:48:07
+  horaTermino: 2023-03-02 20:48:07
