@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<div align="center">
+  <h1>Acesso de Paciente</h1><br><br><br>
+
+  <%= form_with url: acesso_paciente_path do |form| %>
+    <div class="mb-3">
+      <%= form.label :cpf %><br>
+      <%= form.text_field :cpf,class:"form_control" %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit "Entrar" , class:"btn btn-primary"%>
+    </div>
+  <% end %>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= link_to "cadastrar novo Paciente?",new_paciente_path %>
+
+</div>
