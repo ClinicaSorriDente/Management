@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pacientes
   resources :home
   resources :admin
   get "cadastro", to: "cadastro#new"
