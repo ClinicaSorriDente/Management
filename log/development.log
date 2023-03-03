@@ -2604,3 +2604,800 @@ Processing by PacientesController#show as HTML
 Completed 200 OK in 34ms (Views: 19.7ms | ActiveRecord: 0.1ms | Allocations: 2230)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:31:31 -0300
+  [1m[35m (179.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230302024606_create_admins.rb
+
+
+):
+  
+activerecord (7.0.2.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdmins (20230302024606)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230302024606"]]
+  [1m[36mTRANSACTION (242.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:32:13 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 5346)
+  Rendered shared/_flash.html.erb (Duration: 5.1ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 988.4ms | Allocations: 26669)
+Completed 200 OK in 1098ms (Views: 996.2ms | ActiveRecord: 0.0ms | Allocations: 28796)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:33:58 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 5921)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 6016)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 6854)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `paciente_index_path' for #<ActionView::Base:0x0000000000c508>
+Did you mean?  paciente_path):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", paciente_index_path%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:35:18 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5701)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5795)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 6604)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `paciente' for #<ActionView::Base:0x0000000000c850>
+Did you mean?  paciente_url):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", paciente%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:35:29 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1865)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1959)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2770)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"pacientes"}, missing required keys: [:id]
+Did you mean?  paciente_url):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", paciente_path%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:35:45 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1835)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1930)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2746)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"pacientes"}, missing required keys: [:id]
+Did you mean?  paciente_path):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", paciente_url%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:36:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5702)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5796)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 6605)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pacientes' for #<ActionView::Base:0x0000000000d1d8>
+Did you mean?  pacientes_url):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", pacientes%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:37:12 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 806)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2496)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 3334)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:37:15 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 49ms (ActiveRecord: 0.0ms | Allocations: 2280)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:38:00 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (Allocations: 858)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:38:02 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 4ms (Allocations: 788)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:38:03 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 2ms (Allocations: 788)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:38:05 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 5ms (Allocations: 788)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:38:35 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 2ms (Allocations: 792)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:38:41 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 5709)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 5803)
+Completed 500 Internal Server Error in 22ms (Allocations: 6564)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pacientes' for #<ActionView::Base:0x0000000000e9c0>
+Did you mean?  pacientes_url):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", pacientes%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:38:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5407)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5495)
+Completed 500 Internal Server Error in 13ms (Allocations: 5768)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pacientes' for #<ActionView::Base:0x0000000000ecb8>
+Did you mean?  pacientes_url):
+    11:         <br>
+    12:         <br>
+    13:         <h3><small>Paciente<br></small></h3>
+    14:       <%= button_to "entrar", pacientes%>
+    15:       </h1>
+    16:     </p>
+    17: 
+  
+app/views/home/index.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:39:20 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 781)
+  Rendered shared/_flash.html.erb (Duration: 1.1ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2471)
+Completed 200 OK in 33ms (Views: 27.8ms | Allocations: 3282)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:39:21 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 4ms (Allocations: 816)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:40:07 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 4ms (Allocations: 785)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:40:12 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (Allocations: 785)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:41:00 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 3ms (Allocations: 785)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:41:06 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 769)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2459)
+Completed 200 OK in 21ms (Views: 17.8ms | Allocations: 3247)
+
+
+Started POST "/pacientes/index" for 127.0.0.1 at 2023-03-03 13:41:09 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/pacientes/index"):
+  
+Started POST "/pacientes/index" for 127.0.0.1 at 2023-03-03 13:41:36 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/pacientes/index"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:41:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 790)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 2480)
+Completed 200 OK in 25ms (Views: 19.9ms | Allocations: 3275)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:41:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 428)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1524)
+Completed 200 OK in 9ms (Views: 7.0ms | Allocations: 1821)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:41:45 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 805)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:42:26 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (Allocations: 763)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:42:31 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 763)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:42:44 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 778)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 2468)
+Completed 200 OK in 22ms (Views: 18.6ms | Allocations: 3242)
+
+
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:42:45 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 6ms (Allocations: 825)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:43:10 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 2ms (Allocations: 794)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started POST "/pacientes" for 127.0.0.1 at 2023-03-03 13:43:14 -0300
+Processing by PacientesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Completed 400 Bad Request in 6ms (Allocations: 794)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: paciente):
+  
+app/controllers/pacientes_controller.rb:68:in `paciente_params'
+app/controllers/pacientes_controller.rb:24:in `create'
+Started GET "/login" for 127.0.0.1 at 2023-03-03 13:45:08 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 376.3ms | Allocations: 4949)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 387.5ms | Allocations: 6710)
+Completed 200 OK in 405ms (Views: 399.7ms | Allocations: 7630)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-03 13:45:14 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2041)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3249)
+Completed 200 OK in 31ms (Views: 7.5ms | ActiveRecord: 1.0ms | Allocations: 8059)
+
+
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (1.2ms)[0m  [1m[32mINSERT INTO "admins" ("usuario", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["usuario", "Admin_padrao"], ["password_digest", "[FILTERED]"], ["created_at", "2023-03-03 16:48:00.595471"], ["updated_at", "2023-03-03 16:48:00.595471"]]
+  [1m[36mTRANSACTION (76.9ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/login" for 127.0.0.1 at 2023-03-03 13:48:45 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 26.0ms | Allocations: 840)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 2063)
+Completed 200 OK in 412ms (Views: 43.3ms | ActiveRecord: 0.7ms | Allocations: 14005)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 13:49:19 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 22.2ms | Allocations: 385)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 204.4ms | Allocations: 14743)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 212.2ms | Allocations: 16038)
+Completed 200 OK in 225ms (Views: 217.8ms | ActiveRecord: 1.2ms | Allocations: 16916)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-03 13:52:33 -0300
+Processing by LoginController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 602)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:52:33 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 724)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2017)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 2666)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 13:52:35 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1148)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 2239)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 2556)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 13:52:50 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 806)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 1889)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 3450)
+
+

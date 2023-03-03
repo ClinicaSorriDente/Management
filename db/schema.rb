@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_024606) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_03_040512) do
   create_table "admins", force: :cascade do |t|
     t.string "usuario"
     t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_03_040512) do
   create_table "pacientes", force: :cascade do |t|
     t.string "nome"
     t.date "nascimento"
@@ -24,7 +25,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_040512) do
     t.string "telefone"
     t.string "email"
     t.text "endereco"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
