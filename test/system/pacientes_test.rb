@@ -19,6 +19,7 @@ class PacientesTest < ApplicationSystemTestCase
     fill_in "Endereco", with: @paciente.endereco
     fill_in "Nascimento", with: @paciente.nascimento
     fill_in "Nome", with: @paciente.nome
+    fill_in "Telefone", with: @paciente.telefone
     click_on "Create Paciente"
 
     assert_text "Paciente was successfully created"
@@ -34,6 +35,7 @@ class PacientesTest < ApplicationSystemTestCase
     fill_in "Endereco", with: @paciente.endereco
     fill_in "Nascimento", with: @paciente.nascimento
     fill_in "Nome", with: @paciente.nome
+    fill_in "Telefone", with: @paciente.telefone
     click_on "Update Paciente"
 
     assert_text "Paciente was successfully updated"
