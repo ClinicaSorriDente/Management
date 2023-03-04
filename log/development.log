@@ -3401,3 +3401,1341 @@ Processing by PacientesController#show as HTML
 Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 3450)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-03 13:58:20 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 373)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1469)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1752)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 17:39:12 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 1.1ms | Allocations: 44)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 1750)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 2841)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 1.7ms | Allocations: 3133)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 17:49:16 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 697)
+  Rendered shared/_flash.html.erb (Duration: 6.7ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 2414)
+Completed 200 OK in 51ms (Views: 46.8ms | Allocations: 3376)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 17:50:44 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 794)
+  Rendered shared/_flash.html.erb (Duration: 1.1ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2477)
+Completed 200 OK in 33ms (Views: 29.0ms | Allocations: 3310)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:50:46 -0300
+  
+Zeitwerk::NameError (expected file C:/Users/rodri/OneDrive/Documentos/ClinicaSorriDente/ManegementClinicaSorriDente/app/controllers/acesso_paciente_controller.rb to define constant AcessoPacienteController, but didn't
+
+      raise Zeitwerk::NameError.new(msg, cref.last)
+      ^^^^^):
+  
+zeitwerk (2.6.7) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.7) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.2.2) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.2.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.2.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.2.2) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.2.2) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.2.2) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.2.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.2.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-03-03 17:51:57 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 805)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2495)
+Completed 200 OK in 21ms (Views: 17.9ms | Allocations: 3326)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:51:58 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:52:33 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-03 17:53:41 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 702)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2405)
+Completed 200 OK in 21ms (Views: 17.7ms | Allocations: 3233)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:53:43 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:56:26 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:56:29 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:56:30 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:56:30 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:56:31 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:56:48 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:57:32 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:57:34 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:57:35 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:57:36 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 17:59:10 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:04:48 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:04:50 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:04:51 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:04:51 -0300
+  
+ActionController::RoutingError (uninitialized constant AcessoPacienteController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Acesso_pacienteController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:06:32 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 6974)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7068)
+Completed 500 Internal Server Error in 30ms (Allocations: 8003)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `paciente_new_path' for #<ActionView::Base:0x0000000001fe28>
+Did you mean?  paciente_path
+               pacientes_path):
+    15:     </div>
+    16:   <% end %>
+    17: 
+    18:   <%= link_to "cadastrar novo Paciente?",paciente_new_path %>
+    19: 
+    20: </div>
+  
+app/views/acesso_paciente/new.html.erb:18
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:07:23 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1972)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3663)
+Completed 200 OK in 27ms (Views: 23.0ms | Allocations: 4500)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:08:00 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1969)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3649)
+Completed 200 OK in 27ms (Views: 22.4ms | Allocations: 4483)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:08:36 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1979)
+  Rendered shared/_flash.html.erb (Duration: 2.3ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 3659)
+Completed 200 OK in 44ms (Views: 37.7ms | Allocations: 4493)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:08:51 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1977)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3657)
+Completed 200 OK in 31ms (Views: 26.8ms | Allocations: 4491)
+
+
+Started GET "/pacientes/new" for 127.0.0.1 at 2023-03-03 18:08:59 -0300
+Processing by PacientesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/pacientes_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 87.6ms | Allocations: 3520)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 101.1ms | Allocations: 3898)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 106.7ms | Allocations: 5198)
+Completed 200 OK in 146ms (Views: 113.4ms | ActiveRecord: 0.4ms | Allocations: 9685)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:09:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 694)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1997)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 2773)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:10:29 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1554)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2650)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 2955)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:16:06 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 5.5ms | Allocations: 320)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 4384)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 5677)
+Completed 200 OK in 45ms (Views: 37.0ms | ActiveRecord: 0.6ms | Allocations: 7703)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:17:06 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 491)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1794)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2427)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:17:09 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1662)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2941)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3574)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:17:13 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 4560)
+
+
+  
+NameError (undefined local variable or method `pacientes' for #<AcessoPacienteController:0x00000000025ad0>
+
+      redirect_to pacientes, notice: "logado com sucesso"
+                  ^^^^^^^^^
+Did you mean?  @paciente):
+  
+app/controllers/acesso_paciente_controller.rb:10:in `create'
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:17:38 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  [1m[36mPaciente Load (1.0ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+Redirected to http://127.0.0.1:3000/pacientes
+Completed 302 Found in 42ms (ActiveRecord: 5.2ms | Allocations: 5685)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:17:41 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/pacientes/index.html.erb:6
+  Rendered pacientes/_paciente.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1460)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 2762)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 3469)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:18:22 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 844)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 1927)
+Completed 200 OK in 24ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 3436)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:20:36 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2816)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2910)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 3728)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for nil:NilClass):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <h1>
+    4:   <%=Bem vindo Paciente @paciente.nome %>
+    5: </h1>
+    6: 
+    7: <div id="pacientes">
+  
+app/views/pacientes/index.html.erb:4
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:22:10 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2739)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2833)
+Completed 500 Internal Server Error in 20ms (Allocations: 5094)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for nil:NilClass):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <h1>
+    4:   <%=Bem vindo Paciente @paciente.nome %>
+    5: </h1>
+    6: 
+    7: <div id="pacientes">
+  
+app/views/pacientes/index.html.erb:4
+Started GET "/home" for 127.0.0.1 at 2023-03-03 18:22:17 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 704)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2437)
+Completed 200 OK in 23ms (Views: 19.1ms | Allocations: 3199)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-03-03 18:22:18 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 391)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1487)
+Completed 200 OK in 10ms (Views: 8.3ms | Allocations: 1783)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:22:29 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1934)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3213)
+Completed 200 OK in 17ms (Views: 13.6ms | Allocations: 3975)
+
+
+Started GET "/pacientes/new" for 127.0.0.1 at 2023-03-03 18:22:32 -0300
+Processing by PacientesController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/pacientes_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/new.html.erb within layouts/application
+  Rendered pacientes/_form.html.erb (Duration: 3.7ms | Allocations: 2354)
+  Rendered pacientes/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2663)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3823)
+Completed 200 OK in 25ms (Views: 14.9ms | ActiveRecord: 1.7ms | Allocations: 7119)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:22:41 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 2521)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2609)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2886)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for nil:NilClass):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <h1>
+    4:   <%=Bem vindo Paciente @paciente.nome %>
+    5: </h1>
+    6: 
+    7: <div id="pacientes">
+  
+app/views/pacientes/index.html.erb:4
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:22:51 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1190)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2280)
+Completed 200 OK in 17ms (Views: 10.4ms | ActiveRecord: 0.2ms | Allocations: 3848)
+
+
+Started GET "/home" for 127.0.0.1 at 2023-03-03 18:24:01 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 386)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 1482)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 1768)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:24:03 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1506)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2602)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 2887)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:24:07 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4906)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4994)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 6257)
+
+
+  
+ActionView::Template::Error (undefined method `Paciente' for #<ActionView::Base:0x00000000031088>
+Did you mean?  paciente_url):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <h1>
+    4:   <%=Bem vindo Paciente @paciente.nome %>
+    5: </h1>
+    6: 
+    7: <div id="pacientes">
+  
+app/views/pacientes/index.html.erb:4
+app/controllers/acesso_paciente_controller.rb:10:in `create'
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:24:57 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.9ms | Allocations: 298)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 5814)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5908)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms | Allocations: 7533)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `paciente' for #<ActionView::Base:0x000000000313f8>
+Did you mean?  @paciente):
+     8: 
+     9:     <%= render @paciente %>
+    10:     <p>
+    11:       <%= link_to "Show this paciente", paciente %>
+    12:     </p>
+    13: 
+    14: </div>
+  
+app/views/pacientes/index.html.erb:11
+app/controllers/acesso_paciente_controller.rb:10:in `create'
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:25:44 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 1.3ms | Allocations: 298)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1524)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 3205)
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 0.2ms | Allocations: 4995)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:25:56 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.9ms | Allocations: 298)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 822)
+  Rendered shared/_flash.html.erb (Duration: 1.1ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2496)
+Completed 200 OK in 47ms (Views: 40.9ms | ActiveRecord: 0.2ms | Allocations: 4257)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:26:25 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.7ms | Allocations: 298)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 823)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 2497)
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.4ms | Allocations: 4256)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:26:36 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1872)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2969)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3323)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:26:42 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.2ms | Allocations: 43)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 232)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 1315)
+Completed 200 OK in 19ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 2483)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:29:05 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 1.0ms | Allocations: 298)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 789)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2463)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.2ms | Allocations: 4102)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:29:07 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1005)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2258)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 0.2ms | Allocations: 3458)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:29 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.9ms | Allocations: 298)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 891)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 2565)
+Completed 200 OK in 50ms (Views: 39.9ms | ActiveRecord: 0.9ms | Allocations: 4895)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:32 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 250)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1333)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 2558)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:34 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 250)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1333)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 2454)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:36 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 250)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1333)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 2406)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:37 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 250)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1333)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 2421)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:38 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 250)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1340)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 2428)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:35:55 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.5ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 431)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2117)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.5ms | Allocations: 3744)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:36:08 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 414)
+  Rendered shared/_flash.html.erb (Duration: 0.8ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 2100)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.3ms | Allocations: 3846)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:36:33 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 128)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1216)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 2435)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:36:47 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 408)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2101)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.2ms | Allocations: 3743)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:37:02 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 409)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 2095)
+Completed 200 OK in 38ms (Views: 30.8ms | ActiveRecord: 0.2ms | Allocations: 3871)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:40:17 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1212)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2912)
+Completed 200 OK in 40ms (Views: 22.8ms | ActiveRecord: 1.8ms | Allocations: 9259)
+
+
+Started GET "/paciente_logout" for 127.0.0.1 at 2023-03-03 18:40:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/paciente_logout"):
+  
+Started GET "/paciente_logout" for 127.0.0.1 at 2023-03-03 18:41:42 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/paciente_logout"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:42:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 715)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2025)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 2801)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:42:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 400)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1496)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1796)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:42:50 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1824)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2920)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3275)
+
+
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:42:56 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2606)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2700)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3450)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for nil:NilClass):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <h1>
+    4:   <%="Bem vindo " + @paciente.nome + "!" %><br><br>
+    5: </h1>
+    6: 
+    7: <div id="pacientes">
+  
+app/views/pacientes/index.html.erb:4
+Started GET "/pacientes" for 127.0.0.1 at 2023-03-03 18:42:57 -0300
+Processing by PacientesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2515)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2603)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2894)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for nil:NilClass):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <h1>
+    4:   <%="Bem vindo " + @paciente.nome + "!" %><br><br>
+    5: </h1>
+    6: 
+    7: <div id="pacientes">
+  
+app/views/pacientes/index.html.erb:4
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:43:05 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.7ms | Allocations: 311)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1285)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2534)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 4082)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:43:15 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 392)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1488)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 1771)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:43:17 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1537)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 2633)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2916)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:43:27 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 170)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1258)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 2367)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:43:32 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 606)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1689)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 2466)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:44:04 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.7ms | Allocations: 302)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1260)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2920)
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 0.2ms | Allocations: 4235)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:44:17 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.7ms | Allocations: 302)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1259)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 2919)
+Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 0.2ms | Allocations: 4313)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:44:25 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 1.5ms | Allocations: 302)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1256)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 2923)
+Completed 200 OK in 50ms (Views: 38.6ms | ActiveRecord: 0.2ms | Allocations: 4318)
+
+
+Started GET "/paciente_logout" for 127.0.0.1 at 2023-03-03 18:44:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/paciente_logout"):
+  
+Started GET "/paciente_logout" for 127.0.0.1 at 2023-03-03 18:53:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/paciente_logout"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:53:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 725)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 2428)
+Completed 200 OK in 30ms (Views: 25.4ms | Allocations: 3219)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:53:28 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 385)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 1488)
+Completed 200 OK in 13ms (Views: 10.7ms | Allocations: 1785)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-03 18:53:30 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 22.6ms | Allocations: 2825)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 4104)
+Completed 200 OK in 43ms (Views: 39.9ms | Allocations: 4867)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:53:36 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1975)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3250)
+Completed 200 OK in 18ms (Views: 14.4ms | Allocations: 3904)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:53:39 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 474)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 1562)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 1.5ms | Allocations: 3431)
+
+
+Started DELETE "/paciente_logout" for 127.0.0.1 at 2023-03-03 18:53:45 -0300
+Processing by AcessoPacienteController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 512)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:53:45 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 417)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1517)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 1800)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-03 18:54:29 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2842)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4522)
+Completed 200 OK in 40ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 5350)
+
+
+Started GET "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:54:32 -0300
+Processing by AcessoPacienteController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_paciente/new.html.erb within layouts/application
+  Rendered acesso_paciente/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1978)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3253)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 3903)
+
+
+Started POST "/acesso_paciente" for 127.0.0.1 at 2023-03-03 18:54:40 -0300
+Processing by AcessoPacienteController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cpf"=>"135.469.494-55", "commit"=>"Entrar"}
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_paciente_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/index.html.erb within layouts/application
+  Rendered pacientes/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 474)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1562)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 2827)
+
+
+Started GET "/pacientes/1" for 127.0.0.1 at 2023-03-03 18:56:19 -0300
+Processing by PacientesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pacientes_controller.rb:63:in `set_paciente'
+  Rendering layout layouts/application.html.erb
+  Rendering pacientes/show.html.erb within layouts/application
+  Rendered pacientes/_paciente.html.erb (Duration: 0.7ms | Allocations: 302)
+  Rendered pacientes/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1270)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2521)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 3697)
+
+
+Started DELETE "/paciente_logout" for 127.0.0.1 at 2023-03-03 18:56:26 -0300
+Processing by AcessoPacienteController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 537)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:56:26 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 732)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2025)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 2671)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-03 18:56:30 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2414)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3510)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 3812)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-03 18:56:36 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 798)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 2007)
+Completed 200 OK in 381ms (Views: 25.6ms | ActiveRecord: 0.9ms | Allocations: 12624)
+
+
+Started DELETE "/admin/1" for 127.0.0.1 at 2023-03-03 18:56:39 -0300
+Processing by AdminController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:9:in `set_admin'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 572)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1846)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 4160)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2023-03-03 18:56:41 -0300
+Processing by LoginController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 599)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-03 18:56:41 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 385)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1487)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 1785)
+
+
