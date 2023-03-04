@@ -1,14 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Dentista</h1>
+
+<h1>Dentistas</h1><br>
+
 
 <div id="dentista">
   <% @dentista.each do |dentistum| %>
     <%= render dentistum %>
     <p>
-      <%= link_to "Show this dentistum", dentistum %>
+      <%= link_to "Ver este dentista", dentistum %><br><hr>
+
+
     </p>
   <% end %>
 </div>
 
-<%= link_to "New dentistum", new_dentistum_path %>
+<%= link_to "voltar pra o Menu Principal", root_path  %>
+
