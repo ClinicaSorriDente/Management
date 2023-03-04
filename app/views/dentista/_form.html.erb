@@ -1,0 +1,57 @@
+<%= form_with(model: dentistum) do |form| %>
+  <% if dentistum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(dentistum.errors.count, "error") %> prohibited this dentistum from being saved:</h2>
+
+      <ul>
+        <% dentistum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :telefone, style: "display: block" %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div>
+    <%= form.label :CRO, style: "display: block" %>
+    <%= form.text_field :CRO %>
+  </div>
+
+  <div>
+    <%= form.label :CPF, style: "display: block" %>
+    <%= form.text_field :CPF %>
+  </div>
+
+  <div>
+    <%= form.label :especializacao, style: "display: block" %>
+    <%= form.text_field :especializacao %>
+  </div>
+
+  <div>
+    <%= form.label :data, style: "display: block" %>
+    <%= form.date_field :data %>
+  </div>
+
+  <div>
+    <%= form.label :horaInicio, style: "display: block" %>
+    <%= form.time_field :horaInicio %>
+  </div>
+
+  <div>
+    <%= form.label :horaTermino, style: "display: block" %>
+    <%= form.time_field :horaTermino %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
