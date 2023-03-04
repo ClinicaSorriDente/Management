@@ -6,11 +6,50 @@
   <component name="ChangeListManager">
     <list default="true" id="fde43509-7127-4129-b86d-27cefc6b5d08" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/dentistum.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/dentistum.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/acesso_paciente_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/acesso_paciente_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pacientes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pacientes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/acesso_paciente/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/acesso_paciente/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pacientes/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pacientes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pacientes/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/0m/0muYujPysAT5TNPk2C2L_tUjqzB-Fr5MlEQa3UhlfkI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/0m/0muYujPysAT5TNPk2C2L_tUjqzB-Fr5MlEQa3UhlfkI.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/0s/0s9sG2hAtfpirPXwcS2UgjFhP744thryArjjkJ1ZFjg.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/0s/0s9sG2hAtfpirPXwcS2UgjFhP744thryArjjkJ1ZFjg.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/1H/1HyneLliGLAocm4KVeWzj5tKGWdomYfz7rWloxQlXRc.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/1H/1HyneLliGLAocm4KVeWzj5tKGWdomYfz7rWloxQlXRc.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/2K/2Kqqs5CDZKeqQ8Zi3OcRThACYBsE09CB_YbQaG96080.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/2K/2Kqqs5CDZKeqQ8Zi3OcRThACYBsE09CB_YbQaG96080.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/5m/5m_-RNfWq5So-lzl-MMbyZ_hDj9qmvV8kAAy8M6yP1w.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/5m/5m_-RNfWq5So-lzl-MMbyZ_hDj9qmvV8kAAy8M6yP1w.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/6X/6Xww8hsnsm9n3S8CdwOfWphh6N4znwkB0mntLnVPiPo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/6X/6Xww8hsnsm9n3S8CdwOfWphh6N4znwkB0mntLnVPiPo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/7I/7IpqHy_BlNBPXENGsmmdLx8RrTDXvVmk7uv8Magk0gc.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/7I/7IpqHy_BlNBPXENGsmmdLx8RrTDXvVmk7uv8Magk0gc.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/7J/7Jnpdg3FsPTG40aT7-xqYBbE0AOv1gBt6Z52wO1844s.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/7J/7Jnpdg3FsPTG40aT7-xqYBbE0AOv1gBt6Z52wO1844s.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/8J/8JOedZF9m0P656fHle8DWmmJffxhiciEo-B9Ta6NyG8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/8J/8JOedZF9m0P656fHle8DWmmJffxhiciEo-B9Ta6NyG8.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/G5/G5136oWaUx64iXXiw5LWytCV8N-k28dqikZsd0iOhU4.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/G5/G5136oWaUx64iXXiw5LWytCV8N-k28dqikZsd0iOhU4.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/GU/GUXS7k4VfsjGuhsxfyGG76mAYUhY8GGlkz1mU4NkPso.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/GU/GUXS7k4VfsjGuhsxfyGG76mAYUhY8GGlkz1mU4NkPso.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/GZ/GZ-DT6MN77EM-pobcb5yB8HOpsY7aXJijQ41KJMLVys.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/GZ/GZ-DT6MN77EM-pobcb5yB8HOpsY7aXJijQ41KJMLVys.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Hh/Hhcm4e1MGwHKtoihxTj4lYwtXkBaqD5g714iQUpR5kY.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Hh/Hhcm4e1MGwHKtoihxTj4lYwtXkBaqD5g714iQUpR5kY.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/LA/LASwtniX9MlTUrFc-Zp0bmUTXlXUF_GOtlCWec-ph0E.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/LA/LASwtniX9MlTUrFc-Zp0bmUTXlXUF_GOtlCWec-ph0E.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/MT/MTEnHHaywLmZgfy_VKjrjuCunrcODzEnX5Lr1oXowb8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/MT/MTEnHHaywLmZgfy_VKjrjuCunrcODzEnX5Lr1oXowb8.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Q-/Q-Rm5AyxDNc0s_6WuN9SumCXohsKH1aQYno4v1jSecE.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Q-/Q-Rm5AyxDNc0s_6WuN9SumCXohsKH1aQYno4v1jSecE.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Rj/RjITTgXNhsy9d6_H3HVGlhto2m2GSseMjQ3buurxOiI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/Rj/RjITTgXNhsy9d6_H3HVGlhto2m2GSseMjQ3buurxOiI.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/X1/X1q6zxqfICxwgp-7tbOj5HG7QZYIrGUX5hyuqO-kCVI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/X1/X1q6zxqfICxwgp-7tbOj5HG7QZYIrGUX5hyuqO-kCVI.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/_l/_lmcKXxRaxUDiNERjd5Z-ltZO0j3thtH8vDw8Trzy8k.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/_l/_lmcKXxRaxUDiNERjd5Z-ltZO0j3thtH8vDw8Trzy8k.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/bp/bpKck68ac48ui_lBNwfGgbeL0GcxyawRbrO7PrTvbS0.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/bp/bpKck68ac48ui_lBNwfGgbeL0GcxyawRbrO7PrTvbS0.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/eH/eHkM8Qu4eQ1QU0gM0XTeMM8P5yFbOj8K8nnwX1gHpZs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/eH/eHkM8Qu4eQ1QU0gM0XTeMM8P5yFbOj8K8nnwX1gHpZs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/eV/eV4zslRY89uKmfBRbtjZnvcQohy7SNzuMK5iZsLDHvU.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/eV/eV4zslRY89uKmfBRbtjZnvcQohy7SNzuMK5iZsLDHvU.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/fU/fU2ThWcDrrIALVIrW0RmOpUmxZmVBN-GiFnVEapMcm4.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/fU/fU2ThWcDrrIALVIrW0RmOpUmxZmVBN-GiFnVEapMcm4.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/jE/jE8naJQC8LBy-gbNT-g-ygvqSqjt69w9k6c6X04lbpM.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/jE/jE8naJQC8LBy-gbNT-g-ygvqSqjt69w9k6c6X04lbpM.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/jc/jc1J4EeLVW8Ks0VlBK3Stv-bWm1JSK6GoIXNKtDRpTI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/jc/jc1J4EeLVW8Ks0VlBK3Stv-bWm1JSK6GoIXNKtDRpTI.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/kh/khBncaHlisoaRejDYhYotR2IGka5bNnR5OWEU2PmNME.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/kh/khBncaHlisoaRejDYhYotR2IGka5bNnR5OWEU2PmNME.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/mM/mMBWs31oZsgSvMNytPhKSGclpLqMsMVnReYfi5v9Wyo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/mM/mMBWs31oZsgSvMNytPhKSGclpLqMsMVnReYfi5v9Wyo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/mP/mPFtfvziV-O7Dq620s-wcIuXHhOpnMVqyCGVPXpb5XQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/mP/mPFtfvziV-O7Dq620s-wcIuXHhOpnMVqyCGVPXpb5XQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/rP/rPh6s5ySCRtk_FgosmhuLUbqX9sgaMKwoIM6NlDx4sw.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/rP/rPh6s5ySCRtk_FgosmhuLUbqX9sgaMKwoIM6NlDx4sw.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/sF/sFl5hRhm9xfeXKRJgtxx5I5uv9x5DcZOwIiQumkGeqw.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/sF/sFl5hRhm9xfeXKRJgtxx5I5uv9x5DcZOwIiQumkGeqw.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/vA/vA1Fwm32zp3m9St7Hxh8mfMnsZRsWIyIVzXw34IDnJU.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/vA/vA1Fwm32zp3m9St7Hxh8mfMnsZRsWIyIVzXw34IDnJU.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/wZ/wZGok-cp0cP13fBskcX6wNG4i-PgCgKeUoNL-hJUyrk.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/wZ/wZGok-cp0cP13fBskcX6wNG4i-PgCgKeUoNL-hJUyrk.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/yz/yzZSNGOgYTVOYYVqZ_HQ8X355AzyOczxth9G1_LnE08.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/yz/yzZSNGOgYTVOYYVqZ_HQ8X355AzyOczxth9G1_LnE08.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/zU/zULaB21oHeRh6yxfzr06qnoFRzvoRRkG_vl4eUTpU4E.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/zU/zULaB21oHeRh6yxfzr06qnoFRzvoRRkG_vl4eUTpU4E.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,39 +60,56 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MTnb2PCEhU0iYaivD45Wg2lwMU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/acesso_paciente" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/acesso_paciente" />
+      <recent name="$PROJECT_DIR$/app/controllers" />
+      <recent name="$PROJECT_DIR$/app/views/lista_pacientes" />
+      <recent name="$PROJECT_DIR$/app/views/admin" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.Development: ManagementEsClinica">
     <configuration name="Development: ManagementEsClinica" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="ManagementEsClinica" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
@@ -68,12 +124,17 @@
       <module name="ManagementEsClinica" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
@@ -92,7 +153,12 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -114,7 +180,12 @@
         <env name="RAILS_ENV" value="test" />
       </envs>
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
@@ -138,6 +209,8 @@
       <workItem from="1677800514892" duration="1335000" />
       <workItem from="1677878249960" duration="648000" />
       <workItem from="1677882194776" duration="1786000" />
+      <workItem from="1677896964450" duration="12050000" />
+      <workItem from="1677936154672" duration="6459000" />
     </task>
     <servers />
   </component>
@@ -154,5 +227,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__Clinica_SorriDente.rcov" NAME="Development: Clinica-SorriDente Coverage Results" MODIFIED="1677889089797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
+    <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__ManagementEsClinica.rcov" NAME="Development: ManagementEsClinica Coverage Results" MODIFIED="1677940425196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
   </component>
 </project>

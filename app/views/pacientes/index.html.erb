@@ -1,17 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>
-  <%="Bem vindo " + @paciente.nome + "!" %><br><br>
-</h1>
+<h1>Pacientes</h1>
 
 <div id="pacientes">
-
+  <% @pacientes.each do |paciente| %>
+    <%= render paciente %>
     <p>
-      <%= link_to "Ver mais informações", @paciente %><br><br>
-      <%= link_to "Me consultar" %><br><br>
-      <%= button_to "Sair da Conta", paciente_logout_path, method: :delete %>
+      <%= link_to "Ver paciente", paciente %>
     </p>
-
+  <% end %>
 </div>
 
-
+<%= link_to "voltar pra o Menu Principal", root_path  %>
