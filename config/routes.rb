@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   post "acesso_paciente", to: "acesso_paciente#create"
   delete"paciente_logout", to: "acesso_paciente#destroy"
 
+
   root to: "home#index"
 end

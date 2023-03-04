@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  <%="Bem vindo, " + @paciente.nome + "!" %><br><br>
+</h1>
+
+<div id="pacientes">
+
+    <p>
+      <%= link_to "Ver mais informações", @paciente %><br><br>
+      <%= link_to "Me consultar" %><br><br>
+      <%= button_to "Sair da Conta", paciente_logout_path, method: :delete %>
+      <%= button_to "Apagar conta", @paciente, method: :delete %>
+    </p>
+
+
+</div>
+
+
