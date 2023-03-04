@@ -1,11 +1,14 @@
 <div align="center">
 <h1>
   <%="Bem vindo " + @admin.usuario + "!"%>
-</h1><br>
+</h1><br><br>
 
-<%=link_to "cadastrar dentista" %><br>
-<%=link_to "Crud Paciente" %><br>
-<%= "etc ..." %>
+<%=link_to "cadastrar dentista",new_dentistum_path %><br><br>
+<%=link_to "visualizar dentistas", "dentista"  %><br><br>
+<%=link_to "cadastrar paciente",new_paciente_path  %><br><br>
+<%=link_to "visualizar pacientes" %><br><br>
+
+
   <br>
   <br>
   <br>
