@@ -1,4 +1,6 @@
 <div id="<%= dom_id paciente %>">
+  <h2>Paciente</h2>
+  <ul>
   <p>
     <strong>Nome:</strong>
     <%= paciente.nome %>
@@ -23,10 +25,34 @@
     <strong>Email:</strong>
     <%= paciente.email %>
   </p>
+  </ul>
+  <h2>Endereço</h2>
+  <ul>
+    <p>
+      <strong>Cep:</strong>
+      <%= paciente.endereco_paciente.cep %>
+    </p>
 
-  <p>
-    <strong>Endereco:</strong>
-    <%= paciente.endereco %>
-  </p>
+    <p>
+      <strong>Cidade:</strong>
+      <%= paciente.endereco_paciente.cidade %>
+    </p>
+
+    <p>
+      <strong>Bairro:</strong>
+      <%= paciente.endereco_paciente.bairro %>
+    </p>
+
+    <p>
+      <strong>Logradouro:</strong>
+      <%= paciente.endereco_paciente.logradouro %>
+    </p>
+
+    <p>
+      <strong>Complemento:</strong>
+      <%= paciente.endereco_paciente.complemento %><br>
+    </p>
+  </ul>
+
 
 </div>
