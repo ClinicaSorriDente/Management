@@ -1,5 +1,5 @@
 <%= form_with(model: paciente) do |form| %>
-  <% if paciente.errors.any? %>
+  <% if paciente.errors.any?%>
     <div style="color: red">
       <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
 
@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <h2>Paciente</h2>
   <div>
     <%= form.label :nome, style: "display: block" %>
     <%= form.text_field :nome %>
@@ -36,11 +37,39 @@
     <%= form.text_field :email %>
   </div>
 
-  <div>
-    <%= form.label :endereco, style: "display: block" %>
-    <%= form.text_area :endereco %>
-  </div>
 
+
+  <%= form.fields_for :endereco_paciente do |formu| %>
+    <div>
+      <%= formu.label :cep %><br>
+      <%= formu.text_field :cep %>
+      <% paciente.errors[:endereco_paciente_attributes].each do |message| %>
+        <div>
+          <%= message %>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <%= formu.label :cidade %><br>
+      <%= formu.text_field :cidade %>
+    </div>
+
+    <div>
+      <%= formu.label :bairro %><br>
+      <%= formu.text_field :bairro %>
+    </div>
+
+    <div>
+      <%= formu.label :logradouro %><br>
+      <%= formu.text_field :logradouro %>
+    </div>
+
+    <div>
+      <%= formu.label :complemento %><br>
+      <%= formu.text_field :complemento %>
+    </div>
+
+  <% end %>
   <div>
     <%= form.submit %>
   </div>

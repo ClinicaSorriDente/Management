@@ -13,6 +13,7 @@ class PacientesController < ApplicationController
   # GET /pacientes/new
   def new
     @paciente = Paciente.new
+    @paciente.build_endereco_paciente
   end
 
   # GET /pacientes/1/edit
@@ -22,7 +23,7 @@ class PacientesController < ApplicationController
   # POST /pacientes or /pacientes.json
   def create
     @paciente = Paciente.new(paciente_params)
-
+    @paciente.endereco_paciente = EnderecoPaciente.new(paciente_params[:endereco_paciente_attributes])
     respond_to do |format|
       if @paciente.save
         format.html { redirect_to paciente_url(@paciente), notice: "Paciente criado com sucesso." }
@@ -65,6 +66,7 @@ class PacientesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def paciente_params
-      params.require(:paciente).permit(:nome, :nascimento, :cpf, :telefone, :email, :endereco)
+      params.require(:paciente).permit(:nome, :nascimento, :cpf, :telefone, :email,
+                                       endereco_paciente_attributes:  [:cep, :cidade, :bairro, :logradouro, :complemento])
     end
 end

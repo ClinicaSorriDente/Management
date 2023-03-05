@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_03_040512) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_04_205022) do
   create_table "admins", force: :cascade do |t|
     t.string "usuario"
     t.string "password_digest"
@@ -31,15 +31,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_040512) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "endereco_pacientes", force: :cascade do |t|
+    t.string "cep"
+    t.string "cidade"
+    t.string "bairro"
+    t.string "logradouro"
+    t.string "complemento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "paciente_id", null: false
+    t.index ["paciente_id"], name: "index_endereco_pacientes_on_paciente_id"
+  end
+
   create_table "pacientes", force: :cascade do |t|
     t.string "nome"
     t.date "nascimento"
     t.string "cpf"
     t.string "telefone"
     t.string "email"
-    t.text "endereco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "endereco_pacientes", "pacientes"
 end

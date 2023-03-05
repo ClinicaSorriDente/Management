@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-
-  resources :pacientes
+  resources :pacientes do
+    resources :endereco_paciente
+  end
   resources :home
   resources :admin
   resources :dentista
