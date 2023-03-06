@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde43509-7127-4129-b86d-27cefc6b5d08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/helpers/endereco_pacientes_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/endereco_paciente.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230304192538_create_endereco_pacientes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20230304205022_add_paciente_to_endereco_paciente.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/endereco_pacientes_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/endereco_pacientes.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/endereco_paciente_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/endereco_pacientes_test.rb" afterDir="false" />
+    <list default="true" id="fde43509-7127-4129-b86d-27cefc6b5d08" name="Changes" comment="Registro de Endereço de Paciente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pacientes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pacientes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/paciente.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/paciente.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pacientes/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pacientes/_paciente.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/_paciente.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pacientes/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pacientes/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20230303040512_create_pacientes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230303040512_create_pacientes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/endereco_pacientes_controller_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/endereco_pacientes.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/pacientes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/pacientes.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/paciente_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/paciente_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/system/endereco_pacientes_test.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +66,7 @@
       <recent name="$PROJECT_DIR$/app/views/admin" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: ManagementEsClinica">
+  <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_salvar_Admin_sem_senha">
     <configuration name="Development: ManagementEsClinica" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="ManagementEsClinica" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -178,6 +168,76 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_salvar_Admin_sem_senha" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true" nameIsGenerated="true">
+      <module name="Clinica-SorriDente" />
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/admin_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/test/models/admin_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="^test_salvar_Admin_sem_senha$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_the_truth" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true" nameIsGenerated="true">
+      <module name="Clinica-SorriDente" />
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-Itest" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/test/models/admin_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="$MODULE_DIR$/test/models/admin_test.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="^test_the_truth$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_METHOD" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Test::Unit/Shoulda/Minitest.test_salvar_Admin_sem_senha" />
+        <item itemvalue="Test::Unit/Shoulda/Minitest.test_the_truth" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -194,7 +254,8 @@
       <workItem from="1677896964450" duration="12050000" />
       <workItem from="1677936154672" duration="7501000" />
       <workItem from="1677949712068" duration="28241000" />
-      <workItem from="1677995164701" duration="873000" />
+      <workItem from="1677995164701" duration="1442000" />
+      <workItem from="1678035832515" duration="16452000" />
     </task>
     <task id="LOCAL-00001" summary="Acesso do Admin a funções sobre pacientes / Ajustes no acesso a Paciente">
       <created>1677943133953</created>
@@ -203,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677943133953</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Registro de Endereço de Paciente">
+      <created>1677996040066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677996040066</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +294,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Registro de Endereço de Paciente" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Clinica_SorriDente@test_the_truth.rcov" NAME="test_the_truth Coverage Results" MODIFIED="1678059425775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
     <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__Clinica_SorriDente.rcov" NAME="Development: Clinica-SorriDente Coverage Results" MODIFIED="1677889089797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
-    <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__ManagementEsClinica.rcov" NAME="Development: ManagementEsClinica Coverage Results" MODIFIED="1677995449610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
+    <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__ManagementEsClinica.rcov" NAME="Development: ManagementEsClinica Coverage Results" MODIFIED="1678039410274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
+    <SUITE FILE_PATH="coverage/Clinica_SorriDente@test_salvar_Admin_sem_senha.rcov" NAME="test_salvar_Admin_sem_senha Coverage Results" MODIFIED="1678067493412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
   </component>
 </project>
