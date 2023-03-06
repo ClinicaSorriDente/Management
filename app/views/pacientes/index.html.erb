@@ -1,12 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Pacientes</h1>
+<h1>Pacientes</h1><br>
 
 <div id="pacientes">
   <% @pacientes.each do |paciente| %>
     <%= render paciente %>
     <p>
-      <%= link_to "Ver paciente", paciente %>
+      <%= link_to "Ver paciente", paciente %><br><hr>
     </p>
   <% end %>
 </div>

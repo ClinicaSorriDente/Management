@@ -16,7 +16,6 @@ class PacientesTest < ApplicationSystemTestCase
 
     fill_in "Cpf", with: @paciente.cpf
     fill_in "Email", with: @paciente.email
-    fill_in "Endereco", with: @paciente.endereco
     fill_in "Nascimento", with: @paciente.nascimento
     fill_in "Nome", with: @paciente.nome
     fill_in "Telefone", with: @paciente.telefone
@@ -32,7 +31,6 @@ class PacientesTest < ApplicationSystemTestCase
 
     fill_in "Cpf", with: @paciente.cpf
     fill_in "Email", with: @paciente.email
-    fill_in "Endereco", with: @paciente.endereco
     fill_in "Nascimento", with: @paciente.nascimento
     fill_in "Nome", with: @paciente.nome
     fill_in "Telefone", with: @paciente.telefone
