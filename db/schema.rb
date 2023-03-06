@@ -49,7 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_205022) do
     t.string "cpf"
     t.string "telefone"
     t.string "email"
-    t.text "endereco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
