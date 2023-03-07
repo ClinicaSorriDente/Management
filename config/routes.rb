@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :consulta
   resources :pacientes do
     resources :endereco_paciente
   end

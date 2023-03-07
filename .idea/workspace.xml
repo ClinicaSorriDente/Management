@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fde43509-7127-4129-b86d-27cefc6b5d08" name="Changes" comment="Registro de Endereço de Paciente">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Clinica-SorriDente.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Clinica-SorriDente.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20230303040512_create_pacientes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20230303040512_create_pacientes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/dentistum.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/dentistum.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/paciente.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/paciente.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/endereco_pacientes_controller_test.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/endereco_pacientes.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/pacientes.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/pacientes.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/models/paciente_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/paciente_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/endereco_pacientes_test.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,12 +52,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/acesso_paciente" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -256,6 +259,7 @@
       <workItem from="1677949712068" duration="28241000" />
       <workItem from="1677995164701" duration="1442000" />
       <workItem from="1678035832515" duration="16452000" />
+      <workItem from="1678157281980" duration="4258000" />
     </task>
     <task id="LOCAL-00001" summary="Acesso do Admin a funções sobre pacientes / Ajustes no acesso a Paciente">
       <created>1677943133953</created>
@@ -295,8 +299,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Clinica_SorriDente@test_the_truth.rcov" NAME="test_the_truth Coverage Results" MODIFIED="1678059425775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
+    <SUITE FILE_PATH="coverage/Clinica_SorriDente@test_salvar_Admin_sem_senha.rcov" NAME="test_salvar_Admin_sem_senha Coverage Results" MODIFIED="1678067493412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
     <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__Clinica_SorriDente.rcov" NAME="Development: Clinica-SorriDente Coverage Results" MODIFIED="1677889089797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
     <SUITE FILE_PATH="coverage/Clinica_SorriDente@Development__ManagementEsClinica.rcov" NAME="Development: ManagementEsClinica Coverage Results" MODIFIED="1678039410274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
-    <SUITE FILE_PATH="coverage/Clinica_SorriDente@test_salvar_Admin_sem_senha.rcov" NAME="test_salvar_Admin_sem_senha Coverage Results" MODIFIED="1678067493412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
   </component>
 </project>
