@@ -7,7 +7,7 @@ Feature: Dentista
     Given eu estou na pagina de dentista
     And eu vejo um dentista com cpf "70383167450"
     When eu clico em remover o dentista
-    Then eu vejo uma mensagem que o dentista com cpf "12378965450" foi removido
+    Then eu vejo uma mensagem que o dentista com cpf "70383167450" foi removido
 
   Scenario: cadastrar Dentista com CRO invalido
     Given eu estou na pagina de criar dentista
