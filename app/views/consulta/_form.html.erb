@@ -1,0 +1,37 @@
+<%= form_with(model: consultum) do |form| %>
+  <% if consultum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(consultum.errors.count, "error") %> prohibited this consultum from being saved:</h2>
+
+      <ul>
+        <% consultum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :data, style: "display: block" %>
+    <%= form.date_field :data %>
+  </div>
+
+  <div>
+    <%= form.label :horario, style: "display: block" %>
+    <%= form.time_field :horario %>
+  </div>
+
+  <div>
+    <%= form.label :paciente_id, style: "display: block" %>
+    <%= form.collection_select :paciente_id, Paciente.all, :id, :nome %>
+  </div>
+
+  <div>
+    <%= form.label :dentistum_id, style: "display: block" %>
+    <%= form.collection_select :dentistum_id, Dentistum.all, :id, :nome %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
