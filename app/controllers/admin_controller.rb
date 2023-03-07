@@ -5,6 +5,9 @@ class AdminController < ApplicationController
 
   end
 
+  def show
+  end
+
   def set_admin
     @admin = Admin.find(params[:id])
   end

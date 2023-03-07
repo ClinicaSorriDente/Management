@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Ver este dentista", @dentistum %> |
-  <%= link_to "Voltar para dentistas", dentista_path %>
+  <%= link_to "Ver este dentista", "/admin/#{@dentistum.admin_id}/dentista/#{@dentistum.id}" %> |
+  <%= link_to "Voltar para dentistas", admin_dentista_path %>
 </div>

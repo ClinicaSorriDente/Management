@@ -13,6 +13,7 @@ class DentistaController < ApplicationController
   # GET /dentista/new
   def new
     @dentistum = Dentistum.new
+    @dentistum.build_admin
   end
 
   # GET /dentista/1/edit
@@ -21,40 +22,36 @@ class DentistaController < ApplicationController
 
   # POST /dentista or /dentista.json
   def create
-    @dentistum = Dentistum.new(dentistum_params)
+    @admin = Admin.find(params[:admin_id])
+    @dentistum = @admin.dentistums.create(dentistum_params)
 
-    respond_to do |format|
       if @dentistum.save
-        format.html { redirect_to dentistum_url(@dentistum), notice: "Dentistum was successfully created." }
-        format.json { render :show, status: :created, location: @dentistum }
+        redirect_to admin_dentista_path, notice: "Dentista foi Criado com sucesso"
+
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @dentistum.errors, status: :unprocessable_entity }
+        render :'dentista/new', status: :unprocessable_entity
+
+
       end
-    end
   end
 
   # PATCH/PUT /dentista/1 or /dentista/1.json
   def update
-    respond_to do |format|
       if @dentistum.update(dentistum_params)
-        format.html { redirect_to dentistum_url(@dentistum), notice: "Dentistum was successfully updated." }
-        format.json { render :show, status: :ok, location: @dentistum }
+        redirect_to admin_dentista_path, notice: "Dentista foi atualizado mcom sucesso"
+
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @dentistum.errors, status: :unprocessable_entity }
+        render :'dentista/edit', status: :unprocessable_entity
+
       end
-    end
+
   end
 
   # DELETE /dentista/1 or /dentista/1.json
   def destroy
     @dentistum.destroy
+    redirect_to admin_dentista_path, notice: "Dentista excluido com sucesso"
 
-    respond_to do |format|
-      format.html { redirect_to dentista_url, notice: "Dentistum was successfully destroyed." }
-      format.json { head :no_content }
-    end
   end
 
   private

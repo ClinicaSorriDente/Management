@@ -3,8 +3,7 @@
 <%= render @dentistum %>
 
 <div>
-  <%= link_to "Editar este dentista", edit_dentistum_path(@dentistum) %> |
-  <%= link_to "Voltar para dentistas", dentista_path %>
+  <%= link_to "Voltar para dentistas", admin_dentista_path %>
 
-  <%= button_to "Destruir este dentista", @dentistum, method: :delete %>
+  <%= button_to "Destruir este dentista", "/admin/#{@dentistum.admin_id}/dentista/#{@dentistum.id}", method: :delete %>
 </div>

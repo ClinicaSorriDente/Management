@@ -7,13 +7,14 @@
 <div id="dentista">
   <% @dentista.each do |dentistum| %>
     <%= render dentistum %>
-    <p>
-      <%= link_to "Ver este dentista", dentistum %><br><hr>
 
+    <p>
+      <%= link_to "Ver este dentista",  "/admin/#{dentistum.admin_id}/dentista/#{dentistum.id}" %><br><hr>
 
     </p>
   <% end %>
 </div>
+
 
 <%= link_to "voltar pra o Menu Principal", root_path  %>
 

@@ -1,4 +1,4 @@
-<%= form_with(model: dentistum) do |form| %>
+<%= form_with model: @dentistum, url: new_admin_dentistum_path do |form| %>
   <% if dentistum.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(dentistum.errors.count, "error") %> prohibited this dentistum from being saved:</h2>
