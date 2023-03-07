@@ -13,7 +13,7 @@ class DentistaController < ApplicationController
   # GET /dentista/new
   def new
     @dentistum = Dentistum.new
-    @dentistum.build_admin
+
   end
 
   # GET /dentista/1/edit
@@ -22,8 +22,7 @@ class DentistaController < ApplicationController
 
   # POST /dentista or /dentista.json
   def create
-    @admin = Admin.find(params[:admin_id])
-    @dentistum = @admin.dentistums.create(dentistum_params)
+    @dentistum = Dentistum.new(dentistum_params)
 
       if @dentistum.save
         redirect_to admin_dentista_path, notice: "Dentista foi Criado com sucesso"
