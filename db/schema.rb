@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_04_205022) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_044417) do
   create_table "admins", force: :cascade do |t|
     t.string "usuario"
     t.string "password_digest"
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_205022) do
     t.time "horaTermino"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "admin_id", null: false
+    t.index ["admin_id"], name: "index_dentista_on_admin_id"
   end
 
   create_table "endereco_pacientes", force: :cascade do |t|
@@ -49,10 +51,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_04_205022) do
     t.string "cpf"
     t.string "telefone"
     t.string "email"
-    t.text "endereco"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "dentista", "admins"
   add_foreign_key "endereco_pacientes", "pacientes"
 end

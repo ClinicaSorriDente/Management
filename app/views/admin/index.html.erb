@@ -3,21 +3,17 @@
   <%="Bem vindo, " + @admin.usuario + "!"%>
 </h1><br><br>
 
-<%=link_to "cadastrar dentista",new_dentistum_path %><br><br>
-<%=link_to "visualizar dentistas", "dentista"  %><br><br>
+<%=link_to "cadastrar dentista", new_admin_dentistum_path(@admin)%><br><br>
+<%=link_to "visualizar dentistas", admin_dentista_path(@admin) ,method: :get %><br><br>
 <%=link_to "cadastrar paciente",new_paciente_path  %><br><br>
 <%=link_to "visualizar pacientes", "pacientes" %><br><br>
-
-
   <br>
   <br>
   <br>
   <br>
-  <%= link_to "cadastrar novo admin?",cadastro_url %>
   <br>
   <br>
   <%=button_to "Sair da Conta",logout_path, method: :delete %>
   <br>
   <br>
-  <%= button_to "Excluir este Admin", @admin, method: :delete %>
 </div>
