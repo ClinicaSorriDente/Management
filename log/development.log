@@ -19129,3 +19129,938 @@ Processing by ConsultaController#index as HTML
 Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 3100)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-07 06:56:59 -0300
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1249)
+  Rendered shared/_flash.html.erb (Duration: 1.2ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 461.1ms | Allocations: 23266)
+Completed 200 OK in 601ms (Views: 509.5ms | ActiveRecord: 0.0ms | Allocations: 26619)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-07 06:57:05 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 182.7ms | Allocations: 4861)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 189.0ms | Allocations: 6169)
+Completed 200 OK in 199ms (Views: 196.4ms | ActiveRecord: 0.0ms | Allocations: 6961)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-07 06:57:08 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 603)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 1822)
+Completed 200 OK in 800ms (Views: 29.2ms | ActiveRecord: 2.9ms | Allocations: 10244)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 06:57:11 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.6ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 2.7ms | Allocations: 430)
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 60.9ms | Allocations: 5873)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 7168)
+Completed 200 OK in 444ms (Views: 83.0ms | ActiveRecord: 2.4ms | Allocations: 9228)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 06:57:21 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.8ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.4ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 1168.7ms | Allocations: 15722)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 1171.9ms | Allocations: 16026)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 1180.3ms | Allocations: 17251)
+Completed 200 OK in 1186ms (Views: 1177.4ms | ActiveRecord: 4.8ms | Allocations: 17689)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 06:57:31 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-08", "horario"=>"12:57", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.8ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.3ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Create (1278.7ms)[0m  [1m[32mINSERT INTO "consulta" ("data", "horario", "paciente_id", "dentistum_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "2023-03-08"], ["horario", "2000-01-01 12:57:00"], ["paciente_id", 1], ["dentistum_id", 1], ["created_at", "2023-03-07 09:57:32.099978"], ["updated_at", "2023-03-07 09:57:32.099978"]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2026.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/consulta/6
+Completed 302 Found in 4583ms (ActiveRecord: 3306.1ms | Allocations: 18059)
+
+
+Started GET "/consulta/6" for 127.0.0.1 at 2023-03-07 06:57:35 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mConsultum Load (0.6ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 68)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 999)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2196)
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 3797)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 06:57:39 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.7ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.5ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.7ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1833)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 2924)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.3ms | Allocations: 3219)
+
+
+Started GET "/consulta/2" for 127.0.0.1 at 2023-03-07 06:57:45 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 680)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1768)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 2542)
+
+
+Started DELETE "/consulta/2" for 127.0.0.1 at 2023-03-07 06:57:48 -0300
+Processing by ConsultaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mConsultum Destroy (15.4ms)[0m  [1m[31mDELETE FROM "consulta" WHERE "consulta"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (437.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/consulta
+Completed 302 Found in 467ms (ActiveRecord: 453.6ms | Allocations: 2692)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 06:57:49 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1723)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 2818)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms | Allocations: 3112)
+
+
+Started GET "/consulta/2" for 127.0.0.1 at 2023-03-07 06:58:17 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mConsultum Load (0.5ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms | Allocations: 960)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Consultum with 'id'=2):
+  
+app/controllers/consulta_controller.rb:63:in `set_consultum'
+Started GET "/consulta/1" for 127.0.0.1 at 2023-03-07 07:08:22 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 987)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2251)
+Completed 200 OK in 39ms (Views: 16.5ms | ActiveRecord: 1.3ms | Allocations: 7654)
+
+
+Started DELETE "/consulta/1" for 127.0.0.1 at 2023-03-07 07:08:29 -0300
+Processing by ConsultaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mConsultum Destroy (1.0ms)[0m  [1m[31mDELETE FROM "consulta" WHERE "consulta"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (162.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/consulta
+Completed 302 Found in 181ms (ActiveRecord: 163.7ms | Allocations: 2793)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:08:29 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1594)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 2696)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.4ms | Allocations: 3007)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:08:34 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.5ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 31.0ms | Allocations: 10169)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 31.7ms | Allocations: 10282)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 11506)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.9ms | Allocations: 11836)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:08:46 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-02-26", "horario"=>"08:08", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "consulta" WHERE "consulta"."horario" = ? LIMIT ?[0m  [["horario", "2000-01-01 08:08:00"], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.9ms | Allocations: 11334)
+
+
+  
+NameError (uninitialized constant Consultum::ConsultaMedica
+
+    agendas_no_mesmo_horario = ConsultaMedica.where(horario: horario.strftime("%H:%M"), data: data)
+                               ^^^^^^^^^^^^^^):
+  
+app/models/consultum.rb:16:in `horario_reservado'
+app/controllers/consulta_controller.rb:27:in `block in create'
+app/controllers/consulta_controller.rb:26:in `create'
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:10:05 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-02-26", "horario"=>"08:08", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/consulta_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.5ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.3ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 45.2ms | Allocations: 3478)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 45.9ms | Allocations: 3604)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 4881)
+Completed 422 Unprocessable Entity in 122ms (Views: 54.1ms | ActiveRecord: 4.4ms | Allocations: 24836)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:10:17 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-02-22", "horario"=>"08:08:00.000", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.1ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 11.8ms | Allocations: 2935)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3038)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 4131)
+Completed 422 Unprocessable Entity in 35ms (Views: 20.7ms | ActiveRecord: 1.0ms | Allocations: 8578)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:10:24 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-02-28", "horario"=>"08:08:00.000", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (14.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.4ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 60.3ms | Allocations: 2935)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 60.9ms | Allocations: 3038)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 4138)
+Completed 422 Unprocessable Entity in 145ms (Views: 53.8ms | ActiveRecord: 15.3ms | Allocations: 8353)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:10:34 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 78)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1682)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2773)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 3129)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:10:38 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.4ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 14.7ms | Allocations: 2705)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2808)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 3909)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.6ms | Allocations: 4210)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:10:45 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-22", "horario"=>"09:10", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.1ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Create (1.6ms)[0m  [1m[32mINSERT INTO "consulta" ("data", "horario", "paciente_id", "dentistum_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "2023-03-22"], ["horario", "2000-01-01 09:10:00"], ["paciente_id", 1], ["dentistum_id", 1], ["created_at", "2023-03-07 10:10:45.523282"], ["updated_at", "2023-03-07 10:10:45.523282"]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (183.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/consulta/7
+Completed 302 Found in 211ms (ActiveRecord: 185.4ms | Allocations: 4574)
+
+
+Started GET "/consulta/7" for 127.0.0.1 at 2023-03-07 07:10:45 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 733)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1820)
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 3222)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:10:48 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1663)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2754)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 3048)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:10:51 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 9.2ms | Allocations: 2698)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2801)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3902)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.5ms | Allocations: 4200)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:11:10 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-02-26", "horario"=>"07:14", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.1ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 11.2ms | Allocations: 2946)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3049)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 4149)
+Completed 422 Unprocessable Entity in 42ms (Views: 22.7ms | ActiveRecord: 1.2ms | Allocations: 8333)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:11:15 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1661)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 2752)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 3047)
+
+
+Started GET "/consulta/4" for 127.0.0.1 at 2023-03-07 07:13:16 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 987)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 2244)
+Completed 200 OK in 39ms (Views: 12.3ms | ActiveRecord: 2.1ms | Allocations: 7988)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:13:21 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1786)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2878)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 3196)
+
+
+Started GET "/consulta/7" for 127.0.0.1 at 2023-03-07 07:13:27 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 692)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 1775)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 2572)
+
+
+Started DELETE "/consulta/7" for 127.0.0.1 at 2023-03-07 07:13:28 -0300
+Processing by ConsultaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mConsultum Destroy (1.2ms)[0m  [1m[31mDELETE FROM "consulta" WHERE "consulta"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (174.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/consulta
+Completed 302 Found in 189ms (ActiveRecord: 176.2ms | Allocations: 2703)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:13:29 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1524)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 2626)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.3ms | Allocations: 2920)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:13:31 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.4ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 36.1ms | Allocations: 11168)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 36.9ms | Allocations: 11281)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 12509)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 3.1ms | Allocations: 12839)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:13:40 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-08", "horario"=>"09:13", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms | Allocations: 10192)
+
+
+  
+NameError (uninitialized constant Consultum::ConsultaMedica
+
+        agendas_no_mesmo_horario = ConsultaMedica.where(horario: horario.strftime("%H:%M"), data: data)
+                                   ^^^^^^^^^^^^^^):
+  
+app/models/consultum.rb:14:in `horario_reservado'
+app/controllers/consulta_controller.rb:27:in `block in create'
+app/controllers/consulta_controller.rb:26:in `create'
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:17:34 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/consulta/index.html.erb:6
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 69.3ms | Allocations: 8133)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 86.5ms | Allocations: 12349)
+  Rendered layout layouts/application.html.erb (Duration: 87.2ms | Allocations: 12443)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 2.1ms | Allocations: 14789)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for #<Consultum id: 4, data: "2023-03-13", horario: "2000-01-01 04:01:00.000000000 +0000", paciente_id: 1, dentistum_id: 1, created_at: "2023-03-07 04:01:41.122352000 +0000", updated_at: "2023-03-07 04:01:41.122352000 +0000">):
+    11: 
+    12:   <p>
+    13:     <strong>Paciente:</strong>
+    14:     <%= consultum.nome %>
+    15:   </p>
+    16: 
+    17:   <p>
+  
+app/views/consulta/_consultum.html.erb:14
+app/views/consulta/index.html.erb:7
+app/views/consulta/index.html.erb:6
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:18:22 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 5.4ms | Allocations: 3299)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4844)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 4938)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms | Allocations: 5781)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for 1:Integer):
+    11: 
+    12:   <p>
+    13:     <strong>Paciente:</strong>
+    14:     <%= consultum.paciente_id.nome %>
+    15:   </p>
+    16: 
+    17:   <p>
+  
+app/views/consulta/_consultum.html.erb:14
+app/views/consulta/index.html.erb:7
+app/views/consulta/index.html.erb:6
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:18:39 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 1.6ms | Allocations: 280)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.6ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2267)
+  Rendered shared/_flash.html.erb (Duration: 1.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 3990)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.3ms | Allocations: 4873)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:26:32 -0300
+Processing by ConsultaController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/consulta_controller.rb:15:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.5ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 38.1ms | Allocations: 11597)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 40.8ms | Allocations: 11966)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 13261)
+Completed 200 OK in 73ms (Views: 47.6ms | ActiveRecord: 4.4ms | Allocations: 17406)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:26:56 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-07", "horario"=>"10:00", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "consulta" WHERE "consulta"."horario" = ? AND "consulta"."data" = ? LIMIT ?[0m  [["horario", "2000-01-01 10:00:00"], ["data", "2023-03-07"], ["LIMIT", 1]]
+  ↳ app/models/consultum.rb:15:in `horario_reservado'
+  [1m[36mConsultum Create (1.0ms)[0m  [1m[32mINSERT INTO "consulta" ("data", "horario", "paciente_id", "dentistum_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "2023-03-07"], ["horario", "2000-01-01 10:00:00"], ["paciente_id", 1], ["dentistum_id", 1], ["created_at", "2023-03-07 10:26:56.875042"], ["updated_at", "2023-03-07 10:26:56.875042"]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (140.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/consulta/8
+Completed 302 Found in 166ms (ActiveRecord: 142.7ms | Allocations: 8938)
+
+
+Started GET "/consulta/8" for 127.0.0.1 at 2023-03-07 07:26:57 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 74)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1005)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2093)
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 3582)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:27:26 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.5ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.4ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 1.1ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 4.1ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1709)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 2800)
+Completed 200 OK in 31ms (Views: 27.1ms | ActiveRecord: 0.5ms | Allocations: 3097)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:27:29 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.3ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 9.8ms | Allocations: 2756)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2859)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 3963)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.6ms | Allocations: 4262)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:27:45 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-07", "horario"=>"10:00", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.1ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "consulta" WHERE "consulta"."horario" = ? AND "consulta"."data" = ? LIMIT ?[0m  [["horario", "2000-01-01 10:00:00"], ["data", "2023-03-07"], ["LIMIT", 1]]
+  ↳ app/models/consultum.rb:15:in `horario_reservado'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.3ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 10.7ms | Allocations: 2503)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2606)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3704)
+Completed 422 Unprocessable Entity in 38ms (Views: 20.1ms | ActiveRecord: 1.3ms | Allocations: 8599)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:29:16 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/consulta/index.html.erb:6
+  [1m[36mConsultum Load (0.7ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.6ms | Allocations: 115)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 4601)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5894)
+Completed 200 OK in 40ms (Views: 26.2ms | ActiveRecord: 2.4ms | Allocations: 7978)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:29:22 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.4ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 36.9ms | Allocations: 11126)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 37.6ms | Allocations: 11240)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 12464)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 2.8ms | Allocations: 12817)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:29:30 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-07", "horario"=>"07:29", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "consulta" WHERE "consulta"."horario" = ? AND "consulta"."data" = ? LIMIT ?[0m  [["horario", "2000-01-01 07:29:00"], ["data", "2023-03-07"], ["LIMIT", 1]]
+  ↳ app/models/consultum.rb:15:in `horario_reservado'
+  [1m[36mConsultum Create (1.6ms)[0m  [1m[32mINSERT INTO "consulta" ("data", "horario", "paciente_id", "dentistum_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["data", "2023-03-07"], ["horario", "2000-01-01 07:29:00"], ["paciente_id", 1], ["dentistum_id", 1], ["created_at", "2023-03-07 10:29:30.326177"], ["updated_at", "2023-03-07 10:29:30.326177"]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (155.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/consulta/9
+Completed 302 Found in 185ms (ActiveRecord: 157.8ms | Allocations: 8818)
+
+
+Started GET "/consulta/9" for 127.0.0.1 at 2023-03-07 07:29:30 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mConsultum Load (0.3ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 739)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1834)
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 3216)
+
+
+Started DELETE "/consulta/9" for 127.0.0.1 at 2023-03-07 07:31:01 -0300
+Processing by ConsultaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"9"}
+  [1m[36mConsultum Load (0.4ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mConsultum Destroy (1.4ms)[0m  [1m[31mDELETE FROM "consulta" WHERE "consulta"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (144.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/consulta
+Completed 302 Found in 163ms (ActiveRecord: 146.2ms | Allocations: 2609)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:31:01 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1708)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 2803)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 3099)
+
+
+Started GET "/consulta/6" for 127.0.0.1 at 2023-03-07 07:31:05 -0300
+Processing by ConsultaController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/show.html.erb within layouts/application
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 689)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1772)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 2545)
+
+
+Started DELETE "/consulta/6" for 127.0.0.1 at 2023-03-07 07:31:06 -0300
+Processing by ConsultaController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"6"}
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta" WHERE "consulta"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:63:in `set_consultum'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mConsultum Destroy (1.4ms)[0m  [1m[31mDELETE FROM "consulta" WHERE "consulta"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (177.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/consulta_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/consulta
+Completed 302 Found in 196ms (ActiveRecord: 178.9ms | Allocations: 2580)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-07 07:31:07 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/_consultum.html.erb (Duration: 0.3ms | Allocations: 60)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/_consultum.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered consulta/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1517)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 2612)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 2906)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-07 07:31:10 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.3ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 21.6ms | Allocations: 2723)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 22.3ms | Allocations: 2826)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 3934)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.5ms | Allocations: 4233)
+
+
+Started POST "/consulta" for 127.0.0.1 at 2023-03-07 07:32:17 -0300
+Processing by ConsultaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "consultum"=>{"data"=>"2023-03-07", "horario"=>"07:32", "paciente_id"=>"1", "dentistum_id"=>"1"}, "commit"=>"Criar Consultum"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/consulta_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes" WHERE "pacientes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista" WHERE "dentista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  [1m[36mConsultum Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "consulta" WHERE "consulta"."horario" = ? AND "consulta"."data" = ? LIMIT ?[0m  [["horario", "2000-01-01 07:32:00"], ["data", "2023-03-07"], ["LIMIT", 1]]
+  ↳ app/models/consultum.rb:16:in `horario_reservado'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/consulta_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.4ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.4ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 28.9ms | Allocations: 2982)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 29.9ms | Allocations: 3108)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 4385)
+Completed 422 Unprocessable Entity in 110ms (Views: 40.3ms | ActiveRecord: 5.5ms | Allocations: 25335)
+
+
