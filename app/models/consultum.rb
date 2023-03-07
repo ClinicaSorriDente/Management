@@ -6,8 +6,8 @@ class Consultum < ApplicationRecord
   validates :data, inclusion: { in: lambda { |record| Date.today..Date::Infinity.new }, message: "inválida!" }
 
   validates :horario, presence: true
-  validate :horario_reservado
   validate :horario_fora_do_expediente
+  validate :horario_reservado
 
   private
   #Valida se o horário já esta reservado

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde43509-7127-4129-b86d-27cefc6b5d08" name="Changes" comment="CRUD consulta">
+    <list default="true" id="fde43509-7127-4129-b86d-27cefc6b5d08" name="Changes" comment="validacoes consulta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/consultum.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/consultum.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +256,7 @@
       <workItem from="1677995164701" duration="1442000" />
       <workItem from="1678035832515" duration="16452000" />
       <workItem from="1678157281980" duration="5472000" />
-      <workItem from="1678182879455" duration="2225000" />
+      <workItem from="1678182879455" duration="2715000" />
     </task>
     <task id="LOCAL-00001" summary="Acesso do Admin a funções sobre pacientes / Ajustes no acesso a Paciente">
       <created>1677943133953</created>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678162038485</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="validacoes consulta">
+      <created>1678185161583</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678185161583</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +307,8 @@
     <MESSAGE value="Acesso do Admin a funções sobre pacientes / Ajustes no acesso a Paciente" />
     <MESSAGE value="Registro de Endereço de Paciente" />
     <MESSAGE value="CRUD consulta" />
-    <option name="LAST_COMMIT_MESSAGE" value="CRUD consulta" />
+    <MESSAGE value="validacoes consulta" />
+    <option name="LAST_COMMIT_MESSAGE" value="validacoes consulta" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Clinica_SorriDente@test_the_truth.rcov" NAME="test_the_truth Coverage Results" MODIFIED="1678059425775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Clinica-SorriDente" />
