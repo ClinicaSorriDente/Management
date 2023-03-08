@@ -3,7 +3,7 @@ class Consultum < ApplicationRecord
   belongs_to :dentistum
 
   validates :data, presence: true
-  validates :data, inclusion: { in: lambda { |record| Date.today..Date::Infinity.new }, message: "inválida!" }
+  validates :data, inclusion: { in: lambda { Time.zone.today..Date::Infinity.new }, message: "inválida!" }
 
   validates :horario, presence: true
   validate :horario_fora_do_expediente
@@ -13,12 +13,11 @@ class Consultum < ApplicationRecord
   #Valida se o horário já esta reservado
   def horario_reservado
     agendas_no_mesmo_horario = Consultum.where(horario: horario.strftime("%H:%M"), data: data)
-    if !agendas_no_mesmo_horario.empty?
+    unless agendas_no_mesmo_horario.empty?
       errors.add(:horario, "já está reservado")
     end
   end
 
-  private
   #Valida se o horário da consulta está no intervalo de 8:00 as 16:00
   def horario_fora_do_expediente
     aberto = Time.parse("8:00").strftime("%H:%M")
