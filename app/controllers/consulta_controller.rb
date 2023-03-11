@@ -21,7 +21,11 @@ class ConsultaController < ApplicationController
 
   # POST /consulta or /consulta.json
   def create
+    @paciente = Paciente.find(consultum_params[:paciente_id])
+    @dentista = Dentistum.find(consultum_params[:dentistum_id])
     @consultum = Consultum.new(consultum_params)
+    @paciente.consultums << @consultum
+    @dentista.consultums << @consultum
 
     respond_to do |format|
       if @consultum.save
