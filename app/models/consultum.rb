@@ -1,11 +1,10 @@
 # frozen_string_literal: true
-
 class Consultum < ApplicationRecord
   belongs_to :paciente
   belongs_to :dentistum
 
   validates :data, presence: true
-  validates :data, inclusion: { in: lambda { |_record| Time.zone.today..Date::Infinity.new }, message: 'inválida!' }
+  validates :data, inclusion: { in: ->(_record) { Time.zone.today..Date::Infinity.new }, message: 'inválida!' }
 
   validates :horario, presence: true
   validate :horario_fora_do_expediente
