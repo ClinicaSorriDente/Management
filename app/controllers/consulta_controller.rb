@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class ConsultaController < ApplicationController
-  before_action :set_consultum, only: %i[ show edit update destroy ]
+  before_action :set_consultum, only: %i[show edit update destroy]
 
   # GET /consulta or /consulta.json
   def index
@@ -7,8 +9,7 @@ class ConsultaController < ApplicationController
   end
 
   # GET /consulta/1 or /consulta/1.json
-  def show
-  end
+  def show; end
 
   # GET /consulta/new
   def new
@@ -16,16 +17,19 @@ class ConsultaController < ApplicationController
   end
 
   # GET /consulta/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /consulta or /consulta.json
   def create
+    @paciente = Paciente.find(consultum_params[:paciente_id])
+    @dentista = Dentistum.find(consultum_params[:dentistum_id])
     @consultum = Consultum.new(consultum_params)
+    @paciente.consultums << @consultum
+    @dentista.consultums << @consultum
 
     respond_to do |format|
       if @consultum.save
-        format.html { redirect_to consultum_url(@consultum), notice: "Consultum was successfully created." }
+        format.html { redirect_to consultum_url(@consultum), notice: 'Consulta foi criada com sucesso.' }
         format.json { render :show, status: :created, location: @consultum }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +42,7 @@ class ConsultaController < ApplicationController
   def update
     respond_to do |format|
       if @consultum.update(consultum_params)
-        format.html { redirect_to consultum_url(@consultum), notice: "Consultum was successfully updated." }
+        format.html { redirect_to consultum_url(@consultum), notice: 'Consulta foi atualizada com sucesso' }
         format.json { render :show, status: :ok, location: @consultum }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +56,21 @@ class ConsultaController < ApplicationController
     @consultum.destroy
 
     respond_to do |format|
-      format.html { redirect_to consulta_url, notice: "Consultum was successfully destroyed." }
+      format.html { redirect_to consulta_url, notice: 'Consulta doi destruida com sucesso' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_consultum
-      @consultum = Consultum.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def consultum_params
-      params.require(:consultum).permit(:data, :horario, :paciente_id, :dentistum_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_consultum
+    current_paciente = Paciente.find(session[:paciente_id])
+    current_paciente.consultums.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def consultum_params
+    params.require(:consultum).permit(:data, :horario, :paciente_id, :dentistum_id)
+  end
 end
