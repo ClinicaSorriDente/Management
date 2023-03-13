@@ -66,7 +66,12 @@ class ConsultaController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_consultum
     current_paciente = Paciente.find(session[:paciente_id])
-    current_paciente.consultums.find(params[:id])
+    if !current_paciente
+      current_paciente.consultums.find(params[:id])
+    else
+      @consultum = Consultum.find(params[:id])
+    end
+
   end
 
   # Only allow a list of trusted parameters through.
