@@ -21311,3 +21311,136 @@ Completed 200 OK in 509ms (Views: 4.8ms | ActiveRecord: 9.3ms | Allocations: 931
   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-08 00:09:54 -0300
+  [1m[35m (14.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 39.6ms | Allocations: 853)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 445.7ms | Allocations: 21876)
+Completed 200 OK in 517ms (Views: 461.8ms | ActiveRecord: 0.0ms | Allocations: 24946)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-08 00:11:20 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 1020)
+  Rendered shared/_flash.html.erb (Duration: 0.9ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 181.6ms | Allocations: 21426)
+Completed 200 OK in 236ms (Views: 213.9ms | ActiveRecord: 0.0ms | Allocations: 24496)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-08 00:13:24 -0300
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1011)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 21416)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.0ms | Allocations: 24486)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecepcionista (20230314174832)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "recepcionista" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "credencial" varchar, "cpf" varchar, "telefone" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230314174832"]]
+  [1m[36mTRANSACTION (103.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-14 15:51:51 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 853)
+  Rendered shared/_flash.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 239.4ms | Allocations: 21634)
+Completed 200 OK in 322ms (Views: 257.7ms | ActiveRecord: 0.0ms | Allocations: 24718)
+
+
+Started GET "/routes" for 127.0.0.1 at 2023-03-14 15:52:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/recepcionista" for 127.0.0.1 at 2023-03-14 15:52:20 -0300
+Processing by RecepcionistaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/index.html.erb within layouts/application
+  [1m[36mRecepcionistum Load (0.1ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista"[0m
+  ↳ app/views/recepcionista/index.html.erb:6
+  Rendered recepcionista/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1319)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2572)
+Completed 200 OK in 50ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 4759)
+
+
+Started GET "/recepcionista/new" for 127.0.0.1 at 2023-03-14 15:52:22 -0300
+Processing by RecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 139.4ms | Allocations: 3727)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 143.0ms | Allocations: 4067)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 145.9ms | Allocations: 5252)
+Completed 200 OK in 174ms (Views: 150.1ms | ActiveRecord: 0.4ms | Allocations: 10586)
+
+
+Started POST "/recepcionista" for 127.0.0.1 at 2023-03-14 15:53:16 -0300
+Processing by RecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "recepcionistum"=>{"nome"=>"", "credencial"=>"", "cpf"=>"135.469.494-56", "telefone"=>"", "email"=>""}, "commit"=>"Criar Recepcionistum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "recepcionista" WHERE "recepcionista"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-56"], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 23.0ms | Allocations: 10750)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 10857)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 12015)
+Completed 422 Unprocessable Entity in 36ms (Views: 27.4ms | ActiveRecord: 0.2ms | Allocations: 18118)
+
+
+Started POST "/recepcionista" for 127.0.0.1 at 2023-03-14 15:53:22 -0300
+Processing by RecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "recepcionistum"=>{"nome"=>"", "credencial"=>"", "cpf"=>"135.469.494-55", "telefone"=>"", "email"=>""}, "commit"=>"Criar Recepcionistum"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "recepcionista" WHERE "recepcionista"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 32.2ms | Allocations: 9657)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 34.4ms | Allocations: 9756)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 10804)
+Completed 422 Unprocessable Entity in 73ms (Views: 52.0ms | ActiveRecord: 0.3ms | Allocations: 14800)
+
+
+Started GET "/recepcionista" for 127.0.0.1 at 2023-03-14 15:53:38 -0300
+Processing by RecepcionistaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/index.html.erb within layouts/application
+  [1m[36mRecepcionistum Load (0.1ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista"[0m
+  ↳ app/views/recepcionista/index.html.erb:6
+  Rendered recepcionista/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 762)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 1810)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms | Allocations: 2086)
+
+
