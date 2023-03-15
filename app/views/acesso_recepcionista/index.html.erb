@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  <%="Bem vindo, " + @recepcionistum.nome + "!" %><br><br>
+</h1>
+
+<div id="recepcionistas">
+
+  <p>
+    <%= link_to "Ver mais informações", @recepcionistum %><br><br>
+    <%= link_to "Agendar consultas",new_consultum_path %><br><br>
+    <%=link_to "visualizar Consultas", "consulta" %><br><br>
+    <%= button_to "Sair da Conta", recepcionista_logout_path, method: :delete %><br>
+    <%= button_to "Apagar conta", @recepcionistum, method: :delete %>
+  </p>
+
+
+</div>

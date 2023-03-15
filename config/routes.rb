@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   post "acesso_paciente", to: "acesso_paciente#create"
   delete"paciente_logout", to: "acesso_paciente#destroy"
   post "admin/:admin_id/dentista/new", to: "dentista#create"
+  get "acesso_recepcionista", to: "acesso_recepcionista#new"
+  post "acesso_recepcionista", to: "acesso_recepcionista#create"
+  delete"recepcionista_logout", to: "acesso_recepcionista#destroy"
 
 
   root to: "home#index"

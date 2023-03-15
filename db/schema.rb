@@ -74,6 +74,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_174832) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "relatorio_consulta", force: :cascade do |t|
+    t.integer "consulta_id"
+    t.boolean "presente"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "consulta", "dentista"
   add_foreign_key "consulta", "pacientes"
   add_foreign_key "endereco_pacientes", "pacientes"

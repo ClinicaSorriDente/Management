@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<div align="center">
+  <h1>Acesso de Recepcionista</h1><br><br><br>
+
+  <%= form_with url: acesso_recepcionista_path do |form| %>
+    <div class="mb-3">
+      <%= form.label :credencial %><br>
+      <%= form.text_field :credencial,class:"form_control" %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit "Entrar" , class:"btn btn-primary"%>
+    </div>
+  <% end %>
+
+</div>
