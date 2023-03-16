@@ -17,7 +17,7 @@ class RelatorioConsultaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create relatorio_consultum" do
     assert_difference("RelatorioConsultum.count") do
-      post relatorio_consulta_url, params: { relatorio_consultum: { consulta_id: @relatorio_consultum.consulta_id, presente: @relatorio_consultum.presente } }
+      post relatorio_consulta_url, params: { relatorio_consultum: { comentario: @relatorio_consultum.comentario, presente: @relatorio_consultum.presente } }
     end
 
     assert_redirected_to relatorio_consultum_url(RelatorioConsultum.last)
@@ -34,7 +34,7 @@ class RelatorioConsultaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update relatorio_consultum" do
-    patch relatorio_consultum_url(@relatorio_consultum), params: { relatorio_consultum: { consulta_id: @relatorio_consultum.consulta_id, presente: @relatorio_consultum.presente } }
+    patch relatorio_consultum_url(@relatorio_consultum), params: { relatorio_consultum: { comentario: @relatorio_consultum.comentario, presente: @relatorio_consultum.presente } }
     assert_redirected_to relatorio_consultum_url(@relatorio_consultum)
   end
 

@@ -1,3 +1,4 @@
 class RelatorioConsultum < ApplicationRecord
-  validates :presente, presence: true
+  
+  validates :comentario, length: {in: 5..100},presence:true
 end

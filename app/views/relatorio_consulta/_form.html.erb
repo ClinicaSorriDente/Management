@@ -12,13 +12,13 @@
   <% end %>
 
   <div>
-    <%= form.label :consulta_id, style: "display: block" %>
-    <%= form.number_field :consulta_id %>
+    <%= form.label :presente, style: "display: block" %>
+    <%= form.check_box :presente %>
   </div>
 
   <div>
-    <%= form.label :presente, style: "display: block" %>
-    <%= form.check_box :presente %>
+    <%= form.label :comentario, style: "display: block" %>
+    <%= form.text_area :comentario %>
   </div>
 
   <div>

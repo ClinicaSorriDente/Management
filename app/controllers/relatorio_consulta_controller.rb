@@ -65,6 +65,6 @@ class RelatorioConsultaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def relatorio_consultum_params
-      params.require(:relatorio_consultum).permit(:consulta_id, :presente)
+      params.require(:relatorio_consultum).permit(:presente, :comentario)
     end
 end

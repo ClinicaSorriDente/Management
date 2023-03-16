@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :relatorio_consulta
   resources :recepcionista
   resources :consulta
   resources :pacientes do

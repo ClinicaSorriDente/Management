@@ -14,7 +14,7 @@ class RelatorioConsultaTest < ApplicationSystemTestCase
     visit relatorio_consulta_url
     click_on "New relatorio consultum"
 
-    fill_in "Consulta", with: @relatorio_consultum.consulta_id
+    fill_in "Comentario", with: @relatorio_consultum.comentario
     check "Presente" if @relatorio_consultum.presente
     click_on "Create Relatorio consultum"
 
@@ -26,7 +26,7 @@ class RelatorioConsultaTest < ApplicationSystemTestCase
     visit relatorio_consultum_url(@relatorio_consultum)
     click_on "Edit this relatorio consultum", match: :first
 
-    fill_in "Consulta", with: @relatorio_consultum.consulta_id
+    fill_in "Comentario", with: @relatorio_consultum.comentario
     check "Presente" if @relatorio_consultum.presente
     click_on "Update Relatorio consultum"
 
