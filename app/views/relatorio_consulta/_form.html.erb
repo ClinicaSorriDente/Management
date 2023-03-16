@@ -1,0 +1,27 @@
+<%= form_with(model: relatorio_consultum) do |form| %>
+  <% if relatorio_consultum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(relatorio_consultum.errors.count, "error") %> prohibited this relatorio_consultum from being saved:</h2>
+
+      <ul>
+        <% relatorio_consultum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :presente, style: "display: block" %>
+    <%= form.check_box :presente %>
+  </div>
+
+  <div>
+    <%= form.label :comentario, style: "display: block" %>
+    <%= form.text_area :comentario %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

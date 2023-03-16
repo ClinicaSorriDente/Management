@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_174832) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_15_234417) do
   create_table "admins", force: :cascade do |t|
     t.string "usuario"
     t.string "password_digest"
@@ -70,6 +70,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_174832) do
     t.string "cpf"
     t.string "telefone"
     t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relatorio_consulta", force: :cascade do |t|
+    t.boolean "presente"
+    t.text "comentario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
