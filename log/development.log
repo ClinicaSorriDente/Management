@@ -21444,3 +21444,432 @@ Processing by RecepcionistaController#index as HTML
 Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms | Allocations: 2086)
 
 
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-16 12:53:40 -0300
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 894)
+  Rendered shared/_flash.html.erb (Duration: 1.0ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 284.8ms | Allocations: 21995)
+Completed 200 OK in 384ms (Views: 290.4ms | ActiveRecord: 0.0ms | Allocations: 25105)
+
+
+Started GET "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 12:53:47 -0300
+Processing by AcessoRecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/new.html.erb within layouts/application
+  Rendered acesso_recepcionista/new.html.erb within layouts/application (Duration: 71.2ms | Allocations: 3255)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 80.4ms | Allocations: 4506)
+Completed 200 OK in 90ms (Views: 89.3ms | ActiveRecord: 0.0ms | Allocations: 5289)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-16 12:53:56 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 2871)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 4122)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms | Allocations: 4898)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-16 12:53:58 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 656)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1822)
+Completed 200 OK in 365ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 9379)
+
+
+Started GET "/recepcionista/new" for 127.0.0.1 at 2023-03-16 12:54:03 -0300
+Processing by RecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 8.7ms | Allocations: 2402)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2762)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3993)
+Completed 200 OK in 33ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 9125)
+
+
+Started POST "/recepcionista" for 127.0.0.1 at 2023-03-16 12:54:52 -0300
+Processing by RecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "recepcionistum"=>{"nome"=>"Gison Vilaça", "credencial"=>"611", "cpf"=>"135.469.494-55", "telefone"=>"87981586575", "email"=>"///////////////"}, "commit"=>"Criar Recepcionistum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "recepcionista" WHERE "recepcionista"."cpf" = ? LIMIT ?[0m  [["cpf", "135.469.494-55"], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Create (9.7ms)[0m  [1m[32mINSERT INTO "recepcionista" ("nome", "credencial", "cpf", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Gison Vilaça"], ["credencial", "611"], ["cpf", "135.469.494-55"], ["telefone", "87981586575"], ["email", "///////////////"], ["created_at", "2023-03-16 15:54:52.769350"], ["updated_at", "2023-03-16 15:54:52.769350"]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/recepcionista/1
+Completed 302 Found in 56ms (ActiveRecord: 22.3ms | Allocations: 5047)
+
+
+Started GET "/recepcionista/1" for 127.0.0.1 at 2023-03-16 12:54:52 -0300
+Processing by RecepcionistaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepcionistum Load (0.2ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:63:in `set_recepcionistum'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/show.html.erb within layouts/application
+  Rendered recepcionista/_recepcionistum.html.erb (Duration: 15.2ms | Allocations: 289)
+  Rendered recepcionista/show.html.erb within layouts/application (Duration: 72.4ms | Allocations: 6408)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 7556)
+Completed 200 OK in 87ms (Views: 82.4ms | ActiveRecord: 0.2ms | Allocations: 9067)
+
+
+Started GET "/recepcionista" for 127.0.0.1 at 2023-03-16 12:55:05 -0300
+Processing by RecepcionistaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/index.html.erb within layouts/application
+  [1m[36mRecepcionistum Load (0.2ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista"[0m
+  ↳ app/views/recepcionista/index.html.erb:6
+  Rendered recepcionista/_recepcionistum.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered recepcionista/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1305)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 2348)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms | Allocations: 2726)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 12:56:09 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 267)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 1312)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 1575)
+
+
+Started GET "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 12:56:14 -0300
+Processing by AcessoRecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/new.html.erb within layouts/application
+  Rendered acesso_recepcionista/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1402)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2447)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 2709)
+
+
+Started POST "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 12:56:18 -0300
+Processing by AcessoRecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "credencial"=>"611", "commit"=>"Entrar"}
+  [1m[36mRecepcionistum Load (0.2ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."credencial" = ? LIMIT ?[0m  [["credencial", "611"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_recepcionista_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/index.html.erb within layouts/application
+  Rendered acesso_recepcionista/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 564)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 1604)
+Completed 200 OK in 31ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 2829)
+
+
+Started GET "/consulta/new" for 127.0.0.1 at 2023-03-16 12:56:23 -0300
+Processing by ConsultaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/new.html.erb within layouts/application
+  [1m[36mPaciente Load (0.2ms)[0m  [1m[34mSELECT "pacientes".* FROM "pacientes"[0m
+  ↳ app/views/consulta/_form.html.erb:26
+  [1m[36mDentistum Load (0.2ms)[0m  [1m[34mSELECT "dentista".* FROM "dentista"[0m
+  ↳ app/views/consulta/_form.html.erb:31
+  Rendered consulta/_form.html.erb (Duration: 266.2ms | Allocations: 8170)
+  Rendered consulta/new.html.erb within layouts/application (Duration: 321.6ms | Allocations: 8530)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 323.5ms | Allocations: 9773)
+Completed 200 OK in 429ms (Views: 324.7ms | ActiveRecord: 5.8ms | Allocations: 14956)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2023-03-16 12:56:28 -0300
+Processing by ConsultaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering consulta/index.html.erb within layouts/application
+  [1m[36mConsultum Load (0.2ms)[0m  [1m[34mSELECT "consulta".* FROM "consulta"[0m
+  ↳ app/views/consulta/index.html.erb:6
+  Rendered consulta/index.html.erb within layouts/application (Duration: 67.4ms | Allocations: 1074)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 73.8ms | Allocations: 2120)
+Completed 200 OK in 78ms (Views: 74.6ms | ActiveRecord: 0.2ms | Allocations: 2566)
+
+
+Started GET "/recepcionista/1" for 127.0.0.1 at 2023-03-16 12:56:31 -0300
+Processing by RecepcionistaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepcionistum Load (0.1ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:63:in `set_recepcionistum'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/show.html.erb within layouts/application
+  Rendered recepcionista/_recepcionistum.html.erb (Duration: 0.2ms | Allocations: 37)
+  Rendered recepcionista/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 528)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 1560)
+Completed 200 OK in 34ms (Views: 29.5ms | ActiveRecord: 0.1ms | Allocations: 2340)
+
+
+Started GET "/recepcionista/1" for 127.0.0.1 at 2023-03-16 12:57:16 -0300
+Processing by RecepcionistaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepcionistum Load (0.3ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:63:in `set_recepcionistum'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/show.html.erb within layouts/application
+  Rendered recepcionista/_recepcionistum.html.erb (Duration: 10.7ms | Allocations: 243)
+  Rendered recepcionista/show.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1101)
+  Rendered shared/_flash.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 2703)
+Completed 200 OK in 32ms (Views: 23.4ms | ActiveRecord: 0.3ms | Allocations: 4016)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 13:37:32 -0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1053)
+  Rendered shared/_flash.html.erb (Duration: 0.6ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 375.6ms | Allocations: 21467)
+Completed 200 OK in 444ms (Views: 383.7ms | ActiveRecord: 0.0ms | Allocations: 24575)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-16 13:37:35 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 77.1ms | Allocations: 4356)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 86.1ms | Allocations: 5607)
+Completed 200 OK in 101ms (Views: 94.8ms | ActiveRecord: 0.0ms | Allocations: 6385)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-16 13:37:38 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 656)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1822)
+Completed 200 OK in 556ms (Views: 4.8ms | ActiveRecord: 1.7ms | Allocations: 9366)
+
+
+Started GET "/recepcionista/new" for 127.0.0.1 at 2023-03-16 13:37:40 -0300
+Processing by RecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 15.1ms | Allocations: 2434)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 2794)
+  Rendered shared/_flash.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 4026)
+Completed 200 OK in 57ms (Views: 32.5ms | ActiveRecord: 1.0ms | Allocations: 9177)
+
+
+Started POST "/recepcionista" for 127.0.0.1 at 2023-03-16 13:37:49 -0300
+Processing by RecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "recepcionistum"=>{"nome"=>"", "credencial"=>"", "cpf"=>"", "telefone"=>"", "email"=>""}, "commit"=>"Criar Recepcionistum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "recepcionista" WHERE "recepcionista"."cpf" = ? LIMIT ?[0m  [["cpf", ""], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 133.6ms | Allocations: 11590)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 134.4ms | Allocations: 11689)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 152.6ms | Allocations: 12731)
+Completed 422 Unprocessable Entity in 187ms (Views: 159.6ms | ActiveRecord: 0.4ms | Allocations: 17464)
+
+
+Started POST "/recepcionista" for 127.0.0.1 at 2023-03-16 13:40:51 -0300
+Processing by RecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "recepcionistum"=>{"nome"=>"AA", "credencial"=>"123", "cpf"=>"13546949455", "telefone"=>"87981586575", "email"=>"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"}, "commit"=>"Criar Recepcionistum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "recepcionista" WHERE "recepcionista"."cpf" = ? LIMIT ?[0m  [["cpf", "13546949455"], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 12.1ms | Allocations: 2190)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2289)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 3331)
+Completed 422 Unprocessable Entity in 59ms (Views: 29.9ms | ActiveRecord: 0.4ms | Allocations: 6400)
+
+
+Started POST "/recepcionista" for 127.0.0.1 at 2023-03-16 13:40:58 -0300
+Processing by RecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "recepcionistum"=>{"nome"=>"AAAA", "credencial"=>"123", "cpf"=>"13546949455", "telefone"=>"87981586575", "email"=>"\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"}, "commit"=>"Criar Recepcionistum"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "recepcionista" WHERE "recepcionista"."cpf" = ? LIMIT ?[0m  [["cpf", "13546949455"], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mRecepcionistum Create (11.5ms)[0m  [1m[32mINSERT INTO "recepcionista" ("nome", "credencial", "cpf", "telefone", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "AAAA"], ["credencial", "123"], ["cpf", "13546949455"], ["telefone", "87981586575"], ["email", "\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"], ["created_at", "2023-03-16 16:40:58.612755"], ["updated_at", "2023-03-16 16:40:58.612755"]]
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/recepcionista_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/recepcionista/2
+Completed 302 Found in 69ms (ActiveRecord: 23.5ms | Allocations: 4218)
+
+
+Started GET "/recepcionista/2" for 127.0.0.1 at 2023-03-16 13:40:58 -0300
+Processing by RecepcionistaController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecepcionistum Load (0.4ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:63:in `set_recepcionistum'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/show.html.erb within layouts/application
+  Rendered recepcionista/_recepcionistum.html.erb (Duration: 0.8ms | Allocations: 289)
+  Rendered recepcionista/show.html.erb within layouts/application (Duration: 56.6ms | Allocations: 6365)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 7513)
+Completed 200 OK in 86ms (Views: 65.9ms | ActiveRecord: 0.4ms | Allocations: 9011)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 14:02:37 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1080)
+  Rendered shared/_flash.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 126.6ms | Allocations: 21488)
+Completed 200 OK in 164ms (Views: 137.4ms | ActiveRecord: 0.0ms | Allocations: 24596)
+
+
+Started GET "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 14:02:41 -0300
+Processing by AcessoRecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/new.html.erb within layouts/application
+  Rendered acesso_recepcionista/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 3262)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 4513)
+Completed 200 OK in 34ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 5296)
+
+
+Started POST "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 14:02:49 -0300
+Processing by AcessoRecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "credencial"=>"611", "commit"=>"Entrar"}
+  [1m[36mRecepcionistum Load (15.4ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."credencial" = ? LIMIT ?[0m  [["credencial", "611"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_recepcionista_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/index.html.erb within layouts/application
+  Rendered acesso_recepcionista/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 691)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 1845)
+Completed 200 OK in 103ms (Views: 22.6ms | ActiveRecord: 16.6ms | Allocations: 10896)
+
+
+Started GET "/recepcionista/1" for 127.0.0.1 at 2023-03-16 14:02:52 -0300
+Processing by RecepcionistaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepcionistum Load (0.2ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:63:in `set_recepcionistum'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/show.html.erb within layouts/application
+  Rendered recepcionista/_recepcionistum.html.erb (Duration: 0.9ms | Allocations: 298)
+  Rendered recepcionista/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1402)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 2611)
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 0.2ms | Allocations: 4703)
+
+
+Started GET "/recepcionista/1/edit" for 127.0.0.1 at 2023-03-16 14:02:54 -0300
+Processing by RecepcionistaController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecepcionistum Load (0.2ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recepcionista_controller.rb:63:in `set_recepcionistum'
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/edit.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 8.7ms | Allocations: 2337)
+  Rendered recepcionista/edit.html.erb within layouts/application (Duration: 40.2ms | Allocations: 2673)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 3722)
+Completed 200 OK in 69ms (Views: 56.3ms | ActiveRecord: 0.2ms | Allocations: 4637)
+
+
+Started POST "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 15:09:39 -0300
+Processing by AcessoRecepcionistaController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "credencial"=>"611", "commit"=>"Entrar"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/acesso_recepcionista_controller.rb:7:in `create'
+  [1m[36mRecepcionistum Load (0.1ms)[0m  [1m[34mSELECT "recepcionista".* FROM "recepcionista" WHERE "recepcionista"."credencial" = ? LIMIT ?[0m  [["credencial", "611"], ["LIMIT", 1]]
+  ↳ app/controllers/acesso_recepcionista_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/index.html.erb within layouts/application
+  Rendered acesso_recepcionista/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 321)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1358)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2933)
+
+
+Started GET "/acesso_recepcionista" for 127.0.0.1 at 2023-03-16 15:09:40 -0300
+Processing by AcessoRecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering acesso_recepcionista/new.html.erb within layouts/application
+  Rendered acesso_recepcionista/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1356)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2401)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 2662)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-16 15:09:43 -0300
+Processing by LoginController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/new.html.erb within layouts/application
+  Rendered login/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2868)
+  Rendered shared/_flash.html.erb (Duration: 0.0ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4118)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4887)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-03-16 15:09:45 -0300
+Processing by LoginController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "usuario"=>"Admin_padrao", "senha"=>"12345", "commit"=>"login"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
+  ↳ app/controllers/login_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin/index.html.erb within layouts/application
+  Rendered admin/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 643)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1800)
+Completed 200 OK in 424ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 6105)
+
+
+Started GET "/recepcionista/new" for 127.0.0.1 at 2023-03-16 15:09:48 -0300
+Processing by RecepcionistaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recepcionista/new.html.erb within layouts/application
+  Rendered recepcionista/_form.html.erb (Duration: 6.3ms | Allocations: 1532)
+  Rendered recepcionista/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1765)
+  Rendered shared/_flash.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2816)
+Completed 200 OK in 29ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 3188)
+
+

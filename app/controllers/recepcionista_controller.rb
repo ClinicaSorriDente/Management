@@ -25,7 +25,7 @@ class RecepcionistaController < ApplicationController
 
     respond_to do |format|
       if @recepcionistum.save
-        format.html { redirect_to recepcionistum_url(@recepcionistum), notice: "Recepcionistum was successfully created." }
+        format.html { redirect_to recepcionistum_url(@recepcionistum), notice: "Recepcionista criado com sucesso." }
         format.json { render :show, status: :created, location: @recepcionistum }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class RecepcionistaController < ApplicationController
   def update
     respond_to do |format|
       if @recepcionistum.update(recepcionistum_params)
-        format.html { redirect_to recepcionistum_url(@recepcionistum), notice: "Recepcionistum was successfully updated." }
+        format.html { redirect_to recepcionistum_url(@recepcionistum), notice: "Recepcionista atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @recepcionistum }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class RecepcionistaController < ApplicationController
     @recepcionistum.destroy
 
     respond_to do |format|
-      format.html { redirect_to recepcionista_url, notice: "Recepcionistum was successfully destroyed." }
+      format.html { redirect_to recepcionista_url, notice: "Conta de recepcionista deletada com sucesso." }
       format.json { head :no_content }
     end
   end
