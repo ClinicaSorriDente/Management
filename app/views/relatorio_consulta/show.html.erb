@@ -3,8 +3,9 @@
 <%= render @relatorio_consultum %>
 
 <div>
-  <%= link_to "Edit this relatorio consultum", edit_relatorio_consultum_path(@relatorio_consultum) %> |
-  <%= link_to "Back to relatorio consulta", relatorio_consulta_path %>
+  <%= link_to "Editar este relatorio de consulta", edit_consultum_relatorio_consultum_path(@relatorio_consultum) %> |
 
-  <%= button_to "Destroy this relatorio consultum", @relatorio_consultum, method: :delete %>
+  <%= button_to "Destruir este relatorio de consulta",  "/consulta/#{@relatorio_consultum.consultum_id}/relatorio_consulta/#{@relatorio_consultum.id}", method: :delete %><br>
+
+  <%= link_to "voltar pra o Menu Principal", root_path  %>
 </div>

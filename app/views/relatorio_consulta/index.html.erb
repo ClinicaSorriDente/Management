@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Relatorio consulta</h1>
+<h1>Relatorio de consulta</h1>
 
 <div id="relatorio_consulta">
   <% @relatorio_consulta.each do |relatorio_consultum| %>
     <%= render relatorio_consultum %>
     <p>
-      <%= link_to "Show this relatorio consultum", relatorio_consultum %>
+      <%= link_to "Mostrar este relatorio de consulta",  "/consulta/#{relatorio_consultum.consultum_id}/relatorio_consulta/#{relatorio_consultum.id}" %><br><hr>
     </p>
   <% end %>
 </div>
-
-<%= link_to "New relatorio consultum", new_relatorio_consultum_path %>
+<%= link_to "voltar pra o Menu Principal", root_path  %>

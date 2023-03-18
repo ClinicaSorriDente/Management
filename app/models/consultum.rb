@@ -2,6 +2,7 @@
 class Consultum < ApplicationRecord
   belongs_to :paciente
   belongs_to :dentistum
+  has_one :relatorio_consultum, :dependent => :destroy
 
   validates :data, presence: true
   validates :data, inclusion: { in: ->(_record) { Time.zone.today..Date::Infinity.new }, message: 'inválida!' }

@@ -1,4 +1,4 @@
-<%= form_with(model: relatorio_consultum) do |form| %>
+<%= form_with model: @relatorio_consultum, url: consultum_relatorio_consultum_path do |form| %>
   <% if relatorio_consultum.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(relatorio_consultum.errors.count, "error") %> prohibited this relatorio_consultum from being saved:</h2>

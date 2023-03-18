@@ -12,6 +12,7 @@ class RelatorioConsultaController < ApplicationController
 
   # GET /relatorio_consulta/new
   def new
+
     @relatorio_consultum = RelatorioConsultum.new
   end
 
@@ -21,40 +22,33 @@ class RelatorioConsultaController < ApplicationController
 
   # POST /relatorio_consulta or /relatorio_consulta.json
   def create
-    @relatorio_consultum = RelatorioConsultum.new(relatorio_consultum_params)
+    @consultum = Consultum.find_by(params[:consultum_id])
+    @relatorio_consultum = RelatorioConsultum.new(presente: relatorio_consultum_params[:presente],comentario: relatorio_consultum_params[:comentario], consultum_id: @consultum.id)
+    @consultum.relatorio_consultum = @relatorio_consultum
 
-    respond_to do |format|
       if @relatorio_consultum.save
-        format.html { redirect_to relatorio_consultum_url(@relatorio_consultum), notice: "Relatorio consultum was successfully created." }
-        format.json { render :show, status: :created, location: @relatorio_consultum }
+        redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta foi Criado com sucesso"
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @relatorio_consultum.errors, status: :unprocessable_entity }
+        render :'relatorio_consulta/new', status: :unprocessable_entity
       end
-    end
+
   end
 
   # PATCH/PUT /relatorio_consulta/1 or /relatorio_consulta/1.json
   def update
-    respond_to do |format|
-      if @relatorio_consultum.update(relatorio_consultum_params)
-        format.html { redirect_to relatorio_consultum_url(@relatorio_consultum), notice: "Relatorio consultum was successfully updated." }
-        format.json { render :show, status: :ok, location: @relatorio_consultum }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @relatorio_consultum.errors, status: :unprocessable_entity }
-      end
+    if @relatorio_consultum.update(relatorio_consultum_params)
+      redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta foi atualizado mcom sucesso"
+
+    else
+      render :'relatorio_consulta/edit', status: :unprocessable_entity
+
     end
   end
 
   # DELETE /relatorio_consulta/1 or /relatorio_consulta/1.json
   def destroy
     @relatorio_consultum.destroy
-
-    respond_to do |format|
-      format.html { redirect_to relatorio_consulta_url, notice: "Relatorio consultum was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta excluido com sucesso"
   end
 
   private
@@ -65,6 +59,6 @@ class RelatorioConsultaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def relatorio_consultum_params
-      params.require(:relatorio_consultum).permit(:presente, :comentario)
+      params.require(:relatorio_consultum).permit(:presente, :comentario, :consultum_id)
     end
 end
