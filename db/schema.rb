@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_15_234417) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_18_011055) do
   create_table "admins", force: :cascade do |t|
     t.string "usuario"
     t.string "password_digest"
@@ -79,9 +79,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_15_234417) do
     t.text "comentario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "consultum_id", null: false
+    t.index ["consultum_id"], name: "index_relatorio_consulta_on_consultum_id"
   end
 
   add_foreign_key "consulta", "dentista"
   add_foreign_key "consulta", "pacientes"
   add_foreign_key "endereco_pacientes", "pacientes"
+  add_foreign_key "relatorio_consulta", "consulta"
 end

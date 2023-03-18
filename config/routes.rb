@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :relatorio_consulta
+
   resources :recepcionista
-  resources :consulta
+  resources :consulta do
+    resources :relatorio_consulta
+  end
   resources :pacientes do
     resources :endereco_paciente
   end
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
   post "acesso_paciente", to: "acesso_paciente#create"
   delete"paciente_logout", to: "acesso_paciente#destroy"
   post "admin/:admin_id/dentista/new", to: "dentista#create"
+  post "/consulta/:consultum_id/relatorio_consulta/new", to: "relatorio_consulta#create"
   get "acesso_recepcionista", to: "acesso_recepcionista#new"
   post "acesso_recepcionista", to: "acesso_recepcionista#create"
   delete"recepcionista_logout", to: "acesso_recepcionista#destroy"
