@@ -24,9 +24,9 @@ class RelatorioConsultaController < ApplicationController
   def create
     @consultum = Consultum.find_by(params[:consultum_id])
     @relatorio_consultum = RelatorioConsultum.new(presente: relatorio_consultum_params[:presente],comentario: relatorio_consultum_params[:comentario], consultum_id: @consultum.id)
-    @consultum.relatorio_consultum = @relatorio_consultum
 
       if @relatorio_consultum.save
+        @consultum.relatorio_consultum = @relatorio_consultum
         redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta foi Criado com sucesso"
       else
         render :'relatorio_consulta/new', status: :unprocessable_entity

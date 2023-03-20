@@ -11,13 +11,13 @@ Feature: Relatorio_consulta
 
   Scenario: cadastrar relatorio_consulta sem comentario
     Given eu estou na pagina de criar relatorio_consulta
-    When eu preecho um relatorio_consulta com presente "true"
+    When eu preecho um relatorio_consulta com a checkbox de presença marcada
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta invalido
 
   Scenario: cadastrar relatorio_consulta com comentario invalido
     Given eu estou na pagina de criar relatorio_consulta
-    When eu preecho um relatorio_consulta com presente "true" e comentario "abc"
+    When eu preecho um relatorio_consulta com comentario "abc" e marco a checkbox de presença
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta invalido
 
@@ -28,6 +28,6 @@ Feature: Relatorio_consulta
 
   Scenario: cadastrar relatorio_consulta corretamente
     Given eu estou na pagina de criar relatorio_consulta
-    When eu preecho um relatorio_consulta com presente "true" e comentario "paciente com febre"
+    When eu preecho um relatorio_consulta com comentario "paciente com febre" e marco a checkbox de presença
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta criado com sucesso
