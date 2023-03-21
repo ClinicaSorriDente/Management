@@ -7,7 +7,7 @@ Feature: Visualizar Horarios Disponiveis
         Given estou na tela de agendar consulta
         Then Eu vejo 'Não há consultas agendadas'
 
-      Scenario: Horarios Disponiveis
+      Scenario: Horarios Indisponiveis
               Given estou na tela de agendar consulta
-              Then Eu vejo 'Horários Indisponíveis'
+              Then Eu vejo a mensagem 'Horários Indisponíveis'
 
