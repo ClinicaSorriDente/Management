@@ -1,9 +1,9 @@
 Given('eu estou na pagina de relatorio_consulta') do
-  visit '/consulta/4/relatorio_consulta'
+  visit '/consulta/1/relatorio_consulta'
 end
 
 Given('eu vejo um relatorio_consulta com comentario {string}') do |comentario|
-  visit '/consulta/4/relatorio_consulta'
+  visit '/consulta/1/relatorio_consulta'
   expect(page).to have_content(comentario)
 end
 
@@ -17,7 +17,7 @@ Then('eu vejo uma mensagem que o relatorio_consulta foi removido') do
 end
 
 Given('eu estou na pagina de criar relatorio_consulta') do
-  visit '/consulta/5/relatorio_consulta/new'
+  visit '/consulta/2/relatorio_consulta/new'
   expect(page).to have_content("Novo relatorio de consulta")
 end
 
@@ -30,7 +30,7 @@ Then('Eu vejo uma mensagem de relatorio_consulta invalido') do
 end
 
 Given('eu estou na pagina de consulta') do
-  visit '/consulta/4/relatorio_consulta/'
+  visit '/consulta/1/relatorio_consulta/'
 end
 
 When('eu clico em ver relatorio de consulta') do
