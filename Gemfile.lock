@@ -101,6 +101,8 @@ GEM
       sys-uname (~> 1.2, >= 1.2.2)
     cucumber-ci-environment (9.1.0)
     cucumber-core (11.0.0)
+      cucumber-gherkin (~> 23.0, >= 23.0.1)
+      cucumber-messages (~> 18.0, >= 18.0.0)
       cucumber-tag-expressions (~> 4.1, >= 4.1.0)
     cucumber-cucumber-expressions (15.2.0)
     cucumber-gherkin (23.0.1)
