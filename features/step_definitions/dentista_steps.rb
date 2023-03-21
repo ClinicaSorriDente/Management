@@ -13,7 +13,7 @@ Given('eu vejo um dentista com cpf {string}') do |cpf|
   fill_in 'dentistum[horaInicio]', with: '08:00'
   fill_in 'dentistum[horaTermino]', with: "16:00"
   click_button 'Criar Dentista'
-  click_link 'Ver este dentista'
+  visit '/admin/1/dentista/2'
   expect(page).to have_content(cpf)
 end
 
