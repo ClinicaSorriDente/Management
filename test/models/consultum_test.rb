@@ -21,16 +21,15 @@ class ConsultumTest < ActiveSupport::TestCase
     assert admin.save
 
     dentista = Dentistum.new(
-      nome:"Dr Pedro Araujo",
-      telefone:"87998115631",
+      nome:"Rogerio Lacerda",
+      telefone:"87912345678",
       CRO:"123456789",
       CPF:"01384477721",
-      especializacao:"Dentista",
+      especializacao:"Endodontia",
       data:"2021-10-05",
       horaInicio:"08:00",
       horaTermino:"16:00",
-      admin_id: admin.id
-    )
+      )
     assert dentista.save
 
     consulta = Consultum.new(data:"23/10/2023", horario:"12:00", paciente_id:paciente.id, dentistum_id:dentista.id)
@@ -56,16 +55,15 @@ class ConsultumTest < ActiveSupport::TestCase
     assert admin.save
 
     dentista = Dentistum.new(
-      nome:"Dr Pedro Araujo",
-      telefone:"87998115631",
+      nome:"Rogerio Lacerda",
+      telefone:"87912345678",
       CRO:"123456789",
       CPF:"01384477721",
-      especializacao:"Dentista",
+      especializacao:"Endodontia",
       data:"2021-10-05",
       horaInicio:"08:00",
       horaTermino:"16:00",
-      admin_id: admin.id
-    )
+      )
     assert dentista.save
 
     consulta = Consultum.new(data:"23/10/2023", horario:"7:00", paciente_id:paciente.id, dentistum_id:dentista.id)
@@ -91,16 +89,15 @@ class ConsultumTest < ActiveSupport::TestCase
     assert admin.save
 
     dentista = Dentistum.new(
-      nome:"Dr Pedro Araujo",
-      telefone:"87998115631",
+      nome:"Rogerio Lacerda",
+      telefone:"87912345678",
       CRO:"123456789",
       CPF:"01384477721",
-      especializacao:"Dentista",
+      especializacao:"Endodontia",
       data:"2021-10-05",
       horaInicio:"08:00",
       horaTermino:"16:00",
-      admin_id: admin.id
-    )
+      )
     assert dentista.save
 
     consulta = Consultum.new(data:"23/10/2023", horario:"10:00", paciente_id:paciente.id, dentistum_id:dentista.id)
