@@ -14,6 +14,7 @@ class ConsultaController < ApplicationController
   # GET /consulta/new
   def new
     @consultum = Consultum.new
+    @consultas_all = Consultum.where(data: params[:data_inicial]..params[:data_final]).order(:data)
   end
 
   # GET /consulta/1/edit

@@ -9,17 +9,8 @@ class Consultum < ApplicationRecord
 
   validates :horario, presence: true
   validate :horario_fora_do_expediente
-  validate :horario_reservado
 
   private
-
-  # Valida se o horário já esta reservado
-  def horario_reservado
-    agendas_no_mesmo_horario = Consultum.where(horario: horario.strftime('%H:%M'), data:)
-    return if agendas_no_mesmo_horario.empty?
-
-    errors.add(:horario, 'já está reservado')
-  end
 
   # Valida se o horário da consulta está no intervalo de 8:00 as 16:00
   def horario_fora_do_expediente

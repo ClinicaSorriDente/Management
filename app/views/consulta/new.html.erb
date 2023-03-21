@@ -4,6 +4,26 @@
 
 <br>
 
+<% if !@consultas_all.empty? %>
+  <h2>Horários Indisponíveis</h2>
+  <table>
+    <tr>
+      <th>Horario</th>
+      <th></th>
+      <th>Data</th>
+    </tr>
+    <% @consultas_all.each do |consulta| %>
+      <tr>
+        <td><%= consulta.horario.strftime('%H:%M') %></td>
+        <td></td>
+        <td><%= consulta.data.strftime('%d/%m/%Y') %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>Não há consultas agendadas</p>
+<% end %>
+
 <div>
   <%= link_to "voltar pra o Menu Principal", root_path  %>
 </div>
