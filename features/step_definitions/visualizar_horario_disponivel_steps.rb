@@ -6,3 +6,8 @@ Then('Eu vejo {string}') do |nome|
   # Espero a página do consulta
   expect(page).to have_content(nome)
 end
+
+Then('Eu vejo a mensagem {string}') do |nome|
+  # Espero a página do consulta
+  expect(page).to have_content(nome)
+end
