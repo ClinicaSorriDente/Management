@@ -19,10 +19,10 @@ Feature: Visualizar Horarios Disponiveis
     Scenario: Ver que horario esta indisponivel
       Given estou na tela de consulta
       When eu clico para criar nova consulta
-      Then eu vejo que '15:52' esta indisponivel
+      Then eu vejo que '15:53' esta indisponivel
 
     Scenario: mudar horario de disponivel para indisponivel
       Given estou na tela de consulta
-      And eu vejo uma consulta com horario '15:52'
+      And eu vejo uma consulta com horario '15:51'
       When eu clico para excluir esta consulta
-      Then eu vejo que '15:52' esta disponivel
+      Then eu vejo que '15:54' esta disponivel
