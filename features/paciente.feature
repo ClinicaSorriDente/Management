@@ -31,6 +31,6 @@ Feature: Paciente
 
   Scenario: Remover conta de paciente
     Given eu estou na tela de paciente
-    When eu vejo a conta com nome 'Gison Vilaca', nascimento "2001-04-25", cpf '135.469.494-55', telefone '01234567890', email 'gison@gmail.com', cep '55435000', cidade 'Sao Joao', bairro 'Parque Alvorada', logradouro 'Rua do Educandario' e complemento 'Casa'
+    When eu vejo a conta com nome 'Gison', nascimento "2001-04-25", cpf '392.124.303-33', telefone '01234567890', email 'gison@gmail.com', cep '55435000', cidade 'Sao Joao', bairro 'Parque Alvorada', logradouro 'Rua do Educandario' e complemento 'Casa'
     And clico em Remover Paciente
     Then eu vejo uma mensagem informando que a conta de Paciente foi deletada com sucesso
