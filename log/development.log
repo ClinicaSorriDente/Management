@@ -21988,6 +21988,11 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 889ms (Views: 791.9ms | ActiveRecord: 0.0ms | Allocations: 26805)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mAdmin Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."usuario" = ? LIMIT ?[0m  [["usuario", "Admin_padrao"], ["LIMIT", 1]]
@@ -27959,3 +27964,321 @@ Processing by DentistaController#new as HTML
 Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3492)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdmins (20230302024606)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230302024606"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDentista (20230302234807)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "dentista" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "telefone" varchar, "CRO" varchar, "CPF" varchar, "especializacao" varchar, "data" date, "horaInicio" time, "horaTermino" time, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230302234807"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePacientes (20230303040512)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pacientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "nascimento" date, "cpf" varchar, "telefone" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230303040512"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEnderecoPacientes (20230304192538)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "endereco_pacientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cep" varchar, "cidade" varchar, "bairro" varchar, "logradouro" varchar, "complemento" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230304192538"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPacienteToEnderecoPaciente (20230304205022)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (2.9ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aendereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aendereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at" FROM "endereco_pacientes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "endereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "endereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "paciente_id" integer NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "endereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at" FROM "aendereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aendereco_pacientes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_endereco_pacientes_on_paciente_id" ON "endereco_pacientes" ("paciente_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aendereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "paciente_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aendereco_pacientes_on_paciente_id" ON "aendereco_pacientes" ("paciente_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aendereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id" FROM "endereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "endereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "endereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "paciente_id" integer NOT NULL, CONSTRAINT "fk_rails_9a7275ca66"
+FOREIGN KEY ("paciente_id")
+  REFERENCES "pacientes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_endereco_pacientes_on_paciente_id" ON "endereco_pacientes" ("paciente_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "endereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id" FROM "aendereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aendereco_pacientes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230304205022"]]
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConsulta (20230307033328)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "consulta" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date, "horario" time, "paciente_id" integer NOT NULL, "dentistum_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_99e75a4b64"
+FOREIGN KEY ("paciente_id")
+  REFERENCES "pacientes" ("id")
+, CONSTRAINT "fk_rails_4c3d575ee9"
+FOREIGN KEY ("dentistum_id")
+  REFERENCES "dentista" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_consulta_on_paciente_id" ON "consulta" ("paciente_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_consulta_on_dentistum_id" ON "consulta" ("dentistum_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230307033328"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRecepcionista (20230314174832)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "recepcionista" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "credencial" varchar, "cpf" varchar, "telefone" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230314174832"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRelatorioConsulta (20230315234417)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "relatorio_consulta" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "presente" boolean, "comentario" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230315234417"]]
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddConsultumToRelatorioConsultum (20230318011055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "arelatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "arelatorio_consulta" ("id","presente","comentario","created_at","updated_at")
+                     SELECT "id","presente","comentario","created_at","updated_at" FROM "relatorio_consulta"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "relatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "relatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "consultum_id" integer NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "relatorio_consulta" ("id","presente","comentario","created_at","updated_at")
+                     SELECT "id","presente","comentario","created_at","updated_at" FROM "arelatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "arelatorio_consulta"[0m
+  [1m[35m (1.9ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_relatorio_consulta_on_consultum_id" ON "relatorio_consulta" ("consultum_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "arelatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "consultum_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_arelatorio_consulta_on_consultum_id" ON "arelatorio_consulta" ("consultum_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "arelatorio_consulta" ("id","presente","comentario","created_at","updated_at","consultum_id")
+                     SELECT "id","presente","comentario","created_at","updated_at","consultum_id" FROM "relatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "relatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "relatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "consultum_id" integer NOT NULL, CONSTRAINT "fk_rails_934561bc27"
+FOREIGN KEY ("consultum_id")
+  REFERENCES "consulta" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_relatorio_consulta_on_consultum_id" ON "relatorio_consulta" ("consultum_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "relatorio_consulta" ("id","presente","comentario","created_at","updated_at","consultum_id")
+                     SELECT "id","presente","comentario","created_at","updated_at","consultum_id" FROM "arelatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "arelatorio_consulta"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230318011055"]]
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-21 14:38:37.024951"], ["updated_at", "2023-03-21 14:38:37.024951"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (38.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAdmins (20230302024606)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "usuario" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230302024606"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDentista (20230302234807)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "dentista" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "telefone" varchar, "CRO" varchar, "CPF" varchar, "especializacao" varchar, "data" date, "horaInicio" time, "horaTermino" time, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230302234807"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePacientes (20230303040512)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pacientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "nascimento" date, "cpf" varchar, "telefone" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230303040512"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEnderecoPacientes (20230304192538)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "endereco_pacientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cep" varchar, "cidade" varchar, "bairro" varchar, "logradouro" varchar, "complemento" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230304192538"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPacienteToEnderecoPaciente (20230304205022)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aendereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aendereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at" FROM "endereco_pacientes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "endereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "endereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "paciente_id" integer NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "endereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at" FROM "aendereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aendereco_pacientes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_endereco_pacientes_on_paciente_id" ON "endereco_pacientes" ("paciente_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aendereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "paciente_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aendereco_pacientes_on_paciente_id" ON "aendereco_pacientes" ("paciente_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aendereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id" FROM "endereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "endereco_pacientes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "endereco_pacientes" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar DEFAULT NULL, "cidade" varchar DEFAULT NULL, "bairro" varchar DEFAULT NULL, "logradouro" varchar DEFAULT NULL, "complemento" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "paciente_id" integer NOT NULL, CONSTRAINT "fk_rails_9a7275ca66"
+FOREIGN KEY ("paciente_id")
+  REFERENCES "pacientes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_endereco_pacientes_on_paciente_id" ON "endereco_pacientes" ("paciente_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "endereco_pacientes" ("id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id")
+                     SELECT "id","cep","cidade","bairro","logradouro","complemento","created_at","updated_at","paciente_id" FROM "aendereco_pacientes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aendereco_pacientes"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230304205022"]]
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConsulta (20230307033328)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "consulta" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date, "horario" time, "paciente_id" integer NOT NULL, "dentistum_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_99e75a4b64"
+FOREIGN KEY ("paciente_id")
+  REFERENCES "pacientes" ("id")
+, CONSTRAINT "fk_rails_4c3d575ee9"
+FOREIGN KEY ("dentistum_id")
+  REFERENCES "dentista" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_consulta_on_paciente_id" ON "consulta" ("paciente_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_consulta_on_dentistum_id" ON "consulta" ("dentistum_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230307033328"]]
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRecepcionista (20230314174832)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "recepcionista" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "credencial" varchar, "cpf" varchar, "telefone" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230314174832"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRelatorioConsulta (20230315234417)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "relatorio_consulta" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "presente" boolean, "comentario" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230315234417"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddConsultumToRelatorioConsultum (20230318011055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "arelatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "arelatorio_consulta" ("id","presente","comentario","created_at","updated_at")
+                     SELECT "id","presente","comentario","created_at","updated_at" FROM "relatorio_consulta"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "relatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "relatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "consultum_id" integer NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "relatorio_consulta" ("id","presente","comentario","created_at","updated_at")
+                     SELECT "id","presente","comentario","created_at","updated_at" FROM "arelatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "arelatorio_consulta"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_relatorio_consulta_on_consultum_id" ON "relatorio_consulta" ("consultum_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "arelatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "consultum_id" integer NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_arelatorio_consulta_on_consultum_id" ON "arelatorio_consulta" ("consultum_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "arelatorio_consulta" ("id","presente","comentario","created_at","updated_at","consultum_id")
+                     SELECT "id","presente","comentario","created_at","updated_at","consultum_id" FROM "relatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "relatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "relatorio_consulta" ("id" integer NOT NULL PRIMARY KEY, "presente" boolean DEFAULT NULL, "comentario" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "consultum_id" integer NOT NULL, CONSTRAINT "fk_rails_934561bc27"
+FOREIGN KEY ("consultum_id")
+  REFERENCES "consulta" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_relatorio_consulta_on_consultum_id" ON "relatorio_consulta" ("consultum_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "relatorio_consulta" ("id","presente","comentario","created_at","updated_at","consultum_id")
+                     SELECT "id","presente","comentario","created_at","updated_at","consultum_id" FROM "arelatorio_consulta"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "arelatorio_consulta"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230318011055"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-21 15:17:50.475620"], ["updated_at", "2023-03-21 15:17:50.475620"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
