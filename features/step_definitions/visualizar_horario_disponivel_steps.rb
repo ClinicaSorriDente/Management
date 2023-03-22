@@ -87,7 +87,7 @@ Then('eu vejo que {string} esta indisponivel') do |string|
 
   visit '/consulta/new'
   fill_in 'consultum[data]', with: '22/03/2023'
-  fill_in 'consultum[horario]', with: '15:52'
+  fill_in 'consultum[horario]', with: string
   select 'Antonio dos Santos', from: 'consultum[paciente_id]'
   select 'Aberlardo Silva', from: 'consultum[dentistum_id]'
   click_button 'Criar Consultum'
@@ -124,7 +124,7 @@ Given('eu vejo uma consulta com horario {string}') do |string|
 
   visit '/consulta/new'
   fill_in 'consultum[data]', with: '22/03/2023'
-  fill_in 'consultum[horario]', with: '15:52'
+  fill_in 'consultum[horario]', with: string
   select 'Rogerio Vilela', from: 'consultum[paciente_id]'
   select 'Sandra Alba', from: 'consultum[dentistum_id]'
   click_button 'Criar Consultum'
