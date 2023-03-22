@@ -16,7 +16,7 @@ Feature: Relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta invalido
 
   Scenario: cadastrar relatorio_consulta com comentario invalido
-    Given eu estou na pagina de criar relatorio_consulta
+    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '74649087244'
     When eu preecho um relatorio_consulta com comentario "abc" e marco a checkbox de presença
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta invalido
@@ -27,7 +27,7 @@ Feature: Relatorio_consulta
     Then eu vejo o relatorio_consulta e suas informações
 
   Scenario: cadastrar relatorio_consulta corretamente
-    Given eu estou na pagina de criar relatorio_consulta
+    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '29843309430' e do dentista com cpf '97493874654'
     When eu preecho um relatorio_consulta com comentario "paciente com febre" e marco a checkbox de presença
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta criado com sucesso
