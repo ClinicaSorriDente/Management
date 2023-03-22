@@ -58,7 +58,7 @@ Given('eu estou na pagina de criar relatorio_consulta') do
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'Rodrigo Santos'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '41718607920'
+  fill_in 'paciente[cpf]', with: '38854324124'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
