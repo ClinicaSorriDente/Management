@@ -10,13 +10,13 @@ Feature: Relatorio_consulta
     Then eu vejo uma mensagem que o relatorio_consulta foi removido
 
   Scenario: cadastrar relatorio_consulta sem comentario
-    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '79414367870' e do dentista com cpf '15306910106'
+    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '53246573794' e do dentista com cpf '15306910106'
     When eu preecho um relatorio_consulta com a checkbox de presença marcada
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta invalido
 
   Scenario: cadastrar relatorio_consulta com comentario invalido
-    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '79414367870' e do dentista com cpf '28641855637'
+    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '74649087244' e do dentista com cpf '28641855637'
     When eu preecho um relatorio_consulta com comentario "abc" e marco a checkbox de presença
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta invalido
@@ -27,7 +27,7 @@ Feature: Relatorio_consulta
     Then eu vejo o relatorio_consulta e suas informações
 
   Scenario: cadastrar relatorio_consulta corretamente
-    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '79414367870' e do dentista com cpf '97493874654'
+    Given eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf '29843309430' e do dentista com cpf '97493874654'
     When eu preecho um relatorio_consulta com comentario "paciente com febre" e marco a checkbox de presença
     And clico em criar relatorio_consulta
     Then Eu vejo uma mensagem de relatorio_consulta criado com sucesso
