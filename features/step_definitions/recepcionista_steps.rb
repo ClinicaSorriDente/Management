@@ -67,7 +67,7 @@ Then('eu vejo uma mensagem informando que a conta de Recepcionista foi atualizad
 end
 
 
-
+# REMOVER RECEPCIONISTA
 When('clico em Remover Recepcionista') do
   click_button 'Destroy this recepcionista'
 end
