@@ -11,7 +11,7 @@ Then('Eu vejo a mensagem {string}') do |nome|
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'Rodrigo Leandro dos Santos'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '70383167450'
+  fill_in 'paciente[cpf]', with: '23586731108'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -24,7 +24,7 @@ Then('Eu vejo a mensagem {string}') do |nome|
 
   visit '/admin/1/dentista/new'
   fill_in 'dentistum[nome]', with: 'Rodrigo'
-  fill_in 'dentistum[CPF]', with: '70383167450'
+  fill_in 'dentistum[CPF]', with: '22156442738'
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
@@ -62,7 +62,7 @@ Then('eu vejo que {string} esta indisponivel') do |string|
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'Rodrigo Leandro dos Santos'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '70383167450'
+  fill_in 'paciente[cpf]', with: '66838170817'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -75,7 +75,7 @@ Then('eu vejo que {string} esta indisponivel') do |string|
 
   visit '/admin/1/dentista/new'
   fill_in 'dentistum[nome]', with: 'Rodrigo'
-  fill_in 'dentistum[CPF]', with: '70383167450'
+  fill_in 'dentistum[CPF]', with: '97071578605'
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
@@ -99,7 +99,7 @@ Given('eu vejo uma consulta com horario {string}') do |string|
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'Rodrigo Leandro dos Santos'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '70383167450'
+  fill_in 'paciente[cpf]', with: '73451068290'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -112,7 +112,7 @@ Given('eu vejo uma consulta com horario {string}') do |string|
 
   visit '/admin/1/dentista/new'
   fill_in 'dentistum[nome]', with: 'Rodrigo'
-  fill_in 'dentistum[CPF]', with: '70383167450'
+  fill_in 'dentistum[CPF]', with: '88867476165'
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
