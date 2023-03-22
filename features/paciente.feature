@@ -23,7 +23,7 @@ Feature: Paciente
 
   Scenario: Editar conta de paciente
     Given eu estou na tela de paciente
-    When eu vejo a conta com nome 'Gison Vilaca', nascimento "2001-04-25", cpf '135.469.494-55', telefone '01234567890', email 'gison@gmail.com', cep '55435000', cidade 'Sao Joao', bairro 'Parque Alvorada', logradouro 'Rua do Educandario' e complemento 'Casa'
+    When eu vejo a conta com nome 'Gison Morais', nascimento "2001-04-25", cpf '321.056.268-74', telefone '01234567890', email 'gison@gmail.com', cep '55435000', cidade 'Sao Joao', bairro 'Parque Alvorada', logradouro 'Rua do Educandario' e complemento 'Casa'
     And clico em editar este paciente
     When eu edito a conta com nome 'Gison Vilaca Morais', telefone '09876543210'
     And clico em Atualizar Paciente
