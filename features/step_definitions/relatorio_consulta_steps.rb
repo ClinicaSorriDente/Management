@@ -96,6 +96,85 @@ Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente co
 
 end
 
+Given('eu estou na pagina de criar relatorio_consulta') do
+  visit 'pacientes/new'
+  fill_in 'paciente[nome]', with: 'jeffesson r.'
+  fill_in 'paciente[nascimento]', with: "2001-04-25"
+  fill_in 'paciente[cpf]', with: '83061327185'
+  fill_in 'paciente[telefone]', with: '87998165631'
+  fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
+  fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
+  fill_in 'paciente[endereco_paciente_attributes][cidade]', with: 'Garanhuns'
+  fill_in 'paciente[endereco_paciente_attributes][bairro]', with: '///////////////////'
+  fill_in 'paciente[endereco_paciente_attributes][logradouro]', with: '///////////////////'
+  fill_in 'paciente[endereco_paciente_attributes][complemento]', with: '///////////////////'
+  click_button 'Criar Paciente'
+  expect(page).to have_content('Paciente criado com sucesso.')
+
+  visit '/admin/1/dentista/new'
+  fill_in 'dentistum[nome]', with: 'michel d.'
+  fill_in 'dentistum[CPF]', with: '23608514112'
+  fill_in 'dentistum[telefone]', with: 87998165631
+  fill_in 'dentistum[especializacao]', with: 'Dentista'
+  fill_in 'dentistum[CRO]', with: '123456789'
+  fill_in 'dentistum[data]', with: '2023-10-05'
+  fill_in 'dentistum[horaInicio]', with: '08:00'
+  fill_in 'dentistum[horaTermino]', with: "16:00"
+  click_button 'Criar Dentista'
+  expect(page).to have_content('Dentista foi Criado com sucesso')
+
+  visit '/consulta/new'
+  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[horario]', with: '12:41'
+  select 'jeffesson r.', from: 'consultum[paciente_id]'
+  select 'michel d.', from: 'consultum[dentistum_id]'
+  click_button 'Criar Consultum'
+  visit '/consulta'
+  expect(page).to have_content('jeffesson r.')
+
+  visit '/consulta/1/relatorio_consulta/new'
+end
+
+Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf {string}') do |string|
+  visit 'pacientes/new'
+  fill_in 'paciente[nome]', with: 'jeffesson b.'
+  fill_in 'paciente[nascimento]', with: "2001-04-25"
+  fill_in 'paciente[cpf]', with: string
+  fill_in 'paciente[telefone]', with: '87998165631'
+  fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
+  fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
+  fill_in 'paciente[endereco_paciente_attributes][cidade]', with: 'Garanhuns'
+  fill_in 'paciente[endereco_paciente_attributes][bairro]', with: '///////////////////'
+  fill_in 'paciente[endereco_paciente_attributes][logradouro]', with: '///////////////////'
+  fill_in 'paciente[endereco_paciente_attributes][complemento]', with: '///////////////////'
+  click_button 'Criar Paciente'
+  expect(page).to have_content('Paciente criado com sucesso.')
+
+  visit '/admin/1/dentista/new'
+  fill_in 'dentistum[nome]', with: 'michel p.'
+  fill_in 'dentistum[CPF]', with: '31104950405'
+  fill_in 'dentistum[telefone]', with: 87998165631
+  fill_in 'dentistum[especializacao]', with: 'Dentista'
+  fill_in 'dentistum[CRO]', with: '123456789'
+  fill_in 'dentistum[data]', with: '2023-10-05'
+  fill_in 'dentistum[horaInicio]', with: '08:00'
+  fill_in 'dentistum[horaTermino]', with: "16:00"
+  click_button 'Criar Dentista'
+  expect(page).to have_content('Dentista foi Criado com sucesso')
+
+  visit '/consulta/new'
+  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[horario]', with: '12:41'
+  select 'jeffesson b.', from: 'consultum[paciente_id]'
+  select 'michel p.', from: 'consultum[dentistum_id]'
+  click_button 'Criar Consultum'
+  visit '/consulta'
+  expect(page).to have_content('jeffesson b.')
+
+  visit '/consulta/1/relatorio_consulta/new'
+end
+
+
 When('clico em criar relatorio_consulta') do
   click_button 'Criar Relatorio consultum'
 end
