@@ -54,7 +54,8 @@ Then('eu vejo uma mensagem que o relatorio_consulta foi removido') do
   expect(page).to have_content("Relatorio de consulta excluido com sucesso")
 end
 
-Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf {string}') do |string|
+Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf {string} e do dentista com cpf {string}') do |string, string2|
+
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'jeffesson'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
@@ -71,7 +72,7 @@ Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente co
 
   visit '/admin/1/dentista/new'
   fill_in 'dentistum[nome]', with: 'michel'
-  fill_in 'dentistum[CPF]', with: '96774126391'
+  fill_in 'dentistum[CPF]', with: string2
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
