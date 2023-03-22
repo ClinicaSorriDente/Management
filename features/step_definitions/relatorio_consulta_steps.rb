@@ -4,7 +4,7 @@ Given('eu estou na pagina de relatorio_consulta') do
   fill_in 'paciente[nascimento]', with: "2001-04-25"
   fill_in 'paciente[cpf]', with: '04622744899'
   fill_in 'paciente[telefone]', with: '87998165631'
-  fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
+  fill_in 'paciente[email]', with: 'rodrigo.leandro.xz@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
   fill_in 'paciente[endereco_paciente_attributes][cidade]', with: 'Garanhuns'
   fill_in 'paciente[endereco_paciente_attributes][bairro]', with: '///////////////////'
@@ -56,9 +56,9 @@ end
 
 Given('eu estou na pagina de criar relatorio_consulta') do
   visit 'pacientes/new'
-  fill_in 'paciente[nome]', with: 'Rodrigo pereira'
+  fill_in 'paciente[nome]', with: 'jeffesson'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '49949950449'
+  fill_in 'paciente[cpf]', with: '64472069881'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -84,11 +84,11 @@ Given('eu estou na pagina de criar relatorio_consulta') do
   visit '/consulta/new'
   fill_in 'consultum[data]', with: '22/03/2023'
   fill_in 'consultum[horario]', with: '12:41'
-  select 'Rodrigo pereira', from: 'consultum[paciente_id]'
+  select 'jeffesson', from: 'consultum[paciente_id]'
   select 'michel', from: 'consultum[dentistum_id]'
   click_button 'Criar Consultum'
   visit '/consulta'
-  expect(page).to have_content('Rodrigo pereira')
+  expect(page).to have_content('jeffesson')
 
   visit '/consulta/1/relatorio_consulta/new'
 
