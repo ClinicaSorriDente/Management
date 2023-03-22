@@ -9,9 +9,9 @@ end
 
 Then('Eu vejo a mensagem {string}') do |nome|
   visit 'pacientes/new'
-  fill_in 'paciente[nome]', with: 'Rodrigo Leandro dos Santos'
+  fill_in 'paciente[nome]', with: 'Jonatas dos Santos'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '70383167450'
+  fill_in 'paciente[cpf]', with: '23586731108'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -23,8 +23,8 @@ Then('Eu vejo a mensagem {string}') do |nome|
   expect(page).to have_content('Paciente criado com sucesso.')
 
   visit '/admin/1/dentista/new'
-  fill_in 'dentistum[nome]', with: 'Rodrigo'
-  fill_in 'dentistum[CPF]', with: '70383167450'
+  fill_in 'dentistum[nome]', with: 'Rodolfo Melo'
+  fill_in 'dentistum[CPF]', with: '22156442738'
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
@@ -37,8 +37,8 @@ Then('Eu vejo a mensagem {string}') do |nome|
   visit '/consulta/new'
   fill_in 'consultum[data]', with: '22/03/2023'
   fill_in 'consultum[horario]', with: '12:41'
-  select 'Rodrigo Leandro dos Santos', from: 'consultum[paciente_id]'
-  select 'Rodrigo', from: 'consultum[dentistum_id]'
+  select 'Jonatas dos Santos', from: 'consultum[paciente_id]'
+  select 'Rodolfo Melo', from: 'consultum[dentistum_id]'
   click_button 'Criar Consultum'
 
   visit new_consultum_path
@@ -60,9 +60,9 @@ end
 
 Then('eu vejo que {string} esta indisponivel') do |string|
   visit 'pacientes/new'
-  fill_in 'paciente[nome]', with: 'Rodrigo Leandro dos Santos'
+  fill_in 'paciente[nome]', with: 'Antonio dos Santos'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '70383167450'
+  fill_in 'paciente[cpf]', with: '66838170817'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -74,8 +74,8 @@ Then('eu vejo que {string} esta indisponivel') do |string|
   expect(page).to have_content('Paciente criado com sucesso.')
 
   visit '/admin/1/dentista/new'
-  fill_in 'dentistum[nome]', with: 'Rodrigo'
-  fill_in 'dentistum[CPF]', with: '70383167450'
+  fill_in 'dentistum[nome]', with: 'Aberlardo Silva'
+  fill_in 'dentistum[CPF]', with: '97071578605'
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
@@ -88,8 +88,8 @@ Then('eu vejo que {string} esta indisponivel') do |string|
   visit '/consulta/new'
   fill_in 'consultum[data]', with: '22/03/2023'
   fill_in 'consultum[horario]', with: '15:52'
-  select 'Rodrigo Leandro dos Santos', from: 'consultum[paciente_id]'
-  select 'Rodrigo', from: 'consultum[dentistum_id]'
+  select 'Antonio dos Santos', from: 'consultum[paciente_id]'
+  select 'Aberlardo Silva', from: 'consultum[dentistum_id]'
   click_button 'Criar Consultum'
   visit '/consulta/new'
   expect(page).to have_content(string)
@@ -97,9 +97,9 @@ end
 
 Given('eu vejo uma consulta com horario {string}') do |string|
   visit 'pacientes/new'
-  fill_in 'paciente[nome]', with: 'Rodrigo Leandro dos Santos'
+  fill_in 'paciente[nome]', with: 'Rogerio Vilela'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '70383167450'
+  fill_in 'paciente[cpf]', with: '73451068290'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
@@ -111,8 +111,8 @@ Given('eu vejo uma consulta com horario {string}') do |string|
   expect(page).to have_content('Paciente criado com sucesso.')
 
   visit '/admin/1/dentista/new'
-  fill_in 'dentistum[nome]', with: 'Rodrigo'
-  fill_in 'dentistum[CPF]', with: '70383167450'
+  fill_in 'dentistum[nome]', with: 'Sandra Alba'
+  fill_in 'dentistum[CPF]', with: '88867476165'
   fill_in 'dentistum[telefone]', with: 87998165631
   fill_in 'dentistum[especializacao]', with: 'Dentista'
   fill_in 'dentistum[CRO]', with: '123456789'
@@ -125,8 +125,8 @@ Given('eu vejo uma consulta com horario {string}') do |string|
   visit '/consulta/new'
   fill_in 'consultum[data]', with: '22/03/2023'
   fill_in 'consultum[horario]', with: '15:52'
-  select 'Rodrigo Leandro dos Santos', from: 'consultum[paciente_id]'
-  select 'Rodrigo', from: 'consultum[dentistum_id]'
+  select 'Rogerio Vilela', from: 'consultum[paciente_id]'
+  select 'Sandra Alba', from: 'consultum[dentistum_id]'
   click_button 'Criar Consultum'
   expect(page).to have_content(string)
 end
