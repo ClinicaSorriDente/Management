@@ -54,11 +54,11 @@ Then('eu vejo uma mensagem que o relatorio_consulta foi removido') do
   expect(page).to have_content("Relatorio de consulta excluido com sucesso")
 end
 
-Given('eu estou na pagina de criar relatorio_consulta') do
+Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente com cpf {string}') do |string|
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'jeffesson'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '64472069881'
+  fill_in 'paciente[cpf]', with: string
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
