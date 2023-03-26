@@ -232,7 +232,7 @@ When('eu clico em ver relatorio de consulta') do
   click_link 'Mostrar este relatorio de consulta'
 end
 
-Then('eu vejo o relatorio_consulta e suas informações') do
+Then('eu vejo o relatorio_consulta e suas informacoes') do
   expect(page).to have_content('Comentario:')
   expect(page).to have_content('Presente:')
 end
@@ -242,11 +242,11 @@ Then('Eu vejo uma mensagem de relatorio_consulta criado com sucesso') do
 end
 
 
-When('eu preecho um relatorio_consulta com a checkbox de presença marcada') do
+When('eu preecho um relatorio_consulta com a checkbox de presenca marcada') do
   check 'relatorio_consultum[presente]'
 end
 
-When('eu preecho um relatorio_consulta com comentario {string} e marco a checkbox de presença') do |comentario|
+When('eu preecho um relatorio_consulta com comentario {string} e marco a checkbox de presenca') do |comentario|
   check 'relatorio_consultum[presente]'
   fill_in 'relatorio_consultum[comentario]', with: comentario
 end
