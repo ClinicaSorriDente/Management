@@ -27,7 +27,8 @@ class RelatorioConsultaController < ApplicationController
 
       if @relatorio_consultum.save
         @consultum.relatorio_consultum = @relatorio_consultum
-        redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta foi Criado com sucesso"
+        flash[:success]= "Relatorio de consulta foi Criado com sucesso"
+        redirect_to consultum_relatorio_consulta_path
       else
         render :'relatorio_consulta/new', status: :unprocessable_entity
       end
@@ -37,7 +38,8 @@ class RelatorioConsultaController < ApplicationController
   # PATCH/PUT /relatorio_consulta/1 or /relatorio_consulta/1.json
   def update
     if @relatorio_consultum.update(relatorio_consultum_params)
-      redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta foi atualizado mcom sucesso"
+      flash[:success]= "Relatorio de consulta foi atualizado mcom sucesso"
+      redirect_to consultum_relatorio_consulta_path
 
     else
       render :'relatorio_consulta/edit', status: :unprocessable_entity
@@ -48,7 +50,8 @@ class RelatorioConsultaController < ApplicationController
   # DELETE /relatorio_consulta/1 or /relatorio_consulta/1.json
   def destroy
     @relatorio_consultum.destroy
-    redirect_to consultum_relatorio_consulta_path, notice: "Relatorio de consulta excluido com sucesso"
+    flash[:success]= "Relatorio de consulta excluido com sucesso"
+    redirect_to consultum_relatorio_consulta_path
   end
 
   private

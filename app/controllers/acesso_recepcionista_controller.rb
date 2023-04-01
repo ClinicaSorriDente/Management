@@ -7,8 +7,8 @@ class AcessoRecepcionistaController < ApplicationController
     @recepcionistum=  Recepcionistum.find_by(credencial: params[:credencial])
     if @recepcionistum.present?
       session[:recepcionistum_id] = @recepcionistum.id
-      render :'acesso_recepcionista/index'
-      #redirect_to pacientes_url, notice: "logado com sucesso"
+      flash[:success]= "logado com sucesso"
+      render 'acesso_recepcionista/index'
     else
       flash[:alert]= "Credencial não cadastrada"
       render :'acesso_recepcionista/new'
@@ -17,6 +17,8 @@ class AcessoRecepcionistaController < ApplicationController
 
   def destroy
     session[:recepcionistum_id] = nil
-    redirect_to root_path, notice: "desconectado com sucesso"
+    flash[:success]="desconectado com sucesso"
+    redirect_to root_path
+
   end
 end

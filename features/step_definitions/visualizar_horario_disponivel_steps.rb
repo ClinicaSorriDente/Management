@@ -35,7 +35,7 @@ Then('Eu vejo a mensagem {string}') do |nome|
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: '12:41'
   select 'Jonatas dos Santos', from: 'consultum[paciente_id]'
   select 'Rodolfo Melo', from: 'consultum[dentistum_id]'
@@ -86,7 +86,7 @@ Then('eu vejo que {string} esta indisponivel') do |string|
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: string
   select 'Antonio dos Santos', from: 'consultum[paciente_id]'
   select 'Aberlardo Silva', from: 'consultum[dentistum_id]'
@@ -123,7 +123,7 @@ Given('eu vejo uma consulta com horario {string}') do |string|
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '25/04/2023'
   fill_in 'consultum[horario]', with: string
   select 'Rogerio Vilela', from: 'consultum[paciente_id]'
   select 'Sandra Alba', from: 'consultum[dentistum_id]'
