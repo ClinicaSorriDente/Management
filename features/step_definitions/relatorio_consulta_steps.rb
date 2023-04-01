@@ -26,7 +26,7 @@ Given('eu estou na pagina de relatorio_consulta') do
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: '12:41'
   select 'Robson Leandro dos Santos', from: 'consultum[paciente_id]'
   select 'Rodrigo leao', from: 'consultum[dentistum_id]'
@@ -83,7 +83,7 @@ Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente co
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: '12:41'
   select 'jeffesson', from: 'consultum[paciente_id]'
   select 'michel', from: 'consultum[dentistum_id]'
@@ -124,7 +124,7 @@ Given('eu estou na pagina de criar relatorio_consulta') do
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: '12:41'
   select 'jeffesson r.', from: 'consultum[paciente_id]'
   select 'michel d.', from: 'consultum[dentistum_id]'
@@ -163,7 +163,7 @@ Given('eu estou na pagina de criar relatorio_consulta da consulta do paciente co
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: '12:41'
   select 'jeffesson b.', from: 'consultum[paciente_id]'
   select 'michel p.', from: 'consultum[dentistum_id]'
@@ -211,7 +211,7 @@ Given('eu estou na pagina de consulta') do
   expect(page).to have_content('Dentista foi Criado com sucesso')
 
   visit '/consulta/new'
-  fill_in 'consultum[data]', with: '22/03/2023'
+  fill_in 'consultum[data]', with: '22/04/2023'
   fill_in 'consultum[horario]', with: '12:41'
   select 'Renato', from: 'consultum[paciente_id]'
   select 'cleiton', from: 'consultum[dentistum_id]'
