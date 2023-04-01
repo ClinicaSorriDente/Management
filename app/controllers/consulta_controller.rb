@@ -28,22 +28,22 @@ class ConsultaController < ApplicationController
     @paciente.consultums << @consultum
     @dentista.consultums << @consultum
 
-    respond_to do |format|
       if @consultum.save
-        format.html { redirect_to consultum_url(@consultum), notice: 'Consulta foi criada com sucesso.' }
-        format.json { render :show, status: :created, location: @consultum }
+        flash[:success]='Consulta foi criada com sucesso.'
+        redirect_to "/consulta/#{@consultum.id}"
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @consultum.errors, status: :unprocessable_entity }
+        flash[:alert] = 'verifique seus campos'
+        redirect_to new_consultum_path
       end
-    end
   end
 
   # PATCH/PUT /consulta/1 or /consulta/1.json
   def update
     respond_to do |format|
       if @consultum.update(consultum_params)
-        format.html { redirect_to consultum_url(@consultum), notice: 'Consulta foi atualizada com sucesso' }
+        format.html { flash[:success]='Consulta foi atualizada com sucesso'
+        redirect_to consultum_url(@consultum)
+        }
         format.json { render :show, status: :ok, location: @consultum }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -57,7 +57,8 @@ class ConsultaController < ApplicationController
     @consultum.destroy
 
     respond_to do |format|
-      format.html { redirect_to consulta_url, notice: 'Consulta doi destruida com sucesso' }
+      format.html { flash[:success]='Consulta doi destruida com sucesso'
+        redirect_to consulta_url}
       format.json { head :no_content }
     end
   end

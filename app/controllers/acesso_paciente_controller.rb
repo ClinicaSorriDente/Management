@@ -7,8 +7,9 @@ class AcessoPacienteController < ApplicationController
     @paciente= Paciente.find_by(cpf: params[:cpf])
     if @paciente.present?
       session[:paciente_id] = @paciente.id
+      flash[:success]= "logado com sucesso"
       render :'acesso_paciente/index'
-      #redirect_to pacientes_url, notice: "logado com sucesso"
+
     else
       flash[:alert]= "CPF não cadastrado"
       render :'acesso_paciente/new'
@@ -17,6 +18,7 @@ class AcessoPacienteController < ApplicationController
 
   def destroy
     session[:paciente_id] = nil
-    redirect_to root_path, notice: "desconectado com sucesso"
+    flash[:success]= "desconectado com sucesso"
+    redirect_to root_path
   end
 end

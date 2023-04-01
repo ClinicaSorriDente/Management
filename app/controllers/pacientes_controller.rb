@@ -26,7 +26,8 @@ class PacientesController < ApplicationController
     @paciente.endereco_paciente = EnderecoPaciente.new(paciente_params[:endereco_paciente_attributes])
     respond_to do |format|
       if @paciente.save
-        format.html { redirect_to paciente_url(@paciente), notice: "Paciente criado com sucesso." }
+        format.html { flash[:success]= "Paciente criado com sucesso."
+          redirect_to paciente_url(@paciente) }
         format.json { render :show, status: :created, location: @paciente }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +40,8 @@ class PacientesController < ApplicationController
   def update
     respond_to do |format|
       if @paciente.update(paciente_params)
-        format.html { redirect_to paciente_url(@paciente), notice: "Paciente atualizado com sucesso." }
+        format.html { flash[:success]= "Paciente atualizado com sucesso."
+          redirect_to paciente_url(@paciente) }
         format.json { render :show, status: :ok, location: @paciente }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +55,8 @@ class PacientesController < ApplicationController
     @paciente.destroy
 
     respond_to do |format|
-      format.html { redirect_to root_path, notice: "Conta de paciente deletada com sucesso." }
+      format.html {flash[:success]=  "Conta de paciente deletada com sucesso."
+      redirect_to root_path}
       format.json { head :no_content }
     end
   end

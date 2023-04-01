@@ -19,7 +19,8 @@ class AdminController < ApplicationController
       render :'admin/index'
     else
       @admin.destroy
-      redirect_to root_path, notice: "Admin foi excluido com sucesso"
+      flash[:success]="Admin foi excluido com sucesso"
+      redirect_to root_path
     end
 
   end

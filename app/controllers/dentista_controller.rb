@@ -25,11 +25,12 @@ class DentistaController < ApplicationController
     @dentistum = Dentistum.new(dentistum_params)
 
       if @dentistum.save
-        redirect_to admin_dentista_path, notice: "Dentista foi Criado com sucesso"
+        flash[:success]= "Dentista foi Criado com sucesso"
+        redirect_to admin_dentista_path
+
 
       else
         render :'dentista/new', status: :unprocessable_entity
-
 
       end
   end
@@ -37,7 +38,8 @@ class DentistaController < ApplicationController
   # PATCH/PUT /dentista/1 or /dentista/1.json
   def update
       if @dentistum.update(dentistum_params)
-        redirect_to admin_dentista_path, notice: "Dentista foi atualizado mcom sucesso"
+        flash[:success]="Dentista foi atualizado mcom sucesso"
+        redirect_to admin_dentista_path
 
       else
         render :'dentista/edit', status: :unprocessable_entity
@@ -49,7 +51,8 @@ class DentistaController < ApplicationController
   # DELETE /dentista/1 or /dentista/1.json
   def destroy
     @dentistum.destroy
-    redirect_to admin_dentista_path, notice: "Dentista excluido com sucesso"
+    flash[:success]= "Dentista excluido com sucesso"
+    redirect_to admin_dentista_path
 
   end
 
