@@ -139,7 +139,7 @@ When('eu clico para criar uma nova consulta para o horario {string}') do |string
   visit 'pacientes/new'
   fill_in 'paciente[nome]', with: 'Rogerio Lacerda'
   fill_in 'paciente[nascimento]', with: "2001-04-25"
-  fill_in 'paciente[cpf]', with: '27338080879'
+  fill_in 'paciente[cpf]', with: '44221640316'
   fill_in 'paciente[telefone]', with: '87998165631'
   fill_in 'paciente[email]', with: 'rodrigo.leandro.zx@gmail.com'
   fill_in 'paciente[endereco_paciente_attributes][cep]', with: '55298165'
