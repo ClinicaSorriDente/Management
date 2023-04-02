@@ -9,8 +9,8 @@ class Paciente < ApplicationRecord
   validates :telefone, length: { minimum: 11 }, numericality: { only_integer: true }, presence: true
   validates :email, length: { minimum: 11 }
 
-  validate :conferindo_data
-  def conferindo_data
+  validate :validar_data_nascimento
+  def validar_data_nascimento
     if nascimento.present? && nascimento > Time.zone.today
       errors.add(:dataNascimento, 'Data inválida')
     end
