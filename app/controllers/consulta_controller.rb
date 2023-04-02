@@ -22,11 +22,8 @@ class ConsultaController < ApplicationController
 
   # POST /consulta or /consulta.json
   def create
-    @paciente = Paciente.find(consultum_params[:paciente_id])
-    @dentista = Dentistum.find(consultum_params[:dentistum_id])
     @consultum = Consultum.new(consultum_params)
-    @paciente.consultums << @consultum
-    @dentista.consultums << @consultum
+    buscar_paciente_medico
 
       if @consultum.save
         flash[:success]='Consulta foi criada com sucesso.'
@@ -73,5 +70,12 @@ class ConsultaController < ApplicationController
   # Only allow a list of trusted parameters through.
   def consultum_params
     params.require(:consultum).permit(:data, :horario, :paciente_id, :dentistum_id)
+  end
+
+  def buscar_paciente_medico
+    @paciente = Paciente.find(consultum_params[:paciente_id])
+    @dentista = Dentistum.find(consultum_params[:dentistum_id])
+    @paciente.consultums << @consultum
+    @dentista.consultums << @consultum
   end
 end
