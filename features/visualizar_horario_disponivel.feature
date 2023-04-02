@@ -26,5 +26,5 @@ Feature: Visualizar Horarios Disponiveis
   Scenario: mudar horario de disponivel para indisponivel
     Given estou na tela de consulta
     And eu nao vejo uma consulta com horario '15:54'
-    When eu clico para criar uma nova consulta para o horario '15:54'
-    Then eu vejo que '15:54' esta indisponivel
+    When eu clico para criar uma nova consulta
+    Then eu vejo que agora '15:54' esta indisponivel
