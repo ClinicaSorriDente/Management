@@ -23,7 +23,7 @@ Feature: Recepcionista
 
   Scenario: Editar conta de recepcionista
     Given eu estou na tela de recepcionista
-    When eu vejo a conta com nome 'Gison Vilaca', credencial '611', cpf '135.469.494-55', telefone '01234567890', email 'gison@gmail.com'
+    When eu vejo a conta com nome 'Gison Morais', credencial '611', cpf '321.056.268-74', telefone '01234567890', email 'gison@gmail.com'
     And clico em editar este recepcionista
     When edito a conta com nome 'Gison Vilaca Morais', telefone '09876543210'
     And clico em Atualizar Recepcionista
@@ -31,7 +31,7 @@ Feature: Recepcionista
 
   Scenario: Remover conta de recepcionista
     Given eu estou na tela de recepcionista
-    When eu vejo a conta com nome 'Gison Vilaca', credencial '611', cpf '135.469.494-55', telefone '01234567890', email 'gison@gmail.com'
+    When eu vejo a conta com nome 'Gison', credencial '611', cpf '392.124.303-33', telefone '01234567890', email 'gison@gmail.com'
     And clico em Remover Recepcionista
     Then eu vejo uma mensagem informando que a conta de Recepcionista foi deletada com sucesso
 

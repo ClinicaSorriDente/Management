@@ -90,7 +90,7 @@ Then('eu vejo uma mensagem informando que a conta de Paciente foi atualizada com
 end
 
 
-
+# REMOVER PACIENTE
 When('clico em Remover Paciente') do
   click_button 'Destroy this paciente'
 end
