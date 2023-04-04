@@ -5,7 +5,7 @@ Feature: Consulta
 
   Scenario: Agender nova consulta
     Given estou na tela de paciente
-    And existe o paciente de Nome 'Rodrigo Leandro dos Santoss', CPF '43673037218'
+    And existe o paciente de Nome 'Rodrigo Leandro dos Santoss', CPF '70383167450'
     And existe um dentista de Nome 'zezo' e cpf '17518717468'
     When eu seleciono o paciente de Nome 'Rodrigo Leandro dos Santoss', Dentista 'zezo', Horario '22/03/2023 - 08:00'
     And clico em Criar Consultum
@@ -38,10 +38,10 @@ Feature: Consulta
     And clico em Criar Consultum
     Then eu vejo a mensagem: Selecione um horário.
 
-  Scenario: Criar uma consulta sem dentista
+  Scenario: Criar uma consulta sem data e horario
     Given estou na tela de paciente
     And existe o paciente de Nome 'matheus', CPF '68058677205'
-    And nao existe dentista disponivel
-    When eu seleciono o paciente de Nome 'matheus', Dentista vazio, Horario '22/04/2023 14:00'
+    And existe um dentista de Nome 'carloss' e cpf '14152709294'
+    When eu seleciono o paciente de Nome 'matheus', Dentista 'carloss', Horario '', data ''
     And clico em Criar Consultum
-    Then eu vejo a mensagem: Não é possivel se consultar sem um dentista.
+    Then eu vejo a mensagem: Data inválida

@@ -88,3 +88,14 @@ When('eu seleciono o paciente de Nome {string}, Dentista vazio, Horario {string}
   click_button 'Criar Consultum'
 
 end
+When('eu seleciono o paciente de Nome {string}, Dentista {string}, Horario {string}, data {string}') do |paciente, dentista, horario, data|
+  visit '/consulta/new'
+  fill_in 'consultum[data]', with: data
+  fill_in 'consultum[horario]', with: horario
+  select paciente, from: 'consultum[paciente_id]'
+  select dentista, from: 'consultum[dentistum_id]'
+end
+
+Then('eu vejo a mensagem: Data inválida') do
+  expect(page).to have_content('verifique seus campos')
+end
