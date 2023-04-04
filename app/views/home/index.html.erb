@@ -1,31 +1,16 @@
-<p style="color: green"><%= notice %></p>
-
-<center>
 <h1>Clinica Odontológica</h1>
 <h1>SorriDente</h1><br>
-<div class="mb-3">
 
-    <p>
+<h2>Entrar como</h2>
 
-      <h1>
-        <br>
-        <br>
-        <h3><small>Paciente<br></small></h3>
-      <%= button_to "entrar", "/acesso_paciente", method: :get%>
-      </h1>
-    </p>
-
-    <p>
-        <h3>
-          <br>
-          <br>
-          <br>
-          <br>
-          <small>
-        <%= link_to "Logar como admin",login_url %> | <%= link_to "Logar como recepcionista","/acesso_recepcionista", method: :get %>
-          </small>
-        </h3>
-    </p>
-
-</div>
-</center>
+<ul>
+  <li>
+    <%= button_to "Paciente", "/acesso_paciente", method: :get%>
+  </li>
+  <li>
+    <%= link_to "Admin",login_url %>
+  </li>
+  <li>
+    <%= link_to "Recepcionista","/acesso_recepcionista", method: :get %>
+  </li>
+</ul>
