@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @consultum %>
+<%= render @consultum %><br>
 
 <div>
   <% if !@consultum.relatorio_consultum%>
-    <%= link_to "gerar relatorio",  new_consultum_relatorio_consultum_path(@consultum)%><br>
+    <%= link_to "gerar relatorio",  new_consultum_relatorio_consultum_path(@consultum)%><br><br>
   <% else%>
     <%= link_to "ver relatorio", "/consulta/#{@consultum.id}/relatorio_consulta/#{@consultum.relatorio_consultum.id}" %><br><br>
   <%end%>
   <%= link_to "Edit this consultum", edit_consultum_path(@consultum) %> |
-  <%= link_to "Back to consulta", consulta_path %>
+  <%= link_to "Back to consulta", consulta_path %><br><br>
   <%= button_to "Destroy this consultum", @consultum, method: :delete %>
 </div>

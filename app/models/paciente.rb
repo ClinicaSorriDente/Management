@@ -5,7 +5,7 @@ class Paciente < ApplicationRecord
   accepts_nested_attributes_for :endereco_paciente, allow_destroy: true
   validates :nome, length: { minimum: 4 }, presence: true
   validates :nascimento, presence: true
-  validates :cpf, cpf: { message: 'Inválido ou Inexistente' }, presence: true, uniqueness: true
+  validates :cpf, cpf: { message: 'Inválido ou Inexistente' }, uniqueness: true, presence: true
   validates :telefone, length: { minimum: 11 }, numericality: { only_integer: true }, presence: true
   validates :email, length: { minimum: 11 }
 

@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @dentistum %>
+<%= render @dentistum %><br>
 
 <div>
-  <%= link_to "Voltar para dentistas", admin_dentista_path %>
+  <%= link_to "Voltar para dentistas", admin_dentista_path %><br><br>
 
   <%= button_to "Destruir este dentista", "/admin/1/dentista/#{@dentistum.id}", method: :delete %>
 </div>

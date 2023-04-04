@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @relatorio_consultum %>
+<%= render @relatorio_consultum %><br>
 
 <div>
-  <%= link_to "Editar este relatorio de consulta", edit_consultum_relatorio_consultum_path(@relatorio_consultum) %> |
+  <%= link_to "Editar este relatorio de consulta", edit_consultum_relatorio_consultum_path(@relatorio_consultum) %><br><br>
 
   <%= button_to "Destruir este relatorio de consulta",  "/consulta/#{@relatorio_consultum.consultum_id}/relatorio_consulta/#{@relatorio_consultum.id}", method: :delete %><br>
 
