@@ -22,11 +22,11 @@ class RelatorioConsultaController < ApplicationController
 
   # POST /relatorio_consulta or /relatorio_consulta.json
   def create
-    @consultum = Consultum.find_by(params[:consultum_id])
-    @relatorio_consultum = RelatorioConsultum.new(presente: relatorio_consultum_params[:presente],comentario: relatorio_consultum_params[:comentario], consultum_id: @consultum.id)
+
+    @relatorio_consultum = RelatorioConsultum.new(presente: relatorio_consultum_params[:presente],comentario: relatorio_consultum_params[:comentario], consultum_id: params[:consultum_id])
 
       if @relatorio_consultum.save
-        @consultum.relatorio_consultum = @relatorio_consultum
+        # @consultum.relatorio_consultum = @relatorio_consultum
         flash[:success]= "Relatorio de consulta foi Criado com sucesso"
         redirect_to consultum_relatorio_consulta_path
       else
