@@ -5,18 +5,18 @@ Feature: Consulta
 
   Scenario: Agender nova consulta
     Given estou na tela de paciente
-    And existe o paciente de Nome 'Rodrigo Leandro dos Santos', CPF '43673037218'
+    And existe o paciente de Nome 'Rodrigo Leandro dos Santoss', CPF '43673037218'
     And existe um dentista de Nome 'zezo' e cpf '17518717468'
-    When eu seleciono o paciente de Nome 'Rodrigo Leandro dos Santos', Dentista 'zezo', Horario '22/03/2023 - 08:00'
+    When eu seleciono o paciente de Nome 'Rodrigo Leandro dos Santoss', Dentista 'zezo', Horario '22/03/2023 - 08:00'
     And clico em Criar Consultum
     Then eu vejo a mensagem: Consulta foi criada com sucesso.
 
   Scenario: Agendar consulta com data invalida
     Given estou na tela de paciente
     And existe o paciente de Nome 'thiago', CPF '70383167450'
-    And existe um dentista de Nome 'cleiton' e cpf '17401111330'
+    And existe um dentista de Nome 'cleitonn' e cpf '17401111330'
     And estou na tela de criar Consulta
-    When eu seleciono o paciente de Nome 'thiago', Dentista 'cleiton', Horario '22/01/2021 - 05:00'
+    When eu seleciono o paciente de Nome 'thiago', Dentista 'cleitonn', Horario '22/01/2021 - 05:00'
     And clico em Criar Consultum
     Then eu vejo a mensagem: Data inválida, marque uma data futura e não passada.
 
