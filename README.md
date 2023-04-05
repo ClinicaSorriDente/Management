@@ -21,7 +21,7 @@ consequentemente editar, remover e visualizar seu perfil. Um administrador deve 
  ### [Codacy](https://www.codacy.com/product)
  ### [Railway](https://railway.app/)
 ## :construction: Status do Projeto
-Em andamento
+Concluído
 ## :keyboard: Acessando o sistema
 __Login:__ "Admin_padrao"
 __Senha:__ "12345"
