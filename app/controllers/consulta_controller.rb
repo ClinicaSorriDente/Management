@@ -73,9 +73,11 @@ class ConsultaController < ApplicationController
   end
 
   def buscar_paciente_medico
-    @paciente = Paciente.find(consultum_params[:paciente_id])
-    @dentista = Dentistum.find(consultum_params[:dentistum_id])
-    @paciente.consultums << @consultum
-    @dentista.consultums << @consultum
+    if consultum_params[:paciente_id].present? and consultum_params[:dentistum_id].present?
+      @paciente = Paciente.find(consultum_params[:paciente_id])
+      @dentista = Dentistum.find(consultum_params[:dentistum_id])
+      @paciente.consultums << @consultum
+      @dentista.consultums << @consultum
+    end
   end
 end

@@ -38,6 +38,7 @@ Given('eu estou na pagina de relatorio_consulta') do
   check 'relatorio_consultum[presente]'
   fill_in 'relatorio_consultum[comentario]', with: "paciente com febre"
   click_button 'Criar Relatorio consultum'
+  expect(page).to have_content('Relatorio de consulta foi Criado com sucesso')
 end
 
 Given('eu vejo um relatorio_consulta com comentario {string}') do |comentario|
@@ -223,6 +224,7 @@ Given('eu estou na pagina de consulta') do
   check 'relatorio_consultum[presente]'
   fill_in 'relatorio_consultum[comentario]', with: "paciente com febre"
   click_button 'Criar Relatorio consultum'
+  expect(page).to have_content('Relatorio de consulta foi Criado com sucesso')
   visit 'consulta/1/relatorio_consulta'
 
 
