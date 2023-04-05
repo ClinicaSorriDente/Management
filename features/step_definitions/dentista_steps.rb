@@ -4,16 +4,19 @@ Given('eu estou na pagina de dentista') do
 end
 
 Given('eu vejo um dentista com cpf {string}') do |cpf|
-  fill_in 'dentistum[nome]', with: 'Rodrigo leandro'
-  fill_in 'dentistum[CPF]', with: cpf
-  fill_in 'dentistum[telefone]', with: 87998165631
-  fill_in 'dentistum[especializacao]', with: 'Dentista'
-  fill_in 'dentistum[CRO]', with: '123456789'
-  fill_in 'dentistum[data]', with: '2023-10-05'
-  fill_in 'dentistum[horaInicio]', with: '08:00'
-  fill_in 'dentistum[horaTermino]', with: "16:00"
-  click_button 'Criar Dentista'
-  visit '/admin/1/dentista/1'
+
+  @dentista = Dentistum.new(
+    nome:"Rogerio Lacerda",
+    telefone:"87912345678",
+    CRO:"123456789",
+    CPF:cpf,
+    especializacao:"Endodontia",
+    data:"2021-10-05",
+    horaInicio:"08:00",
+    horaTermino:"16:00",
+    )
+  @dentista.save
+  visit "/admin/1/dentista/#{@dentista.id}"
   expect(page).to have_content(cpf)
 end
 

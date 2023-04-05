@@ -5,7 +5,7 @@ Feature: Consulta
 
   Scenario: Agender nova consulta
     Given estou na tela de paciente
-    And existe o paciente de Nome 'Rodrigo Leandro dos Santoss', CPF '70383167450'
+    And existe o paciente de Nome 'Rodrigo Leandro dos Santoss', CPF '81423861272'
     And existe um dentista de Nome 'zezo' e cpf '17518717468'
     When eu seleciono o paciente de Nome 'Rodrigo Leandro dos Santoss', Dentista 'zezo', Horario '22/03/2023 - 08:00'
     And clico em Criar Consultum
